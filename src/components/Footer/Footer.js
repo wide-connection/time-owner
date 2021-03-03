@@ -31,7 +31,7 @@ class Footer extends Component {
 
                         {/* Column 3 */}
                         <div className="col">
-                            <h4>Sponers</h4>
+                            <h4>Sponsers</h4>
                             <ul className="list-unstyled">
                                 <li>ASDASD</li>
                                 <li>ASDASD</li>
