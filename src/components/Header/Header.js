@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Header.css'
+import logo from '../Images/Chocolander.png'
 
 class Header extends Component {  
   
@@ -8,8 +9,7 @@ class Header extends Component {
           <div className="App">
             <nav className="navbar">
               <div className="navbar_logo">
-                <i class="fas fa-calendar-week"></i> &nbsp;
-              <a href="/#">Chocolander</a>
+               <a href="/#"><img src={logo} alt="logo" width="200px" /></a>           
               </div>
 
               <ul className="navbar_menu">

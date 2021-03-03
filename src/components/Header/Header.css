@@ -50,6 +50,7 @@ a {
 .navbar_icons a {
     transition: .3s linear; 
 }
+
 .navbar_icons a:hover {
     color: #2196F3;
 }

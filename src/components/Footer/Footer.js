@@ -13,7 +13,7 @@ class Footer extends Component {
             <footer>
                 <div className="footer-container">
                     <div className="left-col">
-                    <img src={logo} alt="logo" width="350px" />                    
+                    <img src={logo} alt="logo" className="logo"/>                    
                         <div className="social-media">
                             <a href="/#"><i class="fab fa-facebook-f"></i></a>
                             <a href="/#"><i class="fab fa-twitter"></i></a>
