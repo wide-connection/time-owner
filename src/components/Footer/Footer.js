@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css'
+import logo from '../Images/Chocolander.png'
 
 class Footer extends Component {
     render() {
@@ -12,7 +13,7 @@ class Footer extends Component {
             <footer>
                 <div className="footer-container">
                     <div className="left-col">
-                    <i class="fas fa-calendar-week">Chocolander</i> 
+                    <img src={logo} alt="logo" width="350px" />                    
                         <div className="social-media">
                             <a href="/#"><i class="fab fa-facebook-f"></i></a>
                             <a href="/#"><i class="fab fa-twitter"></i></a>
