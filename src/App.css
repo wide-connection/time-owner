@@ -15,3 +15,9 @@
     flex: 1; 
 
 }
+
+.content-wrap .buttons {
+    position: absolute;
+    bottom: 10px;
+}
+
