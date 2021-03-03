@@ -21,9 +21,8 @@ function App() {
        :
        <div>
          <Header/>
-  
+         <TableForms/>
          <Footer/>
-
        </div>
      }
 
