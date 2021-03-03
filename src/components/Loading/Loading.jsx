@@ -1,6 +1,6 @@
 import React from 'react'
 import RingLoader from "react-spinners/RingLoader";
-import logo from '../Images/Chocolander.png'
+import logo from '../Images/TimeOwner.png'
 
 const override = `
   text-align: center;
@@ -23,7 +23,7 @@ const Loading = () => {
                     width: "400px",
                     position: "absolute",
                     top: "35%",
-                    left: "34%"
+                    left: "36%"
                   }}/>
             <RingLoader
             color={"#4A90E2"} 
