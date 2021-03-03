@@ -18,18 +18,20 @@ class Footer extends Component {
 
                         {/* Column 2 */}
                         <div className="col">
-                            <h4>STAFF</h4>
+                            <h4>Team Members</h4>
                             <ul className="list-unstyled">
+                                <li>Ashish Sheoran</li>
                                 <li>Elena Sakhnovitch</li>
                                 <li>Hyun Seong Lee</li>
                                 <li>Jung Soo Choi</li>
                                 <li>Yun Seon Lee</li>
+                                <li>Zilola Matasimova</li>
                             </ul>
                         </div>
 
                         {/* Column 3 */}
                         <div className="col">
-                            <h4>STUFF</h4>
+                            <h4>Sponers</h4>
                             <ul className="list-unstyled">
                                 <li>ASDASD</li>
                                 <li>ASDASD</li>
