@@ -16,12 +16,15 @@ class Header extends Component {
                   <li><a href="/#">Home</a></li>
                   <li><a href="/#">Login</a></li>
                   <li><a href="/#">About Us</a></li>
-                  <li><a href="/#">Contact</a></li>                  
+                  <li><a href="/#">Contact</a></li>         
+                  <li><a href="/#">Sponsers</a></li>           
               </ul>
 
               <div className="navbar_icons">                
-                 <li><i class="fab fa-github"></i></li> 
-                 <li><i class="fab fa-twitter"></i></li>
+                  <li><a href="/#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="/#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="/#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="/#"><i class="fab fa-github"></i></a></li>
               </div>
 
               <a href="/#" className="navbar_toogleBtn">

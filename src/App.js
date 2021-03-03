@@ -7,12 +7,10 @@ function App() {
   return (
 
     <div className="page-container">
-    <div className="content-wrap">
+
     <Header/>
-   
-   
-  
-    </div>
+     
+
     <Footer/>
     </div>
 
