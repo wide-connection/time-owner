@@ -27,12 +27,7 @@
     width: 50%;
 }
 
-.table-container {
-    float: left;
-    width: 100%;
-}
-
-.left-half .table-container, .left-half .buttons-container{
+.left-half .table-container {
     float: left;
     width: 50%;
 }
