@@ -7,10 +7,11 @@
     
 } */
 
-.App .buttons-container {
+.left-half .buttons-container {
+    float: left;
     position: absolute;
     bottom: 5px;
-    width: 100%;
+    width: 50%;
     height: 60px;
     
 }
@@ -18,5 +19,20 @@
 .buttons-container {
     text-align: center;
     justify-content: center;
-    display: inline-flex;
+
+}
+
+.calender-container {
+    float: right;
+    width: 50%;
+}
+
+.table-container {
+    float: left;
+    width: 100%;
+}
+
+.left-half .table-container, .left-half .buttons-container{
+    float: left;
+    width: 50%;
 }

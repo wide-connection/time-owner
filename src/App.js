@@ -26,21 +26,26 @@ function App() {
               <Header />
               <Switch>
                 <Route path="/">
-                  <Calender />
-                  <div className='buttons-container'>
-                    <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
-                    <Categories className="Family-btn" color='yellow' content='Family' />
-                    <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
-                    <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
-                    <Categories className="Routine-btn" color='lightGray' content='Routine' />
-                    <Categories className="Friends-btn" color='pink' content='Friends' />
-                    <Categories className="Health-btn" color='gold' content='Health' />
-                    <Categories className="Hobby-btn" color='plum' content='Hobby' />
+                  <div className="calender-container">
+                    <Calender />
                   </div>
 
                   <br />
-
-                  <TableForms />
+                  <div className="left-half">
+                    <div className="table-container">
+                      <TableForms />
+                    </div>
+                    <div className='buttons-container'>
+                      <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
+                      <Categories className="Family-btn" color='yellow' content='Family' />
+                      <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
+                      <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
+                      <Categories className="Routine-btn" color='lightGray' content='Routine' />
+                      <Categories className="Friends-btn" color='pink' content='Friends' />
+                      <Categories className="Health-btn" color='gold' content='Health' />
+                      <Categories className="Hobby-btn" color='plum' content='Hobby' />
+                    </div>
+                  </div>
                 </Route>
 
                 <Route path="login">
