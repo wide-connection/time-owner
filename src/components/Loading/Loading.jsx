@@ -12,8 +12,6 @@ const override = `
   top: 31%;
 `;
 
-
-
 const Loading = () => {
   
     return (
