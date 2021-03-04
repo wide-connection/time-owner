@@ -14,30 +14,34 @@ const initialFValues = {
 
 export default function TableForm() {
 
-    const validate = () => {
-        let temp = {}
-        temp.task = values.task ? "" : "This field is required"
+    const validate = (fieldValues = values) => {
+        let temp = {...errors}
+        if('task' in fieldValues)
+        temp.task = values.task ? "" : "This field is required"      
+        if('category' in fieldValues)  
+        temp.category = values.category.length !== 0 ? "" : "This field is required."
         setErrors({
             ...temp
         })
 
-        return Object.values(temp).every(x => x === "")
+        if(fieldValues === values)
+            return Object.values(temp).every(x => x === "")
     }
-
 
 
     const handleSubmit = e => {
         e.preventDefault();
         if (validate())
-            window.alert("testing...")
+            window.alert("Form successfully submitted")
     }
 
     const {
         values,
         errors,
         setErrors,
-        handleInputChange
-    } = useForm(initialFValues);
+        handleInputChange,
+        resetForm
+    } = useForm(initialFValues, true, validate);
 
 
     return (
@@ -72,6 +76,7 @@ export default function TableForm() {
                         values={values.category}
                         onChange={handleInputChange}
                         options={calendarCategory.getCategoryCollection()}
+                        error={errors.category}
                     />
 
                     <br /><br />
@@ -82,7 +87,8 @@ export default function TableForm() {
                             text="Add" />
                         <Controls.Button
                             text="Reset"
-                            color="default" />
+                            color="default"
+                            onClick={resetForm} />
                     </div>
 
                 </Grid>
