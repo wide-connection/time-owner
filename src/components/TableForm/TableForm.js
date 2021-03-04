@@ -3,6 +3,7 @@ import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
 import * as calendarCategory from '../../categories/calendarCategory'
+
 const initialFValues = {
     id: 0,
     task: '',
@@ -10,17 +11,6 @@ const initialFValues = {
     category: '',
     markComplete: '0%'
 }
-
-const categories = [
-    'Work',
-    'Health',
-    'Hobby',
-    'Family',
-    'Routine',
-    'Friends',
-    'Education',
-    'Entertainment'
-];
 
 export default function TableForm() {
 

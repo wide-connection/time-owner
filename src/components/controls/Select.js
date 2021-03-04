@@ -14,11 +14,12 @@ export default function Select(props) {
                 name={name}
                 value={value}
                 onChange={onChange}>
-                {options.map((category) => (
-                    <MenuItem key={category} value={category}>
-                        {category}
-                    </MenuItem>
-                ))}
+                <MenuItem value="">None</MenuItem>
+                {
+                    options.map(
+                        item =>(<MenuItem key={item.id} value={item.id}>{item.category}</MenuItem>)
+                    )
+                }
             </MuiSelect>
         </FormControl>
     )
