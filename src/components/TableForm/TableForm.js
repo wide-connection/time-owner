@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
-import * as calendarCategory from '../../categories/calendarCategory'
+import * as calendarTask from '../../categories/calendarTask'
 
 const initialFValues = {
     id: 0,
@@ -32,7 +32,7 @@ export default function TableForm() {
     const handleSubmit = e => {
         e.preventDefault();
         if (validate())
-            window.alert("Form successfully submitted")
+            calendarTask.insertNewTask(values)
     }
 
     const {
@@ -75,7 +75,7 @@ export default function TableForm() {
                         label="Category"
                         values={values.category}
                         onChange={handleInputChange}
-                        options={calendarCategory.getCategoryCollection()}
+                        options={calendarTask.getCategoryCollection()}
                         error={errors.category}
                     />
 
