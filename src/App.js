@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './App.css';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -11,33 +12,48 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 400);
   })
   return (
+    <Router>
+        <div className="App">              
+          {
+            isLoading ?
+              <Loading />
+              :
+              <div>
+                <Header />
+                <Switch>
+                <Route path="/">
+                <Calender />
+                <div className='buttons-container'>
+                  <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
+                  <Categories className="Family-btn" color='yellow' content='Family' />
+                  <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
+                  <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
+                  <Categories className="Routine-btn" color='lightGray' content='Routine' />
+                  <Categories className="Friends-btn" color='pink' content='Friends' />
+                  <Categories className="Health-btn" color='gold' content='Health' />
+                  <Categories className="Hobby-btn" color='plum' content='Hobby' />
+                </div>
+                <div>s</div>
+                </Route>
+                <Route path="login">
 
-    <div className="App">
-      {
-        isLoading ?
-          <Loading />
-          :
-          <div>
-            <Header />
-            <Calender />
-            <div className='buttons-container'>
-              <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
-              <Categories className="Family-btn" color='yellow' content='Family' />
-              <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
-              <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
-              <Categories className="Routine-btn" color='lightGray' content='Routine' />
-              <Categories className="Friends-btn" color='pink' content='Friends' />
-              <Categories className="Health-btn" color='gold' content='Health' />
-              <Categories className="Hobby-btn" color='plum' content='Hobby' />
-            </div>
-            <Footer />
-          </div>
-      }
+                </Route>
+                <Route path="about">
 
-    </div>
+                </Route>
+
+                <Route path="contact">
+
+                </Route>
+                </Switch>
+                <Footer />
+              </div>
+          }
+        </div>
+    </Router>
 
 
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import RingLoader from "react-spinners/RingLoader";
+import ClockLoader from "react-spinners/ClockLoader";
 import logo from '../Images/Chocolander.png'
 
 const override = `
@@ -22,11 +22,11 @@ const Loading = () => {
             style={{
                     width: "400px",
                     position: "absolute",
-                    top: "35%",
+                    top: "33.5%",
                     left: "34%"
                   }}/>
-            <RingLoader
-            color={"#4A90E2"} 
+            <ClockLoader
+            color={"#3650D7"} 
             css={override}      
             size={125} 
             /> 

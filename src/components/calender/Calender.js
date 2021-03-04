@@ -3,7 +3,7 @@ import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@
 const Calender = () => {
 
     return (
-        <ScheduleComponent currentView="Month">
+        <ScheduleComponent currentView="Day">
             <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
         </ScheduleComponent>
     )

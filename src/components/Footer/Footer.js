@@ -14,13 +14,10 @@ class Footer extends Component {
                 <div className="footer-container">
                     <div className="left-col">
                     <img src={logo} alt="logo" className="logo"/>                    
-                        <div className="social-media">
-                            <a href="/#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="/#"><i class="fab fa-twitter"></i></a>
-                            <a href="/#"><i class="fab fa-instagram"></i></a>  
-                            <a href="/#"><i class="fab fa-github"></i></a>
+                        <div className="social-media">                           
+                            <a href="https://github.com/wide-connection/time-owner"><i class="fab fa-github"></i></a>
                         </div>
-                        <p className="rights-text">&copy; 2020 Created by Team Wide Connection All rights reserved.</p>
+                        <p className="rights-text">&copy; 2021 Created by Team Wide Connection All rights reserved.</p>
                     </div>
                     <div className="right-col">
                         <h1>Our updates</h1>
