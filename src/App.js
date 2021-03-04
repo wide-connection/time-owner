@@ -4,8 +4,9 @@ import './App.css';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
-import Calender from './components/calender/Calender';
-import Categories from './components/Categories/Categories';
+import Calender from './components/calender/Calender'
+import Categories from './components/Categories/Categories'
+import TableForms from './components/TableForm/TableForms'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,11 +37,16 @@ function App() {
                   <Categories className="Health-btn" color='gold' content='Health' />
                   <Categories className="Hobby-btn" color='plum' content='Hobby' />
                 </div>
-                <div>s</div>
+
+                <br/>
+
+                <TableForms/>
                 </Route>
+
                 <Route path="login">
 
                 </Route>
+                
                 <Route path="about">
 
                 </Route>

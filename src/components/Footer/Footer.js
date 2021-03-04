@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
         <div className="App">
             <div className="page-content">
-                Welcome Page
+              
             </div>
 
             <footer>
