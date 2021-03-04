@@ -42,11 +42,10 @@ function App() {
 
                 <TableForms/>
                 </Route>
-
+                
                 <Route path="login">
 
                 </Route>
-                
                 <Route path="about">
 
                 </Route>
