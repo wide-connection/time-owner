@@ -1,0 +1,33 @@
+/* .App .buttons {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    
+} */
+
+.left-half .buttons-container {
+    float: left;
+    position: absolute;
+    bottom: 5px;
+    width: 50%;
+    height: 60px;
+    
+}
+
+.buttons-container {
+    text-align: center;
+    justify-content: center;
+
+}
+
+.calender-container {
+    float: right;
+    width: 50%;
+}
+
+.left-half .table-container {
+    float: left;
+    width: 50%;
+}
