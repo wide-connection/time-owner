@@ -1,0 +1,22 @@
+/* .App .buttons {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    
+} */
+
+.App .buttons-container {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    height: 60px;
+    
+}
+
+.buttons-container {
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+}
