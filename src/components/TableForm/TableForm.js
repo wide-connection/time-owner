@@ -7,7 +7,7 @@ import * as calendarTask from '../../categories/calendarTask'
 const initialFValues = {
     id: 0,
     task: '',
-    length: 0,
+    length: '',
     category: '',
     markComplete: '0%'
 }
@@ -55,18 +55,16 @@ export default function TableForm() {
                         onChange={handleInputChange}
                         error={errors.task}
                     />
-                    <form noValidate>
                         <TextField
                             variant="outlined"
                             id="datetime-local"
                             label="Due date (time)"
-                            type="datetime-local"
+                            type="datetime-local"                            
                             defaultValue="2021-02-24T10:30"
                             InputLabelProps={{
                                 shrink: true,
                             }}
                         />
-                    </form>
 
                 </Grid>
                 <Grid item xs={6}>
