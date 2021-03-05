@@ -7,6 +7,7 @@ import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
 import Categories from './components/Categories/Categories'
 import TableForms from './components/TableForm/TableForms'
+import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,10 +33,13 @@ function App() {
 
                   <br />
                   <div className="left-half">
+                    <div className="WeeklyGoals-container">
+                      <WeeklyGoalsList />
+                    </div>
                     <div className="table-container">
                       <TableForms />
                     </div>
-                    <div className='buttons-container'>
+                    {/* <div className='buttons-container'>
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
                       <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
@@ -44,7 +48,7 @@ function App() {
                       <Categories className="Friends-btn" color='pink' content='Friends' />
                       <Categories className="Health-btn" color='gold' content='Health' />
                       <Categories className="Hobby-btn" color='plum' content='Hobby' />
-                    </div>
+                    </div> */}
                   </div>
                 </Route>
 

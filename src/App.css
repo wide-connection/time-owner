@@ -1,11 +1,25 @@
-/* .App .buttons {
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
+.left-half {
+    width: 50%;
+}
+
+.WeeklyGoals-container {
+    margin: 10%;
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
     text-align: center;
-    margin: 5px;
-    
-} */
+    justify-content: center;
+}
+
+.left-half .table-container {
+    float: left;
+    width: 100%;
+}
+
+.calender-container {
+    float: right;
+    width: 50%;
+}
 
 .left-half .buttons-container {
     float: left;
@@ -22,12 +36,6 @@
 
 }
 
-.calender-container {
-    float: right;
-    width: 50%;
-}
 
-.left-half .table-container {
-    float: left;
-    width: 50%;
-}
+
+

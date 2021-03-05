@@ -19,6 +19,7 @@ footer {
     width: 250px;
     position: relative; 
     left: -10px; 
+    background: none;
 }
 
 .footer-container {
