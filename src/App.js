@@ -7,6 +7,7 @@ import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
 import Categories from './components/Categories/Categories'
 import TableForms from './components/TableForm/TableForms'
+import Timer from './components/Timer/Timer'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,8 +35,9 @@ function App() {
                   <div className="left-half">
                     <div className="table-container">
                       <TableForms />
-                    </div>
                     <div className='buttons-container'>
+                    </div>
+                    <Timer/> 
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
                       <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
