@@ -8,10 +8,10 @@ h1 {
     color: yellow;
 }
 p {
-    color: white; 
+    color: black; 
 }
 footer {
-    background: #263343;
+    background: #add8e6;
     padding: 90px 0; 
 }
 
@@ -19,6 +19,7 @@ footer {
     width: 250px;
     position: relative; 
     left: -10px; 
+    background: none;
 }
 
 .footer-container {
@@ -40,7 +41,7 @@ footer {
 }
 
 .social-media a {
-    color: #fff;
+    color: black;
     margin-right: 25px; 
     font-size: 22px;
     text-decoration: none; 
