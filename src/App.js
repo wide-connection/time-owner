@@ -5,8 +5,9 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
-import Categories from './components/Categories/Categories'
 import TableForms from './components/TableForm/TableForms'
+import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
+import Timer from './components/Timer/Timer'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,16 +27,30 @@ function App() {
               <Header />
               <Switch>
                 <Route path="/">
-                  <div className="calender-container">
-                    <Calender />
+                  <div className="right-half">       
+                    <div className="calender-container">
+                      <Calender />
+                    </div>
+
+                      <Timer/>
+
                   </div>
 
                   <br />
                   <div className="left-half">
+                    <div className="WeeklyGoals-container">
+                      <WeeklyGoalsList />
+                    </div>
+                    <div className="timer-container">
+
+                    </div>
                     <div className="table-container">
                       <TableForms />
                     </div>
+                    {/* <div className='buttons-container'>
                     <div className='buttons-container'>
+                    </div>
+                    <Timer/> 
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
                       <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
@@ -44,7 +59,8 @@ function App() {
                       <Categories className="Friends-btn" color='pink' content='Friends' />
                       <Categories className="Health-btn" color='gold' content='Health' />
                       <Categories className="Hobby-btn" color='plum' content='Hobby' />
-                    </div>
+                    </div> */}
+                   
                   </div>
                 </Route>
 

@@ -57,7 +57,7 @@ export default function TableForm() {
                     />
                         <TextField
                             variant="outlined"
-                            id="datetime-local"
+                            name="length"
                             label="Due date (time)"
                             type="datetime-local"                            
                             defaultValue="2021-02-24T10:30"
@@ -74,7 +74,7 @@ export default function TableForm() {
                         values={values.category}
                         onChange={handleInputChange}
                         options={calendarTask.getCategoryCollection()}
-                        error={errors.category}
+                        error={errors.category}                        
                     />
 
                     <br /><br />

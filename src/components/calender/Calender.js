@@ -1,11 +1,15 @@
 import React from 'react';
+import './Calender.css';
 import { Inject, ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-react-schedule';
+
 const Calender = () => {
 
     return (
-        <ScheduleComponent currentView="Day">
-            <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
-        </ScheduleComponent>
+        <div className="calender">
+            <ScheduleComponent currentView="Day">
+                <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
+            </ScheduleComponent>
+        </div>
     )
 }
 
