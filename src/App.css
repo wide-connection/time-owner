@@ -3,10 +3,11 @@
 }
 
 .WeeklyGoals-container {
-    margin: 10%;
+    margin-left: 10%;
     width: 80%;
     border: 1px solid lightgray;
     border-radius: 4px;
+    box-shadow: 5px 5px 10px lightgray;
     text-align: center;
     justify-content: center;
 }
@@ -16,9 +17,17 @@
     width: 100%;
 }
 
-.calender-container {
+.right-half {
     float: right;
     width: 50%;
+    height: 50%;
+}
+
+.calender-container {
+    float: right;
+    width: 95%;
+    margin-top: 3%;
+    border: 2px solid lightgray;
 }
 
 .left-half .buttons-container {
