@@ -49,7 +49,7 @@ export default function useTable(records, headCells) {
     }
 
     const handleChangeRowsPerPage = event => {
-        setRowsPerPage(parseInt(event.target.value, 10))
+        setRowsPerPage(parseInt(event.target.value,10))
         setPage(0)
     }
 
@@ -60,7 +60,7 @@ export default function useTable(records, headCells) {
         rowsPerPage={rowsPerPage}
         count={records.length}
         onChangePage={handleChangePage}
-        onChangeRowsPerChange = {handleChangeRowsPerPage}
+        onChangeRowsPerPage={handleChangeRowsPerPage}
     />)
 
     const recordsAfterPagingAndSorting = () => {

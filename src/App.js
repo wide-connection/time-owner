@@ -5,7 +5,6 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
-import Categories from './components/Categories/Categories'
 import TableForms from './components/TableForm/TableForms'
 import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 
