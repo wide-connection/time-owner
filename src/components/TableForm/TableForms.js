@@ -11,22 +11,33 @@ const useStyles = makeStyles(theme =>({
     }
 }))
 
+const headCells = [
+    {id: 'task' , label:'Task Name'},
+    {id: 'time' , label:'Allocated Time'},
+    {id: 'category' , label:'Category'},
+    {id: 'complete', label:"Mark Complete"}
+]
+
 export default function TableForms() {
 
     const classes = useStyles();
     const [records, setRecords] = useState(calendarTask.getAllTasks()); 
 
     const {
-        TblContainer
-    }=useTable();
+        TblContainer,
+        TblHead,
+        TblPagination,
+        recordsAfterPagingAndSorting
+    }=useTable(records, headCells);
 
     return (
         <Paper className={classes.pageContent}>
             <TableForm/>
             <TblContainer>
+                <TblHead/>
                 <TableBody>
                     {
-                        records.map(item =>
+                        recordsAfterPagingAndSorting().map(item =>
                             (<TableRow key={item.id}>
                                 <TableCell>{item.task}</TableCell>
                                 <TableCell>{item.length}</TableCell>
@@ -36,6 +47,7 @@ export default function TableForms() {
                     }
                 </TableBody>
             </TblContainer>
+            <TblPagination/>
         </Paper>
         
     )
