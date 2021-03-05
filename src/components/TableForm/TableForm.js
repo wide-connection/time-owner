@@ -7,7 +7,7 @@ import * as calendarTask from '../../categories/calendarTask'
 const initialFValues = {
     id: 0,
     task: '',
-    length: '',
+    length: new Date(),
     category: '',
     markComplete: '0%'
 }
@@ -16,10 +16,13 @@ export default function TableForm() {
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
+
         if('task' in fieldValues)
         temp.task = values.task ? "" : "This field is required"      
+
         if('category' in fieldValues)  
-        temp.category = values.category.length !== 0 ? "" : "This field is required."
+        temp.category = values.category.length !== 0 ? "" : "This field is required." 
+        
         setErrors({
             ...temp
         })
@@ -57,9 +60,8 @@ export default function TableForm() {
                     />
                         <TextField
                             variant="outlined"
-                            id="datetime-local"
                             label="Due date (time)"
-                            type="datetime-local"                            
+                            type="datetime-local"                        
                             defaultValue="2021-02-24T10:30"
                             InputLabelProps={{
                                 shrink: true,

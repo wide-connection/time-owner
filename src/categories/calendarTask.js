@@ -17,7 +17,7 @@ export const getCategoryCollection = ()=> ([
 export function insertNewTask(data) {
     let tasks=getAllTasks();
     data['id'] = generateTaskId();
-    tasks.push(data)
+    tasks.push([data]);
     localStorage.setItem(KEYS.tasks, JSON.stringify(tasks))
 }
 
