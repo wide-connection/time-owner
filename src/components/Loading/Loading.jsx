@@ -1,6 +1,6 @@
 import React from 'react'
 import ClockLoader from "react-spinners/ClockLoader";
-import logo from '../Images/Chocolander.png'
+import logo from '../Footer/Images/Logo_transparent.png'
 
 const override = `
   text-align: center;
@@ -18,9 +18,9 @@ const Loading = () => {
         <div>
             <img src={logo} alt="logo" 
             style={{
-                    width: "400px",
+                    width: "350px",
                     position: "absolute",
-                    top: "33.5%",
+                    top: "29.5%",
                     left: "34%"
                   }}/>
             <ClockLoader
