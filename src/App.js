@@ -6,11 +6,8 @@ import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
 import TableForms from './components/TableForm/TableForms'
-<<<<<<< HEAD
 import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
-=======
 import Timer from './components/Timer/Timer'
->>>>>>> 4fd608a418ac0b99c9911399035ee6feaa455f6e
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,10 +27,13 @@ function App() {
               <Header />
               <Switch>
                 <Route path="/">
-                  <div className="right-half">
+                  <div className="right-half">       
                     <div className="calender-container">
                       <Calender />
                     </div>
+
+                      <Timer/>
+
                   </div>
 
                   <br />
@@ -41,16 +41,16 @@ function App() {
                     <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
                     </div>
+                    <div className="timer-container">
+
+                    </div>
                     <div className="table-container">
                       <TableForms />
-<<<<<<< HEAD
                     </div>
                     {/* <div className='buttons-container'>
-=======
                     <div className='buttons-container'>
                     </div>
                     <Timer/> 
->>>>>>> 4fd608a418ac0b99c9911399035ee6feaa455f6e
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
                       <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
@@ -60,6 +60,7 @@ function App() {
                       <Categories className="Health-btn" color='gold' content='Health' />
                       <Categories className="Hobby-btn" color='plum' content='Hobby' />
                     </div> */}
+                   
                   </div>
                 </Route>
 

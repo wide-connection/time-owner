@@ -24,10 +24,13 @@
 }
 
 .calender-container {
-    float: right;
-    width: 95%;
-    margin-top: 3%;
+    float: right;    
+    margin: 20px 30px;
     border: 2px solid lightgray;
+}
+
+.timer-container {
+    
 }
 
 .left-half .buttons-container {
