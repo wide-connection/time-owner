@@ -1,6 +1,6 @@
 const KEYS = {
-    tasks: 'tasks',
-    taskId: 'taskId'
+    taskId: 'taskId',
+    tasks: 'tasks'
 }
 
 export const getCategoryCollection = ()=> ([
@@ -15,22 +15,27 @@ export const getCategoryCollection = ()=> ([
 ])
 
 export function insertNewTask(data) {
-    let tasks = getAllTasks();
+    let tasks = getAllTasks();    
     data['id'] = generateTaskId();
+
     tasks.push(data); 
-    localStorage.setItem(KEYS.tasks, JSON.stringify(data))
+
+    localStorage.setItem(KEYS.tasks, JSON.stringify(tasks))
 }
 
 export function generateTaskId() {
     if (localStorage.getItem(KEYS.taskId) == null)
         localStorage.setItem(KEYS.taskId, '0')
+
     var id = parseInt(localStorage.getItem(KEYS.taskId))
+
     localStorage.setItem(KEYS.taskId, (++id).toString())
     return id;
 }
 
 export function getAllTasks() {
     if (localStorage.getItem(KEYS.tasks) == null)
-        localStorage.setItem(KEYS.tasks, JSON.stringify([]))
+        localStorage.setItem(KEYS.tasks, JSON.stringify([]));
+
     return JSON.parse(localStorage.getItem(KEYS.tasks));
 }

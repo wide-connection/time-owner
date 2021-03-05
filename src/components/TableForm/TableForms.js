@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme =>({
 export default function TableForms() {
 
     const classes = useStyles();
-    const [records, setRecords]=useState(calendarTask.getAllTasks()); 
+    const [records, setRecords] = useState(calendarTask.getAllTasks()); 
 
     const {
         TblContainer
@@ -22,7 +22,7 @@ export default function TableForms() {
 
     return (
         <Paper className={classes.pageContent}>
-            {/* <TableForm/> */}
+            <TableForm/>
             <TblContainer>
                 <TableBody>
                     {
