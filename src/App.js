@@ -1,43 +1,69 @@
-import React from 'react'; 
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
-import { HealthBtn } from './components/classesLogginButtons/itemButtons/HealthBtn';
-import { WorkBtn } from './components/classesLogginButtons/itemButtons/WorkBtn';
-import { HobbyBtn } from './components/classesLogginButtons/itemButtons/HobbyBtn'
-import { FamilyBtn } from './components/classesLogginButtons/itemButtons/FamilyBtn'
-import { RoutineBtn } from './components/classesLogginButtons/itemButtons/RoutineBtn'
-import { FriendBtn } from './components/classesLogginButtons/itemButtons/FriendBtn'
-import { EducationBtn } from './components/classesLogginButtons/itemButtons/EducationBtn'
-import { EntertainmentBtn } from './components/classesLogginButtons/itemButtons/EntertainmentBtn'
 import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer';
-import DayTable from './components/Tables/DayTable'
+import Footer from './components/Footer/Footer'
+import Loading from './components/Loading/Loading'
+import Calender from './components/calender/Calender'
+import Categories from './components/Categories/Categories'
+import TableForms from './components/TableForm/TableForms'
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 20);
+  })
   return (
+    <Router>
+      <div className="App">
+        {
+          isLoading ?
+            <Loading />
+            :
+            <div>
+              <Header />
+              <Switch>
+                <Route path="/">
+                  <div className="calender-container">
+                    <Calender />
+                  </div>
 
-    <div className="page-container">
-    <div className="content-wrap">
-    <Header/>
+                  <br />
+                  <div className="left-half">
+                    <div className="table-container">
+                      <TableForms />
+                    </div>
+                    <div className='buttons-container'>
+                      <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
+                      <Categories className="Family-btn" color='yellow' content='Family' />
+                      <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
+                      <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
+                      <Categories className="Routine-btn" color='lightGray' content='Routine' />
+                      <Categories className="Friends-btn" color='pink' content='Friends' />
+                      <Categories className="Health-btn" color='gold' content='Health' />
+                      <Categories className="Hobby-btn" color='plum' content='Hobby' />
+                    </div>
+                  </div>
+                </Route>
 
-    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', padding: 15}}>
-    <WorkBtn>Work</WorkBtn>
-    <HealthBtn>Health</HealthBtn>
-    <HobbyBtn>Hobby</HobbyBtn>
-    <FamilyBtn>Family</FamilyBtn>
-    <RoutineBtn>Routine</RoutineBtn>
-    <FriendBtn>Friends</FriendBtn>
-    <EducationBtn>Education</EducationBtn>
-    <EntertainmentBtn>Entertainment</EntertainmentBtn>
-    </div>
-    
-    <DayTable>
+                <Route path="login">
 
-    </DayTable>
-  
-    </div>
-    <Footer/>
-    </div>
+                </Route>
+                <Route path="about">
+
+                </Route>
+
+                <Route path="contact">
+
+                </Route>
+              </Switch>
+              <Footer />
+            </div>
+        }
+      </div>
+    </Router>
 
 
   );
