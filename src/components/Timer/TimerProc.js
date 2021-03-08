@@ -93,9 +93,9 @@ export class Timer extends React.Component {
   render() {
     return (<div>
 
-      <div className="container-button-timer ">
-        <button className='btn-timer' onClick={!this.timerPaused ? this.startTimer :  this.pauseTimer  } >
-          Productive h: {this.state.time.h}   m: {this.state.time.m} s: {this.state.time.s}
+      <div className="timer-proc">
+        <button className='btn-timer' onClick={!this.timerPaused ? this.startTimer :  this.pauseTimer  }>
+          Procrastinating h: {this.state.time.h}   m: {this.state.time.m} s: {this.state.time.s}
         </button>
       </div>
 
