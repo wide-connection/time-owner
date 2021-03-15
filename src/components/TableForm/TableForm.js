@@ -12,7 +12,8 @@ const initialFValues = {
     markComplete: '0%'
 }
 
-export default function TableForm() {
+export default function TableForm(props) {
+    const {addOrEdit} = props
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
@@ -31,8 +32,10 @@ export default function TableForm() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (validate())
-            calendarTask.insertNewTask(values)
+        if (validate()) {
+            addOrEdit(values, resetForm);
+        }
+
     }
 
     const {

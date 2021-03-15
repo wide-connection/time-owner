@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-export default function useTable(records, headCells) {
+export default function useTable(records, headCells, filterFn) {
     const classes = useStyles(); 
 
     const pages = [5, 10, 25]
@@ -37,22 +37,25 @@ export default function useTable(records, headCells) {
     const TblHead = props => {
 
         const handleSortRequest = cellId => {
-            const isAsc = orderBy === cellId && order === "asc"
-            setOrder(isAsc ? 'desc' : 'asc')
+            const isAsc = orderBy === cellId && order === "asc";
+            setOrder(isAsc ? 'desc' : 'asc');
             setOrderBy(cellId)
         }
 
         return (<TableHead>
             <TableRow>
                 {
-                    headCells.map(headCell => (<TableCell key={headCell.id}>
+                    headCells.map(headCell => (
+                    <TableCell key={headCell.id}
+                    sortDirection={orderBy === headCell.id ? order : false}> 
+                                {headCell.disableSorting?headCell.label :                      
                             <TableSortLabel
-                            active={orderBy === headCell.id}
+                                active={orderBy === headCell.id}
                                 direction={orderBy === headCell.id ? order : 'asc'}
                                 onClick= { () =>{handleSortRequest(headCell.id)}}>
                                {headCell.label}
                             </TableSortLabel>
-                    </TableCell>))
+                    }</TableCell>))
                 }
             </TableRow>
         </TableHead>)
@@ -90,7 +93,7 @@ export default function useTable(records, headCells) {
     function getComparator(order, orderBy) {
         return order === 'desc'
             ? (a, b) => descendingComparator(a, b, orderBy)
-            : (a, b) => descendingComparator(a, b, orderBy);
+            : (a, b) => -descendingComparator(a, b, orderBy);
     }
 
     function descendingComparator(a, b, orderBy) {
@@ -104,7 +107,7 @@ export default function useTable(records, headCells) {
     }
 
     const recordsAfterPagingAndSorting = () => {
-        return stableSort(records, getComparator(order, orderBy))
+        return stableSort(filterFn.fn(records), getComparator(order, orderBy))
         .slice(page * rowsPerPage, (page + 1) * rowsPerPage)
     }
 
