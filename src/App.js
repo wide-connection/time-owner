@@ -8,6 +8,7 @@ import Calender from './components/calender/Calender'
 import TableForms from './components/TableForm/TableForms'
 import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 import Timer from './components/Timer/Timer'
+import TimerProc from './components/Timer/TimerProc'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,7 @@ function App() {
                     </div>
 
                       <Timer/>
+                      <TimerProc />
 
                   </div>
 
