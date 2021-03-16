@@ -13,7 +13,7 @@ const useStyles = makeStyles( theme =>({
         }
     },
     primary: {
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: '#e3e2f4',
         '& .MuiButton-label': {
             color: theme.palette.primary.main,
         }

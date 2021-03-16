@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
@@ -13,7 +13,7 @@ const initialFValues = {
 }
 
 export default function TableForm(props) {
-    const {addOrEdit} = props
+    const {addOrEdit, recordForEdit} = props
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
@@ -38,8 +38,16 @@ export default function TableForm(props) {
 
     }
 
+    useEffect(()=>{ 
+        if(recordForEdit != null)
+            setValues({
+                ...recordForEdit
+            })
+    }, [recordForEdit])
+
     const {
         values,
+        setValues,
         errors,
         setErrors,
         handleInputChange,

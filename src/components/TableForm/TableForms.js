@@ -7,7 +7,9 @@ import Controls from "../../components/controls/Controls"
 import { Search } from "@material-ui/icons"
 import AddIcon from '@material-ui/icons/Add'
 import Popup from '../Popup';
-
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined'
+import CloseIcon from '@material-ui/icons/Close'
+ 
 const useStyles = makeStyles(theme =>({
     pageContent: {
         margin: theme.spacing(5),
@@ -26,12 +28,14 @@ const headCells = [
     {id: 'task' , label:'Task Name'},
     {id: 'time' , label:'Allocated Time'},
     {id: 'category' , label:'Category'},
-    {id: 'complete', label:"Mark Complete", disableSorting: true}
+    {id: 'complete', label:"Mark Complete"},
+    {id: 'actions', label:'Actions', disableSorting: true}
 ]
 
 export default function TableForms() {
 
     const classes = useStyles();
+    const [recordForEdit, setRecordForEdit] = useState(null); 
     const [records, setRecords] = useState(calendarTask.getAllTasks()); 
     const [filterFn, setFilterFn] = useState({fn:items => {return items;}})
     const [openPopup, setOpenPopup] = useState(false); 
@@ -60,6 +64,11 @@ export default function TableForms() {
         resetForm()
         setOpenPopup(false)
         setRecords(calendarTask.getAllTasks())
+    }
+
+    const openInPopup = item => {
+        setRecordForEdit(item)
+        setOpenPopup(true)
     }
 
     return (
@@ -94,6 +103,17 @@ export default function TableForms() {
                                 <TableCell>{item.length}</TableCell>
                                 <TableCell>{item.category}</TableCell>
                                 <TableCell>{item.markComplete}</TableCell>
+                                <TableCell>
+                                    <Controls.ActionButton
+                                    color="primary"
+                                    onClick = {()=> {openInPopup(item)}}>
+                                        <EditOutlinedIcon fontSize="small"/>
+                                    </Controls.ActionButton>                                
+                                    <Controls.ActionButton
+                                    color="secondary">
+                                        <CloseIcon fontSize="small"/>
+                                    </Controls.ActionButton> 
+                                </TableCell>
                             </TableRow>))                            
                     }
                 </TableBody>
@@ -106,6 +126,7 @@ export default function TableForms() {
             setOpenPopup = {setOpenPopup}
         >
             <TableForm
+            recordForEdit = {recordForEdit}
             addOrEdit={addOrEdit}/>
         </Popup>
        </>
