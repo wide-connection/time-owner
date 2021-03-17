@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
@@ -12,7 +12,8 @@ const initialFValues = {
     markComplete: '0%'
 }
 
-export default function TableForm() {
+export default function TableForm(props) {
+    const {addOrEdit, recordForEdit} = props
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
@@ -31,12 +32,22 @@ export default function TableForm() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (validate())
-            calendarTask.insertNewTask(values)
+        if (validate()) {
+            addOrEdit(values, resetForm);
+        }
+
     }
+
+    useEffect(()=>{ 
+        if(recordForEdit != null)
+            setValues({
+                ...recordForEdit
+            })
+    }, [recordForEdit])
 
     const {
         values,
+        setValues,
         errors,
         setErrors,
         handleInputChange,
