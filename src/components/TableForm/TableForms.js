@@ -9,7 +9,9 @@ import AddIcon from '@material-ui/icons/Add'
 import Popup from '../Popup';
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined'
 import CloseIcon from '@material-ui/icons/Close'
- 
+import Notification from "../Notification"
+import ConfirmDialog from "../ConfirmDialog"
+
 const useStyles = makeStyles(theme =>({
     pageContent: {
         margin: theme.spacing(5),
@@ -39,6 +41,8 @@ export default function TableForms() {
     const [records, setRecords] = useState(calendarTask.getAllTasks()); 
     const [filterFn, setFilterFn] = useState({fn:items => {return items;}})
     const [openPopup, setOpenPopup] = useState(false); 
+    const [notify, setNotify] = useState({isOpen: false, message:'', type:''})
+    const [confirmDialog, setconfirmDialog] = useState({isOpen:false, title:'', subTitle:''})
 
     const {
         TblContainer,
@@ -60,15 +64,36 @@ export default function TableForms() {
     }
 
     const addOrEdit = (task, resetForm) => {
-        calendarTask.insertNewTask(task)
-        resetForm()
+        if (task.id === 0)
+            calendarTask.insertNewTask(task)
+        else 
+            calendarTask.updateTask(task)
+        resetForm()         
+        setRecordForEdit(null)
         setOpenPopup(false)
         setRecords(calendarTask.getAllTasks())
+        setNotify({
+            isOpen: true,
+            message: 'Submitted Successfully',
+            type: 'success'
+        })
     }
 
     const openInPopup = item => {
         setRecordForEdit(item)
         setOpenPopup(true)
+    }
+
+    const onDelete = id => {
+        if(window.confirm('Are you sure to delete this record?')) {
+            calendarTask.deleteTask(id); 
+            setRecords(calendarTask.getAllTasks())
+            setNotify({
+                isOpen: true,
+                message: 'Deleted Successfully',
+                type: 'error'
+            })
+        }
     }
 
     return (
@@ -90,7 +115,7 @@ export default function TableForms() {
             variant = "outlined"
             startIcon = {<AddIcon/>}
             className = {classes.newButton}
-            onClick = {() => setOpenPopup(true)}
+            onClick = {() => {setOpenPopup(true); setRecordForEdit(null);}}
             />
             </Toolbar>
             <TblContainer>
@@ -110,7 +135,15 @@ export default function TableForms() {
                                         <EditOutlinedIcon fontSize="small"/>
                                     </Controls.ActionButton>                                
                                     <Controls.ActionButton
-                                    color="secondary">
+                                        color="secondary"
+                                        onClick={() => {
+                                            setconfirmDialog({
+                                                isOpen: true,
+                                                title:'Are you sure to delete this record?',
+                                                subTitle: "You can't undo this operation"
+
+                                            })
+                                        }}>
                                         <CloseIcon fontSize="small"/>
                                     </Controls.ActionButton> 
                                 </TableCell>
@@ -129,6 +162,14 @@ export default function TableForms() {
             recordForEdit = {recordForEdit}
             addOrEdit={addOrEdit}/>
         </Popup>
+        <Notification
+        notify={notify}
+        setNotify={setNotify}
+        />
+        <ConfirmDialog
+        confirmDialog={confirmDialog}
+        setconfirmDialog={setconfirmDialog}
+        />
        </>
         
     )

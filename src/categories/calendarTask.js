@@ -23,6 +23,19 @@ export function insertNewTask(data) {
     localStorage.setItem(KEYS.tasks, JSON.stringify(tasks))
 }
 
+export function updateTask(data) {
+    let tasks = getAllTasks();
+    let recordIndex = tasks.findIndex(x => x.id === data.id);
+    tasks[recordIndex] = { ...data }
+    localStorage.setItem(KEYS.tasks, JSON.stringify(tasks));
+}
+
+export function deleteTask(id) {
+    let tasks = getAllTasks();
+    tasks = tasks.filter(x => x.id != id)
+    localStorage.setItem(KEYS.tasks, JSON.stringify(tasks)); 
+}
+
 export function generateTaskId() {
     if (localStorage.getItem(KEYS.taskId) == null)
         localStorage.setItem(KEYS.taskId, '0')

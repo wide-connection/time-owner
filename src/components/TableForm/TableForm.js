@@ -18,9 +18,9 @@ export default function TableForm(props) {
     const validate = (fieldValues = values) => {
         let temp = {...errors}
         if('task' in fieldValues)
-        temp.task = values.task ? "" : "This field is required"      
+        temp.task = fieldValues.task ? "" : "This field is required"      
         if('category' in fieldValues)  
-        temp.category = values.category.length !== 0 ? "" : "This field is required."
+        temp.category =  fieldValues.category.length !== 0 ? "" : "This field is required."
         setErrors({
             ...temp
         })
@@ -39,7 +39,7 @@ export default function TableForm(props) {
     }
 
     useEffect(()=>{ 
-        if(recordForEdit != null)
+        if(recordForEdit !== null)
             setValues({
                 ...recordForEdit
             })
