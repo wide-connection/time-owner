@@ -33,8 +33,8 @@ function App() {
                       <Calender />
                     </div>
 
-                      <Timer/>
-                      <TimerProc />
+                      {/* <Timer/>
+                      <TimerProc /> */}
 
                   </div>
 

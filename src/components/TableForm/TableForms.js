@@ -11,6 +11,8 @@ import EditOutlinedIcon from '@material-ui/icons/EditOutlined'
 import CloseIcon from '@material-ui/icons/Close'
 import Notification from "../Notification"
 import ConfirmDialog from "../ConfirmDialog"
+import TimerIcon from '@material-ui/icons/Timer';
+
 
 const useStyles = makeStyles(theme =>({
     pageContent: {
@@ -42,7 +44,7 @@ export default function TableForms() {
     const [filterFn, setFilterFn] = useState({fn:items => {return items;}})
     const [openPopup, setOpenPopup] = useState(false); 
     const [notify, setNotify] = useState({isOpen: false, message:'', type:''})
-    const [confirmDialog, setconfirmDialog] = useState({isOpen:false, title:'', subTitle:''})
+    const [confirmDialog, setConfirmDialog] = useState({isOpen:false, title:'', subTitle:''})
 
     const {
         TblContainer,
@@ -85,15 +87,17 @@ export default function TableForms() {
     }
 
     const onDelete = id => {
-        if(window.confirm('Are you sure to delete this record?')) {
-            calendarTask.deleteTask(id); 
-            setRecords(calendarTask.getAllTasks())
-            setNotify({
-                isOpen: true,
-                message: 'Deleted Successfully',
-                type: 'error'
-            })
-        }
+        setConfirmDialog({
+            ...confirmDialog,
+            isOpen: false
+        })
+        calendarTask.deleteTask(id); 
+        setRecords(calendarTask.getAllTasks())
+        setNotify({
+            isOpen: true,
+            message: 'Deleted Successfully',
+            type: 'error'
+        })        
     }
 
     return (
@@ -123,30 +127,37 @@ export default function TableForms() {
                 <TableBody>
                     {
                         recordsAfterPagingAndSorting().map(item =>
-                            (<TableRow key={item.id}>
-                                <TableCell>{item.task}</TableCell>
-                                <TableCell>{item.length}</TableCell>
-                                <TableCell>{item.category}</TableCell>
-                                <TableCell>{item.markComplete}</TableCell>
-                                <TableCell>
-                                    <Controls.ActionButton
-                                    color="primary"
-                                    onClick = {()=> {openInPopup(item)}}>
-                                        <EditOutlinedIcon fontSize="small"/>
-                                    </Controls.ActionButton>                                
-                                    <Controls.ActionButton
-                                        color="secondary"
-                                        onClick={() => {
-                                            setconfirmDialog({
-                                                isOpen: true,
-                                                title:'Are you sure to delete this record?',
-                                                subTitle: "You can't undo this operation"
+                            (<TableRow key={item.id}>                                                         
+                                        <TableCell>{item.task}</TableCell>
+                                        <TableCell>{item.length}</TableCell>
+                                        <TableCell>{item.category}</TableCell>
+                                        <TableCell>{item.markComplete}</TableCell>
+                                        <TableCell>                                    
+                                            <Controls.ActionButton
+                                            color="primary"
+                                            onClick = {()=> {openInPopup(item)}}>
+                                                <EditOutlinedIcon fontSize="small"/>
+                                            </Controls.ActionButton>                                
+                                            <Controls.ActionButton
+                                                color="secondary"
+                                                onClick={() => {
+                                                    setConfirmDialog({
+                                                        isOpen: true,
+                                                        title:'Are you sure to delete this record?',
+                                                        subTitle: "You can't undo this operation",
+                                                        onConfirm: () => {onDelete(item.id)}
 
-                                            })
-                                        }}>
-                                        <CloseIcon fontSize="small"/>
-                                    </Controls.ActionButton> 
-                                </TableCell>
+                                                    })
+                                                }}>
+                                                <CloseIcon fontSize="small"/>
+                                            </Controls.ActionButton> 
+
+                                                <Controls.ActionButton
+                                                color="tertiary"
+                                                onClick = {()=> {openInPopup(item)}}>
+                                                    <TimerIcon fontSize="small"/>                                    
+                                                </Controls.ActionButton>
+                                        </TableCell>                  
                             </TableRow>))                            
                     }
                 </TableBody>
@@ -168,7 +179,7 @@ export default function TableForms() {
         />
         <ConfirmDialog
         confirmDialog={confirmDialog}
-        setconfirmDialog={setconfirmDialog}
+        setConfirmDialog={setConfirmDialog}
         />
        </>
         

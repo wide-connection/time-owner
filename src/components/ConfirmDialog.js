@@ -2,6 +2,7 @@ import React from 'react'
 import { Dialog, DialogTitle, DialogContent, DialogActions, Typography, makeStyles, IconButton} from '@material-ui/core'
 import Controls from "./controls/Controls"
 import NotListedLocationIcon from '@material-ui/icons/NotListedLocation'
+import TableForms from './TableForm/TableForms'
 
 const useStyles = makeStyles(theme =>({
     dialog: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme =>({
         justifyContent:'center'
     },
     titleIcon: {
-        backgroundColor: theme.palette.secondary.light,
+        backgroundColor: '#ffe3e7',
         color: theme.palette.secondary.main,
         '&:hover' : {
             backgroundColor: theme.palette.secondary.light,
@@ -55,11 +56,12 @@ const classes = useStyles()
                 <Controls.Button
                 text="No"
                 color="default"
-                onClick={()=>setConfirmDialog({ ...confirmDialog, isOpen: false})}
+                onClick={()=> setConfirmDialog({...confirmDialog,isOpen: false})}
                 />
                 <Controls.Button
                 text="Yes"
-                color="secondary"/>
+                color="secondary"
+                onClick = {confirmDialog.onConfirm}/>
             </DialogActions>
         </Dialog>
     )
