@@ -3,24 +3,32 @@ import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
 import * as calendarTask from '../../categories/calendarTask'
+import { format } from 'date-fns'
+import moment from 'moment'
 
 const initialFValues = {
     id: 0,
     task: '',
-    length: '',
+    startDate: '',
+    endDate: '',
     category: '',
     markComplete: '0%'
 }
 
 export default function TableForm(props) {
-    const {addOrEdit, recordForEdit} = props
+    const {addOrEdit, recordForEdit} = props    
+    let currTime = new Date();     
+    let currTimePlus30Min = moment(currTime).add(30, 'm').toDate();
+    let currTimeWithFormat = format(currTime, "yyyy-MM-dd'T'HH:mm"); 
+    let currTimeWithFormatPlus30Min = format(currTimePlus30Min, "yyyy-MM-dd'T'HH:mm"); 
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
         if('task' in fieldValues)
-        temp.task = values.task ? "" : "This field is required"      
+        temp.task = fieldValues.task ? "" : "This field is required"      
         if('category' in fieldValues)  
-        temp.category = values.category.length !== 0 ? "" : "This field is required."
+        temp.category =  fieldValues.category.length !== 0 ? "" : "This field is required."
+        
         setErrors({
             ...temp
         })
@@ -39,7 +47,7 @@ export default function TableForm(props) {
     }
 
     useEffect(()=>{ 
-        if(recordForEdit != null)
+        if(recordForEdit !== null)
             setValues({
                 ...recordForEdit
             })
@@ -68,26 +76,35 @@ export default function TableForm(props) {
                     />
                         <TextField
                             variant="outlined"
-                            name="length"
-                            label="Due date (time)"
+                            name="startDate"
+                            label="Start date"
                             type="datetime-local"                            
-                            defaultValue="2021-02-24T10:30"
+                            defaultValue={currTimeWithFormat}
                             InputLabelProps={{
                                 shrink: true,
                             }}
                         />
-
+ 
                 </Grid>
                 <Grid item xs={6}>
                     <Controls.Select
                         name="category"
                         label="Category"
-                        values={values.category}
+                        value={values.category}
                         onChange={handleInputChange}
                         options={calendarTask.getCategoryCollection()}
                         error={errors.category}                        
                     />
-
+                        <TextField
+                            variant="outlined"
+                            name="endDate"
+                            label="End date"                    
+                            type="datetime-local"                            
+                            defaultValue={currTimeWithFormatPlus30Min}
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                        />
                     <br /><br />
 
                     <div>

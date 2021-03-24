@@ -18,6 +18,12 @@ const useStyles = makeStyles( theme =>({
             color: theme.palette.primary.main,
         }
     },
+    tertiary: {
+        backgroundColor: '#DDDDFF',
+        '& .MuiButton-label': {
+            color: theme.palette.primary.main,
+        }
+    }
 }))
 export default function ActionButton(props) {
 
