@@ -19,7 +19,7 @@ export function insertNewTask(data) {
     data['id'] = generateTaskId();
 
     tasks.push(data); 
-    
+
     localStorage.setItem(KEYS.tasks, JSON.stringify(tasks))
 }
 
