@@ -11,6 +11,7 @@ const initialFValues = {
     task: '',
     startDate: '',
     endDate: '',
+    allocatedTime: 0,
     category: '',
     markComplete: '0%'
 }
@@ -37,13 +38,22 @@ export default function TableForm(props) {
             return Object.values(temp).every(x => x === "")
     }
 
-
     const handleSubmit = e => {
         e.preventDefault();
-        if (validate()) {
+        if (validate()) {       
             addOrEdit(values, resetForm);
         }
 
+    }
+    const onStartDateChange = e => {
+        console.log(e.target.value); 
+        values.startDate = e.target.value; 
+    }
+
+    const onEndDateChange = e => {
+        console.log(e.target.value); 
+        values.endDate = e.target.value; 
+    
     }
 
     useEffect(()=>{ 
@@ -78,8 +88,9 @@ export default function TableForm(props) {
                             variant="outlined"
                             name="startDate"
                             label="Start date"
-                            type="datetime-local"                            
-                            defaultValue={currTimeWithFormat}
+                            type="datetime-local"                                          
+                            defaultValue={currTimeWithFormat}     
+                            onChange={onStartDateChange}  
                             InputLabelProps={{
                                 shrink: true,
                             }}
@@ -99,7 +110,8 @@ export default function TableForm(props) {
                             variant="outlined"
                             name="endDate"
                             label="End date"                    
-                            type="datetime-local"                            
+                            type="datetime-local"       
+                            onChange={onEndDateChange}                     
                             defaultValue={currTimeWithFormatPlus30Min}
                             InputLabelProps={{
                                 shrink: true,
@@ -116,7 +128,7 @@ export default function TableForm(props) {
                             color="default"
                             onClick={resetForm} />
                     </div>
-
+                        
                 </Grid>
             </Grid>
         </Form>

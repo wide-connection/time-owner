@@ -66,19 +66,21 @@ export default function TableForms() {
     }
 
     const addOrEdit = (task, resetForm) => {
-        if (task.id === 0)
-            calendarTask.insertNewTask(task)
-        else 
+        if (task.id === 0) {              
+            calendarTask.insertNewTask(task)            
+        }
+        else {        
             calendarTask.updateTask(task)
-        resetForm()         
-        setRecordForEdit(null)
-        setOpenPopup(false)
-        setRecords(calendarTask.getAllTasks())
-        setNotify({
-            isOpen: true,
-            message: 'Submitted Successfully',
-            type: 'success'
-        })
+            resetForm()         
+            setRecordForEdit(null)
+            setOpenPopup(false)
+            setRecords(calendarTask.getAllTasks())
+            setNotify({
+                isOpen: true,
+                message: 'Submitted Successfully',
+                type: 'success'
+            })
+        }
     }
 
     const openInPopup = item => {
@@ -129,7 +131,7 @@ export default function TableForms() {
                         recordsAfterPagingAndSorting().map(item =>
                             (<TableRow key={item.id}>                                                         
                                         <TableCell>{item.task}</TableCell>
-                                        <TableCell>{item.length}</TableCell>
+                                        <TableCell>{item.startDate}</TableCell>
                                         <TableCell>{item.category}</TableCell>
                                         <TableCell>{item.markComplete}</TableCell>
                                         <TableCell>                                    
