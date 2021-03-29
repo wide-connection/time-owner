@@ -7,6 +7,7 @@ import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
 import TableForms from './components/TableForm/TableForms'
 import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
+import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
 
@@ -49,7 +50,7 @@ function App() {
                     <div className="table-container">
                       <TableForms />
                     </div>
-                    {/* <div className='buttons-container'>
+                    <div className='buttons-container'>
                     <div className='buttons-container'>
                     </div>
                     <Timer/> 
@@ -61,7 +62,7 @@ function App() {
                       <Categories className="Friends-btn" color='pink' content='Friends' />
                       <Categories className="Health-btn" color='gold' content='Health' />
                       <Categories className="Hobby-btn" color='plum' content='Hobby' />
-                    </div> */}
+                    </div>
                    
                   </div>
                 </Route>
