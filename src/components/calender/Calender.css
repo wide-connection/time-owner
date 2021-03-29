@@ -1,5 +1,34 @@
 .calender {
-    width: 550px;
+    width: 560px;
     height: 800px;
     overflow: scroll;
 }
+
+/* .vertical {
+    border-left: 2px dotted black; 
+    height: 783px;
+    right: 30%;
+    position: absolute;
+} */
+.flex-row-container {
+    /* background: #aaa; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-container > .flex-row-item {
+    flex: 1 1 15%; /*grow | shrink | basis */
+    height: 50px;
+}
+
+.flex-row-item {
+  /* background-color: #fff4e6; */
+  border: 1px solid grey;
+}
+
+/* .square {
+    width: 60px;
+    height: 60px;
+    background-color: #1695A3; 
+} */

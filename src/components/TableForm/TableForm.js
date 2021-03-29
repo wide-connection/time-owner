@@ -5,6 +5,7 @@ import Controls from '../controls/Controls'
 import * as calendarTask from '../../categories/calendarTask'
 import { format } from 'date-fns'
 import moment from 'moment'
+import { CollectionsOutlined } from '@material-ui/icons'
 
 const initialFValues = {
     id: 0,
@@ -23,6 +24,8 @@ export default function TableForm(props) {
     let currTimeWithFormat = format(currTime, "yyyy-MM-dd'T'HH:mm"); 
     let currTimeWithFormatPlus30Min = format(currTimePlus30Min, "yyyy-MM-dd'T'HH:mm"); 
 
+
+ 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
         if('task' in fieldValues)
@@ -40,20 +43,21 @@ export default function TableForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (validate()) {       
+        if (validate()) {  
+            let startDateMin = (values.startDate).substring(14, 16);
+            let endDateMin = (values.endDate).substring(14, 16); 
+            let result = endDateMin - startDateMin; 
+            values.allocatedTime = `${Math.abs(result)}m`;
             addOrEdit(values, resetForm);
         }
 
     }
     const onStartDateChange = e => {
-        console.log(e.target.value); 
         values.startDate = e.target.value; 
     }
 
-    const onEndDateChange = e => {
-        console.log(e.target.value); 
-        values.endDate = e.target.value; 
-    
+    const onEndDateChange = e => { 
+        values.endDate = e.target.value;     
     }
 
     useEffect(()=>{ 
@@ -88,7 +92,7 @@ export default function TableForm(props) {
                             variant="outlined"
                             name="startDate"
                             label="Start date"
-                            type="datetime-local"                                          
+                            type="datetime-local"                                     
                             defaultValue={currTimeWithFormat}     
                             onChange={onStartDateChange}  
                             InputLabelProps={{
@@ -117,6 +121,7 @@ export default function TableForm(props) {
                                 shrink: true,
                             }}
                         />
+                        
                     <br /><br />
 
                     <div>
