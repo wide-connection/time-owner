@@ -3,9 +3,9 @@ import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
 import * as calendarTask from '../../categories/calendarTask'
-import { format } from 'date-fns'
+// import { format } from 'date-fns'
 import moment from 'moment'
-import { CollectionsOutlined } from '@material-ui/icons'
+// import { CollectionsOutlined } from '@material-ui/icons'
 
 const initialFValues = {
     id: 0,
@@ -19,13 +19,12 @@ const initialFValues = {
 
 export default function TableForm(props) {
     const {addOrEdit, recordForEdit} = props    
-    let currTime = new Date();     
-    let currTimePlus30Min = moment(currTime).add(30, 'm').toDate();
-    let currTimeWithFormat = format(currTime, "yyyy-MM-dd'T'HH:mm"); 
-    let currTimeWithFormatPlus30Min = format(currTimePlus30Min, "yyyy-MM-dd'T'HH:mm"); 
+    // let currTime = new Date();     
+    // let currTimePlus30Min = moment(currTime).add(30, 'm').toDate();
+    // let currTimeWithFormat = format(currTime, "yyyy-MM-dd'T'HH:mm"); 
+    // let currTimeWithFormatPlus30Min = format(currTimePlus30Min, "yyyy-MM-dd'T'HH:mm"); 
 
 
- 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
         if('task' in fieldValues)
@@ -88,7 +87,7 @@ export default function TableForm(props) {
                         onChange={handleInputChange}
                         error={errors.task}
                     />
-                        <TextField
+                        {/* <TextField
                             variant="outlined"
                             name="startDate"
                             label="Start date"
@@ -98,7 +97,7 @@ export default function TableForm(props) {
                             InputLabelProps={{
                                 shrink: true,
                             }}
-                        />
+                        /> */}
  
                 </Grid>
                 <Grid item xs={6}>
@@ -110,7 +109,7 @@ export default function TableForm(props) {
                         options={calendarTask.getCategoryCollection()}
                         error={errors.category}                        
                     />
-                        <TextField
+                        {/* <TextField
                             variant="outlined"
                             name="endDate"
                             label="End date"                    
@@ -121,7 +120,7 @@ export default function TableForm(props) {
                                 shrink: true,
                             }}
                         />
-                        
+                         */}
                     <br /><br />
 
                     <div>

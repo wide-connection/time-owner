@@ -53,7 +53,7 @@ function App() {
                     <div className='buttons-container'>
                     <div className='buttons-container'>
                     </div>
-                    <Timer/> 
+
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
                       <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />

@@ -12,8 +12,8 @@ import CloseIcon from '@material-ui/icons/Close'
 import Notification from "../Notification"
 import ConfirmDialog from "../ConfirmDialog"
 import TimerIcon from '@material-ui/icons/Timer';
-
-
+import EventIcon from '@material-ui/icons/Event';
+import { changeTileColor, time} from '../../components/calender/Calender'
 const useStyles = makeStyles(theme =>({
     pageContent: {
         margin: theme.spacing(5),
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme =>({
 
 const headCells = [
     {id: 'task' , label:'Task Name'},
-    {id: 'time' , label:'Allocated Time'},
+    {id: 'time' , label:'Total Allocated Time'},
     {id: 'category' , label:'Category'},
     {id: 'complete', label:"Mark Complete"},
     {id: 'actions', label:'Actions', disableSorting: true}
@@ -86,6 +86,14 @@ export default function TableForms() {
     const openInPopup = item => {
         setRecordForEdit(item)
         setOpenPopup(true)
+    }
+    
+    const addToCalendar = item => {
+        changeTileColor(item.task, item.category); 
+        item.allocatedTime = `${time}m`;
+        calendarTask.updateTask(item);
+        setRecords(calendarTask.getAllTasks());
+
     }
 
     const onDelete = id => {
@@ -153,11 +161,19 @@ export default function TableForms() {
                                                 }}>
                                                 <CloseIcon fontSize="small"/>
                                             </Controls.ActionButton> 
-
+                                            
+                                                    <br/> 
+                                                    
                                                 <Controls.ActionButton
                                                 color="tertiary"
                                                 onClick = {()=> {openInPopup(item)}}>
                                                     <TimerIcon fontSize="small"/>                                    
+                                                </Controls.ActionButton>
+
+                                                <Controls.ActionButton
+                                                color="tertiary"
+                                                onClick = {()=> {addToCalendar(item)}}>
+                                                    <EventIcon fontSize="small"/>                                    
                                                 </Controls.ActionButton>
                                         </TableCell>                  
                             </TableRow>))                            
