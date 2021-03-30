@@ -26,21 +26,27 @@ export function changeTileColor(task, category) {
         let temp = eventContainer[i].target.style.backgroundColor;
         if(category === "Work" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#00bfff';
+            eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Family" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#ffff00';
+            eventContainer[i].target.innerHTML = task;
         }
         else if(category === "Education" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#00fa9a';        
+            eventContainer[i].target.innerHTML = task;
         } 
         else if (category === "Entertainment" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#f08080';
+            eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Routine" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#d3d3d3';
+            eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Friends" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#ffc0cb';
+            eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Health" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#ffd700';
@@ -48,6 +54,12 @@ export function changeTileColor(task, category) {
         }
         else if (category === "Hobby" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
+            eventContainer[i].target.innerHTML = task;
+            // css to assign middle 
+            // mark complete user non-automatic change 
+            // time sound 
+            // when the user clicks specific category, it will display some proper imojis     
+            // the format of time hh:mm 
         }
         time = (eventContainer.length * 10); 
     }
