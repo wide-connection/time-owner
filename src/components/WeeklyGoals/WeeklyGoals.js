@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import WeeklyGoalsForm from './WeeklyGoalsForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
-import './WeeklyGoals.css';
+import './WeeklyGoals.scss';
 
 const WeeklyGoals = ({ goals, completeGoal, removeGoal, updateGoal }) => {
   const [edit, setEdit] = useState({
