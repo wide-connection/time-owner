@@ -13,10 +13,30 @@ export function handleClick(e) {
         eventContainer.push(e);
     } else {
         e.target.style.backgroundColor = 'white';
+        e.target.innerHTML = "";
         eventContainer.pop(e);
     }     
     
     
+}
+
+export function handleCategoryHighlight(e) {
+    let temp = e.target.style.backgroundColor; 
+    console.log(e.target.style.backgroundColor);
+    for (let i = 0; i < eventContainer.length; i++) {
+        if (temp === 'deepskyblue') {
+            eventContainer[i].target.style.backgroundColor = '#00bfff';
+        }
+        else if (temp === 'pink') {
+            eventContainer[i].target.style.backgroundColor = '#ffc0cb';
+        } 
+        else if (temp === 'mediumspringgreen') {
+            eventContainer[i].target.style.backgroundColor = '#00fa9a';  
+        }
+        else if (temp === 'lightcoral') {
+            eventContainer[i].target.style.backgroundColor = '#f08080';
+        }
+    }
 }
 
 export function changeTileColor(task, category) {
@@ -41,6 +61,9 @@ export function changeTileColor(task, category) {
             eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Routine" && temp === "rgb(205, 205, 205)") {
+            if (eventContainer[i].target.style.backgroundColor = 'white') {
+
+            }
             eventContainer[i].target.style.backgroundColor = '#d3d3d3';
             eventContainer[i].target.innerHTML = task;
         }
@@ -55,6 +78,7 @@ export function changeTileColor(task, category) {
         else if (category === "Hobby" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
             eventContainer[i].target.innerHTML = task;
+            eventContainer[i].target = 'center';
             // css to assign middle 
             // mark complete user non-automatic change 
             // time sound 

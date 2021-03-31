@@ -51,13 +51,13 @@ export default function TableForm(props) {
         }
 
     }
-    const onStartDateChange = e => {
-        values.startDate = e.target.value; 
-    }
+    // const onStartDateChange = e => {
+    //     values.startDate = e.target.value; 
+    // }
 
-    const onEndDateChange = e => { 
-        values.endDate = e.target.value;     
-    }
+    // const onEndDateChange = e => { 
+    //     values.endDate = e.target.value;     
+    // }
 
     useEffect(()=>{ 
         if(recordForEdit !== null)
