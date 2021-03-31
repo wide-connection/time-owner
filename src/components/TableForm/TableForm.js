@@ -3,24 +3,27 @@ import { Grid, TextField } from '@material-ui/core'
 import { useForm, Form } from '../useForm'
 import Controls from '../controls/Controls'
 import * as calendarTask from '../../categories/calendarTask'
-import { format } from 'date-fns'
+// import { format } from 'date-fns'
 import moment from 'moment'
+// import { CollectionsOutlined } from '@material-ui/icons'
 
 const initialFValues = {
     id: 0,
     task: '',
     startDate: '',
     endDate: '',
+    allocatedTime: 0,
     category: '',
     markComplete: '0%'
 }
 
 export default function TableForm(props) {
     const {addOrEdit, recordForEdit} = props    
-    let currTime = new Date();     
-    let currTimePlus30Min = moment(currTime).add(30, 'm').toDate();
-    let currTimeWithFormat = format(currTime, "yyyy-MM-dd'T'HH:mm"); 
-    let currTimeWithFormatPlus30Min = format(currTimePlus30Min, "yyyy-MM-dd'T'HH:mm"); 
+    // let currTime = new Date();     
+    // let currTimePlus30Min = moment(currTime).add(30, 'm').toDate();
+    // let currTimeWithFormat = format(currTime, "yyyy-MM-dd'T'HH:mm"); 
+    // let currTimeWithFormatPlus30Min = format(currTimePlus30Min, "yyyy-MM-dd'T'HH:mm"); 
+
 
     const validate = (fieldValues = values) => {
         let temp = {...errors}
@@ -37,14 +40,24 @@ export default function TableForm(props) {
             return Object.values(temp).every(x => x === "")
     }
 
-
     const handleSubmit = e => {
         e.preventDefault();
-        if (validate()) {
+        if (validate()) {  
+            let startDateMin = (values.startDate).substring(14, 16);
+            let endDateMin = (values.endDate).substring(14, 16); 
+            let result = endDateMin - startDateMin; 
+            values.allocatedTime = `${Math.abs(result)}m`;
             addOrEdit(values, resetForm);
         }
 
     }
+    // const onStartDateChange = e => {
+    //     values.startDate = e.target.value; 
+    // }
+
+    // const onEndDateChange = e => { 
+    //     values.endDate = e.target.value;     
+    // }
 
     useEffect(()=>{ 
         if(recordForEdit !== null)
@@ -74,16 +87,17 @@ export default function TableForm(props) {
                         onChange={handleInputChange}
                         error={errors.task}
                     />
-                        <TextField
+                        {/* <TextField
                             variant="outlined"
                             name="startDate"
                             label="Start date"
-                            type="datetime-local"                            
-                            defaultValue={currTimeWithFormat}
+                            type="datetime-local"                                     
+                            defaultValue={currTimeWithFormat}     
+                            onChange={onStartDateChange}  
                             InputLabelProps={{
                                 shrink: true,
                             }}
-                        />
+                        /> */}
  
                 </Grid>
                 <Grid item xs={6}>
@@ -95,16 +109,18 @@ export default function TableForm(props) {
                         options={calendarTask.getCategoryCollection()}
                         error={errors.category}                        
                     />
-                        <TextField
+                        {/* <TextField
                             variant="outlined"
                             name="endDate"
                             label="End date"                    
-                            type="datetime-local"                            
+                            type="datetime-local"       
+                            onChange={onEndDateChange}                     
                             defaultValue={currTimeWithFormatPlus30Min}
                             InputLabelProps={{
                                 shrink: true,
                             }}
                         />
+                         */}
                     <br /><br />
 
                     <div>
@@ -116,7 +132,7 @@ export default function TableForm(props) {
                             color="default"
                             onClick={resetForm} />
                     </div>
-
+                        
                 </Grid>
             </Grid>
         </Form>
