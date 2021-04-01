@@ -16,8 +16,7 @@ export function handleClick(e) {
         e.target.innerHTML = "";
         eventContainer.pop(e);
     }     
-    
-    
+        
 }
 
 export function handleCategoryHighlight(e) {
