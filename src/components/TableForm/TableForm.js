@@ -10,8 +10,6 @@ import moment from 'moment'
 const initialFValues = {
     id: 0,
     task: '',
-    startDate: '',
-    endDate: '',
     allocatedTime: 0,
     category: '',
     markComplete: '0%'
