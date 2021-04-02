@@ -34,16 +34,16 @@ function App() {
                       <Calender />
                     </div>
 
-                      {/* <Timer/>
-                      <TimerProc /> */}
+                      <Timer/>
+                      <TimerProc />
 
                   </div>
 
                   <br />
                   <div className="left-half">
-                    <div className="WeeklyGoals-container">
+                    {/* <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
-                    </div>
+                    </div> */}
                     <div className="timer-container">
 
                     </div>
