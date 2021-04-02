@@ -1,0 +1,61 @@
+.calender {
+    width: 560px;
+    height: 795px;
+    overflow: scroll;
+}
+.horizontal_1 {
+    border-left: 2px dotted black; 
+    position: absolute; 
+    right: 20%;
+    width: 200px;
+}
+
+/* hr {
+    position: absolute; 
+    top: 15.1%;
+    right: 34.3%;
+    border: 1px dotted black;
+    width: 80px;
+} */
+
+.time-stamp {
+    width: 80px; 
+    right: 34.3%;
+    height: 780px;
+    position: absolute; 
+}
+
+.time-zone:nth-child(1) {
+    position: relative;
+    margin-top: 15px; 
+}
+.time-zone {
+    position: relative; 
+    margin-top: 33px;  
+    margin-left: 20px;
+}
+
+.vertical {
+    border-left: 2px dotted black; 
+    height: 780px;
+    right: 39%;
+    position: absolute;
+}
+
+.flex-row-container {
+    /* background: #aaa; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-container > .flex-row-item {
+    flex: 1 1 15%; /*grow | shrink | basis */
+    height: 50px;
+}
+
+.flex-row-item {
+   /* background-color: #fff4e6; */
+    border: 1px solid black;
+}
+

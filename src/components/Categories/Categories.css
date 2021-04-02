@@ -1,0 +1,188 @@
+.Work-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Work-btn {
+    float: left;
+    position: relative;
+    width: 80px;
+    margin-left: 60px;
+}
+
+.Family-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Family-btn {
+    float: left;
+    position: relative;
+    width: 90px;
+}
+
+.Education-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Education-btn {
+    float: left;
+    position: relative;
+    width: 80px;
+}
+
+.Entertainment-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Entertainment-btn {
+    float: left;
+    position: relative;
+    width: 150px;
+}
+
+.Routine-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Routine-btn {
+    float: left;
+    position: relative;
+    width: 80px;
+}
+
+.Friends-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Friends-btn {
+    float: left;
+    position: relative;
+    width: 80px;
+}
+
+
+.Health-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Health-btn {
+    float: left;
+    position: relative;
+    width: 80px;
+}
+
+
+
+.Hobby-btn button{
+    padding: 8px 20px; 
+    border-radius: 50%; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;  
+}
+
+.Hobby-btn {
+    float: left;
+    position: relative;
+    width: 80px;
+}
+
+
+.btn:hover {
+    padding: 8px 20px;
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #6568F4; 
+    transition: 250ms; 
+}
