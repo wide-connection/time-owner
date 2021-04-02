@@ -12,6 +12,7 @@ import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
 
 import About from './components/About/About'
+import { SliderData } from './components/About/SliderData'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,7 @@ function App() {
     }, 20);
   })
   return (
+ 
     <Router>
       <div className="App">
         {
@@ -30,7 +32,10 @@ function App() {
             <div>
               <Header />         
               <Switch>
-              <Route path="/about" component = {About} />  
+              <Route path="/about" component = {About}>
+                <About slides = {SliderData}></About>
+                </Route> 
+
                 <Route path="/">
                   <div className="right-half">       
                     <div className="calender-container">
