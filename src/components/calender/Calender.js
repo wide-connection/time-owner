@@ -6,12 +6,9 @@ export const eventContainer=[];
 export let time = []; 
 export let count = 0; 
 
-
 export function handleClick(e) {
     let a = e.target.style.backgroundColor; 
-    /* ex conatiner1: 5 
-       ex2 conatiner2: 10 
-    */
+
    console.log(e.target.style.backgroundColor);
     if (a === "" || a === "white") {
         e.target.style.backgroundColor = '#CDCDCD';
@@ -21,9 +18,8 @@ export function handleClick(e) {
         e.target.innerHTML = "";
         eventContainer.pop(e);
         count--;
-    }     
-    
-    
+        time -= 10;
+    }             
 }
 
 export function handleCategoryHighlight(e) {
@@ -59,6 +55,11 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
+    let containerLength = eventContainer.length;
+    const tempContainer_1 = containerLength; 
+    console.log(tempContainer_1);
+    containerLength -= eventContainer.length; 
+
     for (let i = count; i < eventContainer.length; i++) {
          // starting time 
         let temp = eventContainer[i].target.style.backgroundColor;
@@ -95,6 +96,7 @@ export function changeTileColor(task, category) {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
             eventContainer[i].target.innerHTML = task;
             eventContainer[i].target = 'center';
+            
             // css to assign middle 
             // mark complete user non-automatic change 
             // time sound 
@@ -111,6 +113,7 @@ const Calender = () => {
     return (
         <div className="calender">
             <div className="time-stamp">
+ 
                 <div className="time-zone">9:00</div>
                 <div className="time-zone">10:00</div>
                 <div className="time-zone">11:00</div>

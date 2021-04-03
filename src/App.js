@@ -52,8 +52,7 @@ function App() {
                       <TableForms />
                     </div>
                     <div className='buttons-container'>
-                    <div className='buttons-container'>
-                    </div>
+              
 
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
