@@ -40,7 +40,7 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
-        console.log(task);
+ 
     for (let i = 0; i < eventContainer.length; i++) {
          
         let temp = eventContainer[i].target.style.backgroundColor;
@@ -61,9 +61,6 @@ export function changeTileColor(task, category) {
             eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Routine" && temp === "rgb(205, 205, 205)") {
-            if (eventContainer[i].target.style.backgroundColor = 'white') {
-
-            }
             eventContainer[i].target.style.backgroundColor = '#d3d3d3';
             eventContainer[i].target.innerHTML = task;
         }
@@ -78,7 +75,6 @@ export function changeTileColor(task, category) {
         else if (category === "Hobby" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
             eventContainer[i].target.innerHTML = task;
-            eventContainer[i].target = 'center';
             // css to assign middle 
             // mark complete user non-automatic change 
             // time sound 

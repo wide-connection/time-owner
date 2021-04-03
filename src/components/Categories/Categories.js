@@ -13,9 +13,11 @@ const Categories = (props) => {
 
     
     return (
-        <div className={className}>
-            <button className="btn" onClick={handleCategoryClick} style={{ backgroundColor: color }}></button>
-            <span>{content}</span>
+        <div className="category_container">
+            <div className={className}>
+                <button className="btn" onClick={handleCategoryClick} style={{ backgroundColor: color }}></button>
+                <span>{content}</span>
+            </div>
         </div>
         // click category button and it will color the tile
 

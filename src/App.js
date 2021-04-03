@@ -10,7 +10,7 @@ import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
-
+import About from './components/About/About'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -28,6 +28,7 @@ function App() {
             <div>
               <Header />
               <Switch>
+              <Route path="/about" component={About}/>
                 <Route path="/">
                   <div className="right-half">       
                     <div className="calender-container">
@@ -51,8 +52,7 @@ function App() {
                       <TableForms />
                     </div>
                     <div className='buttons-container'>
-                    <div className='buttons-container'>
-                    </div>
+              
 
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
@@ -67,17 +67,16 @@ function App() {
                   </div>
                 </Route>
 
-                <Route path="login">
+                <Route path="/login">
 
                 </Route>
-                <Route path="about">
+                
+                      
+
+                <Route path="/contact">
 
                 </Route>
-
-                <Route path="contact">
-
-                </Route>
-              </Switch>
+                </Switch>
               <Footer />
             </div>
         }
