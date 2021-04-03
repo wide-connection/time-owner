@@ -4,12 +4,10 @@ import './Calender.css';
 export const divArr=[];
 export const eventContainer=[]; 
 export let time = []; 
-export let count = 0; 
 
 export function handleClick(e) {
     let a = e.target.style.backgroundColor; 
 
-   console.log(e.target.style.backgroundColor);
     if (a === "" || a === "white") {
         e.target.style.backgroundColor = '#CDCDCD';
         eventContainer.push(e);
@@ -17,20 +15,17 @@ export function handleClick(e) {
         e.target.style.backgroundColor = 'white';
         e.target.innerHTML = "";
         eventContainer.pop(e);
-        count--;
-        time -= 10;
-    }             
+    }     
+    
+    
 }
 
 export function handleCategoryHighlight(e) {
     let temp = e.target.style.backgroundColor; 
-
-    for (let i = count; i < eventContainer.length; i++) {
+    console.log(e.target.style.backgroundColor);
+    for (let i = 0; i < eventContainer.length; i++) {
         if (temp === 'deepskyblue') {
             eventContainer[i].target.style.backgroundColor = '#00bfff';
-        }
-        else if (temp === 'yellow') {
-            eventContainer[i].target.style.backgroundColor = '#ffff00';
         }
         else if (temp === 'pink') {
             eventContainer[i].target.style.backgroundColor = '#ffc0cb';
@@ -41,29 +36,14 @@ export function handleCategoryHighlight(e) {
         else if (temp === 'lightcoral') {
             eventContainer[i].target.style.backgroundColor = '#f08080';
         }
-        else if (temp === 'lightgray') {
-            eventContainer[i].target.style.backgroundColor = '#d3d3d3';
-        }
-        else if (temp === 'gold') {
-            eventContainer[i].target.style.backgroundColor = '#ffd700';
-        } 
-        else if (temp === 'plum') {
-            eventContainer[i].target.style.backgroundColor = '#dda0dd';
-        }
-        count++; 
     }
 }
 
 export function changeTileColor(task, category) {
-    let containerLength = eventContainer.length;
-    const tempContainer_1 = containerLength; 
-    console.log(tempContainer_1);
-    containerLength -= eventContainer.length; 
-
-    for (let i = count; i < eventContainer.length; i++) {
-         // starting time 
+ 
+    for (let i = 0; i < eventContainer.length; i++) {
+         
         let temp = eventContainer[i].target.style.backgroundColor;
-        
         if(category === "Work" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#00bfff';
             eventContainer[i].target.innerHTML = task;
@@ -95,8 +75,6 @@ export function changeTileColor(task, category) {
         else if (category === "Hobby" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
             eventContainer[i].target.innerHTML = task;
-            eventContainer[i].target = 'center';
-            
             // css to assign middle 
             // mark complete user non-automatic change 
             // time sound 
@@ -104,7 +82,6 @@ export function changeTileColor(task, category) {
             // the format of time hh:mm 
         }
         time = (eventContainer.length * 10); 
-        count++;
     }
 } 
 
@@ -113,7 +90,6 @@ const Calender = () => {
     return (
         <div className="calender">
             <div className="time-stamp">
- 
                 <div className="time-zone">9:00</div>
                 <div className="time-zone">10:00</div>
                 <div className="time-zone">11:00</div>
