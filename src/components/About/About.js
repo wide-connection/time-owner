@@ -32,34 +32,29 @@ const About = () => {
                     <div class = "entry-content">
 
                         <div class = "box-right">
-                                <div class = "imageBx">
-
-                                    <img src = {code} alt = "code" className = "code"/>
-
-                                </div>
+                               
 
                                 <div class = "contetnBx">
 
-                                     <h1>Wide Connection</h1>
-                                     <p>
+                                     <h1 class ="about_topic">Wide Connection</h1>
+                                     <img src={code} alt="" className="code"/> 
+                                     <p class ="about_content">
                                         The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.
                                          We are moving forward for our dreams by developing time-management application 'Time Owner'.
+                                       
                                      </p>
                                 </div>
 
                         </div>
                         
                         <div class = "box-left">
-                                <div class = "imageBx">
-
-                                    <img src = {chocolate} alt = "chocolate" className = "chocolate"/>
-
-                                </div>
+                               
 
                                 <div class = "contetnBx">
 
-                                     <h1>Time Owner</h1>
-                                     <p>
+                                <h1 class ="about_topic">Time Owner</h1>
+                                <img src={chocolate} alt="" className="chocolate"/> 
+                                    <p class ="about_content">
                                         The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.
                                          We are moving forward for our dreams by developing time-management application 'Time Owner'.
                                      </p>
