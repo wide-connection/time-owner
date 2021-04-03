@@ -1,220 +1,86 @@
 
 import { setMilliseconds } from 'date-fns';
 import { relativeTimeRounding } from 'moment';
-import React, {useState, useRef} from 'react';
-import styled, { css } from 'styled-components/macro'
-import { IoMdArrowRoundForward } from 'react-icons/io'
-import { IoArrowForward, IoArrowBack } from 'react-icons/io5'
+import React from 'react';
+import './About.css';
+import code from './code.jpg';
+import chocolate from './Chcolate.jpg'
 
 
 
-const HeroSection = styled.section`
-    height: 100vh;
-    max-height: 700px;
-    position: relative;
-    overflow: hidden;
-
-`;
-
-const HeroWrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    `;
-
-const HeroSlide = styled.div`
-    z-index: 1;
-    width: 100%;
-    height: 100%`;
-
-const HeroSlider = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &::before {
-        content: '';
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100vh;
-        bottom: 0vh;
-        left: 0;
-        overflow: hidden;
-        opacity: 0.4;
-        background: linear-gradient(0deg,
-             rgba(0, 0, 0, 0.2) 0%
-             rgba(0, 0, 0, 0.2) 50%
-             rgba(0, 0, 0, 0.2) 100%)
-    }
-    `;
-   
-const HeroContent = styled.div`
-
-    position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    max-width: 1600px;
-    width: calc(100% - 100px);
-    color: #fff;
-    
-    h1{
-        font-size: clamp(1rem, 8vw, 20rem)
-        font-weight: 400;
-        text-transform: uppercase;
-        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
-        text-align: left;
-        margine-bottom:0.8rem;
-      
-        
-    }
-
-    p{
-        margine-bottom:1.2rem;
-        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
-    }
-    `;
-
-const HeroImage = styled.img`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 50vh;
-    object-fit: cover`;
-
-const Arrow = styled(IoMdArrowRoundForward)`
-    margine-left: 0.5rem;
-    `;
-
-const SliderButtons = styled.div`
-        position: absolute;
-        bottom: 50px;
-        right: 50px;
-        display: flex;
-        z-index: 10;
-    `;
-
-
-const arrowButtons = css`
-width: 50px;
-height: 50px;
-color: #fff;
-cursor: pointer;
-background: #000d1a;
-border-radius: 50px;
-padding: 10px;
-margin-right: 1rem;
-user-select: none;
-transition: 0.3s;
-
-&:hover {
-    background: #cd853f;
-    transform: scale(1.05);
-}
-
-`;
-
-const PrevArrow = styled(IoArrowBack)`
-${arrowButtons}
-`;
-
-const NextArror = styled(IoArrowForward)`
-${arrowButtons}
-`;
-
-
-const About = ( {slides} ) => {
-
-const [current, setCurrent] = useState(0)
-const length = slides.length
-
-const timeout = useRef(null)
-
-const nextSlide = () => {
-    setCurrent (current === length -1 ? 0 : current + 1)
-
-    
-
-};
-
-const prevSlide = () => {
-    setCurrent(current === 0 ? length -1 : current -1)
-
-   
-};
-
+const About = () => {
 
 
     return (
 
-        <HeroSection>
-            <HeroWrapper>
-               
-                {slides.map((slide, index) => {
-                    return (
-                        <HeroSlide key = { index }>
-                            
-                            {index === current && (
+        <div id = "container" class="hfeed">
 
-                            <HeroSlider>
+            <div id = "main">
 
-                                <HeroImage src={slide.image} />
-                                <HeroContent>
-                                    <h1 css={
-                                        `
-                                         color: #fff;
-                                         font-size: 40px;
-                                    
-                                        `
-                                    }>{slide.title}</h1>
-                                    <p
-                                    
-                                    css={
-                                        `max-width: 500px;
-                                         color: #fff;
-                                         font-size: 15px;
-                                        `
-                                    }>
-                                        {slide.content}
-                                    </p>
-                                    
-                                    <Arrow/>
+                <div id = "content" class = "main-post">
 
-                                </HeroContent>
+                    <div class = "wrap">
 
 
-                                
-                                
-                            </HeroSlider>
-
-                            )}
 
                            
-                        </HeroSlide>
-                    )
-                })}
-          
-                <SliderButtons>
-
-                    <PrevArrow onClick={prevSlide}/>
-                    <NextArror onClick={nextSlide}/>
 
 
-                </SliderButtons>
-            </HeroWrapper>
 
-        </HeroSection>
+                    
+
+                    <div class = "entry-content">
+
+                        <div class = "box-right">
+                                <div class = "imageBx">
+
+                                    <img src = {code} alt = "code" className = "code"/>
+
+                                </div>
+
+                                <div class = "contetnBx">
+
+                                     <h1>Wide Connection</h1>
+                                     <p>
+                                        The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.
+                                         We are moving forward for our dreams by developing time-management application 'Time Owner'.
+                                     </p>
+                                </div>
+
+                        </div>
+                        
+                        <div class = "box-left">
+                                <div class = "imageBx">
+
+                                    <img src = {chocolate} alt = "chocolate" className = "chocolate"/>
+
+                                </div>
+
+                                <div class = "contetnBx">
+
+                                     <h1>Time Owner</h1>
+                                     <p>
+                                        The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.
+                                         We are moving forward for our dreams by developing time-management application 'Time Owner'.
+                                     </p>
+                                </div>
+
+                        </div>
+
+                    </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
            
        
     );

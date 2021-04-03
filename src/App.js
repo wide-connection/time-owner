@@ -12,7 +12,7 @@ import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
 
 import About from './components/About/About'
-import { SliderData } from './components/About/SliderData'
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ function App() {
               <Header />         
               <Switch>
               <Route path="/about" component = {About}>
-                <About slides = {SliderData}></About>
+   
                 </Route> 
 
                 <Route path="/">
