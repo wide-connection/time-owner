@@ -33,7 +33,7 @@
 .left-half .buttons-container {
     float: left;
     position: absolute;
-    bottom: 5px;
+    top: 950px;
     width: 50%;
     height: 60px;
     
