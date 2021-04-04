@@ -14,6 +14,10 @@ import ConfirmDialog from "../ConfirmDialog"
 import TimerIcon from '@material-ui/icons/Timer';
 import EventIcon from '@material-ui/icons/Event';
 import { changeTileColor, time} from '../../components/calender/Calender'
+import {
+    taskDB,
+  } from '../../data-task/index.js'
+
 const useStyles = makeStyles(theme =>({
     pageContent: {
         margin: theme.spacing(5),
@@ -67,7 +71,15 @@ export default function TableForms() {
 
     const addOrEdit = (task, resetForm) => {
         if (task.id === 0) {              
-            calendarTask.insertNewTask(task)            
+            calendarTask.insertNewTask(task);
+            task = {
+                id: task.id,
+                task: task.task,
+                allocatedTime:task.allocatedTime,
+                Category: task.Category,
+                markComplete:task.markComplete
+              };
+            taskDB.insert(task);            
         }
         else {        
             calendarTask.updateTask(task)
