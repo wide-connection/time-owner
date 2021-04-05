@@ -10,8 +10,6 @@ import moment from 'moment'
 const initialFValues = {
     id: 0,
     task: '',
-    startDate: '',
-    endDate: '',
     allocatedTime: 0,
     category: '',
     markComplete: '0%'
@@ -43,10 +41,10 @@ export default function TableForm(props) {
     const handleSubmit = e => {
         e.preventDefault();
         if (validate()) {  
-            let startDateMin = (values.startDate).substring(14, 16);
-            let endDateMin = (values.endDate).substring(14, 16); 
-            let result = endDateMin - startDateMin; 
-            values.allocatedTime = `${Math.abs(result)}m`;
+            // let startDateMin = (values.startDate).substring(14, 16);
+            // let endDateMin = (values.endDate).substring(14, 16); 
+            // let result = endDateMin - startDateMin; 
+            // values.allocatedTime = `${Math.abs(result)}m`;
             addOrEdit(values, resetForm);
         }
 
