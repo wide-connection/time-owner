@@ -11,12 +11,11 @@ class Footer extends Component {
             </div>
 
             <footer>
-                <div className="footer-container">
+                <div>
                     <div className="left-col">
                     <div className='buttons-container'>
                     <div className='buttons-container'>
                     </div>
-
                       <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
                       <Categories className="Family-btn" color='yellow' content='Family' />
                       <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
