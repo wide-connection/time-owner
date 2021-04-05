@@ -1,31 +1,29 @@
 
 
-.box-right {
+.contentbox {
     position: relative;
     top: 10%;
     left: 50%;
     margin-bottom: 3%;
     transform: translate(-50%, 10%);
-    padding: 20px;
     box-sizing: border-box;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 5px 15px rgba(0,0,0, .5);
     display: flex;
 }
-.box-left {
-    position: relative;
-    top: 10%;
-    left: 50%;
-    margin-bottom: 3%;
-    transform: translate(-50%, 10%);
-    padding: 20px;
-    box-sizing: border-box;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0,0,0, .5);
-    display: flex;
+
+
+#aboutWideConnection {
+
+
+    
+    padding-left: 10%;
+    
+    
+
 }
+
 
 .wrap {
     margin: 0;
@@ -40,6 +38,30 @@
     margin-bottom: 20px;
 }
 
+#aboutTimeOwner {
+    padding-left: 10%;
+
+
+}
+
+#aboutUseCase {
+    padding-left: 20%;
+
+}
+
+#aboutClassDiagram{
+    padding-left: 20%;
+
+}
+
+#aboutOurFuture {
+    padding-left: 10%;
+}
+
+#aboutConceptionModule{
+    padding-left: 10%;
+    padding-bottom: 10%;
+}
 
 .about_topic {
     margin: 0;
@@ -60,9 +82,9 @@
     
 }
 
-.code {
-    width: 70%;
-    height: 50%;
+.wideconnectionLogo {
+    width: 40%;
+    height: 40%;
     display: block;
     position: relative; 
     margin-top: 20px;
@@ -76,9 +98,9 @@
    
 }
 
-.chocolate {
-    width: 70%;
-    height: 50%;
+.timeOwnerLogo {
+    width: 40%;
+    height: 20%;
     display: block;
     position: relative; 
     margin-top: 20px;
@@ -89,4 +111,69 @@
     border-radius: 5%;
     padding: 10px;
     max-width: 200%;
+}
+
+.useCaseDiagram {
+    width: 100%;
+    height:80%;
+    display: block;
+    position: relative; 
+    margin: 0 auto;
+    margin-top: 20px;
+    background: none;
+    border: "1px";
+    border-radius: 5%;
+    padding: 0px;
+    max-width: 100%;
+}
+
+.functionalFlow{
+
+    width: 80%;
+    height: 30%;
+    display: block;
+    position: relative; 
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: "1px";
+    border-radius: 5%;
+    padding: 10px;
+    max-width: 200%;
+}
+
+.ConceptFlow{
+    width: 100%;
+    height: 30%;
+    display: block;
+    position: relative; 
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: "1px";
+    border-radius: 5%;
+    padding: 10px;
+    max-width: 200%;
+}
+
+
+.ProcessFlow{
+    width: 80%;
+    height: 30%;
+    display: block;
+    position: relative; 
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: "1px";
+    border-radius: 5%;
+    padding: 10px;
+    max-width: 200%;
+}
+
+.Alice_WC{
+   height: 47%;
 }
