@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import TableForm from './TableForm'
 import { Paper, makeStyles, TableBody, TableRow, TableCell, Toolbar, InputAdornment } from '@material-ui/core'
 import useTable from "../../components/useTable"
@@ -13,27 +13,42 @@ import Notification from "../Notification"
 import ConfirmDialog from "../ConfirmDialog"
 import TimerIcon from '@material-ui/icons/Timer';
 import EventIcon from '@material-ui/icons/Event';
-import { changeTileColor, time } from '../../components/calender/Calender'
-const useStyles = makeStyles(theme => ({
+import { changeTileColor, time} from '../../components/calender/Calender'
+import { relativeTimeRounding } from 'moment'
+import { blue } from '@material-ui/core/colors';
+import './TableForm.scss';
+
+const useStyles = makeStyles(theme =>({
     pageContent: {
-        margin: theme.spacing(5),
-        padding: theme.spacing(3)
+    display: 'flex',
+    flexWrap: 'wrap',
+    width: '100%',
+        
+        
     },
     searchInput: {
-        width: '75%'
+        width: '550px',
+        position: 'absolute',
+        color:'red',
+        display: 'flex',
+        
     },
-    newButton: {
+    
+    newButton : {
         position: 'absoulte',
-        left: '70px'
-    }
+        left: 550,
+        display: 'flex',
+        height: '55px',
+        width: '150px'
+    },
 }))
 
 const headCells = [
-    { id: 'task', label: 'Task Name' },
-    { id: 'time', label: 'Total Allocated Time' },
-    { id: 'category', label: 'Category' },
-    { id: 'complete', label: "Mark Complete" },
-    { id: 'actions', label: 'Actions', disableSorting: true }
+    {id: 'task' , label:'Task Name'},
+    {id: 'time' , label:'Total Allocated Time'},
+    {id: 'category' , label:'Category'},
+    {id: 'complete', label:"Mark Complete"},
+    {id: 'actions', label:'Actions', disableSorting: true}
 ]
 
 export default function TableForms() {
@@ -41,23 +56,23 @@ export default function TableForms() {
     const classes = useStyles();
     const [recordForEdit, setRecordForEdit] = useState(null);
     const [records, setRecords] = useState(calendarTask.getAllTasks());
-    const [filterFn, setFilterFn] = useState({ fn: items => { return items; } })
+    const [filterFn, setFilterFn] = useState({fn:items => {return items;}})
     const [openPopup, setOpenPopup] = useState(false);
-    const [notify, setNotify] = useState({ isOpen: false, message: '', type: '' })
-    const [confirmDialog, setConfirmDialog] = useState({ isOpen: false, title: '', subTitle: '' })
+    const [notify, setNotify] = useState({isOpen: false, message:'', type:''})
+    const [confirmDialog, setConfirmDialog] = useState({isOpen:false, title:'', subTitle:''})
 
     const {
         TblContainer,
         TblHead,
         TblPagination,
         recordsAfterPagingAndSorting
-    } = useTable(records, headCells, filterFn);
+    }=useTable(records, headCells, filterFn);
 
     const handleSearch = e => {
         let target = e.target;
         setFilterFn({
-            fn: items => {
-                if (target.value === "")
+            fn:items => {
+                if(target.value === "")
                     return items;
                 else
                     return items.filter(x => x.task.toLowerCase().includes(target.value))
@@ -111,15 +126,15 @@ export default function TableForms() {
     }
 
     return (
-        <>
-            <Paper className={classes.pageContent}>
+        <div className= 'container'>
+        <Paper className={classes.pageContent} >
                 <Toolbar>
                     <Controls.Input
                         label="Search Task"
-                        className={classes.searchInput}
+            className = {classes.searchInput}
                         InputProps={{
-                            startAdornment: (<InputAdornment position="start">
-                                <Search />
+                    startAdornment:(<InputAdornment position="start">
+                        <Search/> 
                             </InputAdornment>)
                         }}
                         onChange={handleSearch}
@@ -145,51 +160,52 @@ export default function TableForms() {
                                 <TableCell>
                                     <Controls.ActionButton
                                         color="primary"
-                                        onClick={() => { openInPopup(item) }}>
-                                        <EditOutlinedIcon fontSize="small" />
+                                            
+                                            onClick = {()=> {openInPopup(item)}}>
+                                                <EditOutlinedIcon fontSize="small"/>
                                     </Controls.ActionButton>
                                     <Controls.ActionButton
                                         color="secondary"
                                         onClick={() => {
                                             setConfirmDialog({
                                                 isOpen: true,
-                                                title: 'Are you sure to delete this record?',
+                                                        title:'Are you sure to delete this record?',
                                                 subTitle: "You can't undo this operation",
-                                                onConfirm: () => { onDelete(item.id) }
+                                                        onConfirm: () => {onDelete(item.id)}
 
                                             })
                                         }}>
-                                        <CloseIcon fontSize="small" />
+                                                <CloseIcon fontSize="small"/>
                                     </Controls.ActionButton>
 
-                                    <br />
+                                                    <br/> 
 
                                     <Controls.ActionButton
                                         color="tertiary"
-                                        onClick={() => { openInPopup(item) }}>
-                                        <TimerIcon fontSize="small" />
+                                                onClick = {()=> {openInPopup(item)}}>
+                                                    <TimerIcon fontSize="small"/>                                    
                                     </Controls.ActionButton>
 
                                     <Controls.ActionButton
                                         color="tertiary"
-                                        onClick={() => { addToCalendar(item) }}>
-                                        <EventIcon fontSize="small" />
+                                                onClick = {()=> {addToCalendar(item)}}>
+                                                    <EventIcon fontSize="small"/>                                    
                                     </Controls.ActionButton>
                                 </TableCell>
                             </TableRow>))
                         }
                     </TableBody>
                 </TblContainer>
-                <TblPagination />
+            <TblPagination/>            
             </Paper>
             <Popup
-                title="Task Form"
-                openPopup={openPopup}
-                setOpenPopup={setOpenPopup}
+            title = "Task Form"
+            openPopup = {openPopup}
+            setOpenPopup = {setOpenPopup}
             >
                 <TableForm
-                    recordForEdit={recordForEdit}
-                    addOrEdit={addOrEdit} />
+            recordForEdit = {recordForEdit}
+            addOrEdit={addOrEdit}/>
             </Popup>
             <Notification
                 notify={notify}
@@ -199,7 +215,7 @@ export default function TableForms() {
                 confirmDialog={confirmDialog}
                 setConfirmDialog={setConfirmDialog}
             />
-        </>
+        </div>
 
     )
 }

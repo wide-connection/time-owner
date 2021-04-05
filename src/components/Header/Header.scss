@@ -47,7 +47,6 @@ a {
 }
 
 .navbar_menu li:hover {
-    background-color: var(--accent-color);
     border-radius: 4px; 
 }
 
@@ -60,14 +59,21 @@ a {
     color: #2196F3;
 }
 
-.navbar_icons {
+.logout {
     list-style: none; 
     color: var(--text-color); 
     display: flex;
 }
 
 .navbar_icons li {
-    padding: 8px 12px; 
+    padding: 15px; 
+    display: flex;
+    list-style: none; 
+    font-size: 30px;
+}
+
+.git-icon{
+    padding: 8px 12px;   
 }
 
 .navbar_toogleBtn {
