@@ -34,34 +34,22 @@ function App() {
                     <div className="calender-container">
                       <Calender />
                     </div>
-
-                      {/* <Timer/>
-                      <TimerProc /> */}
-
+                   {/* ON HOLD 
+                      <Timer/>
+                      <TimerProc /> 
+                         ON HOLD */}
                   </div>
 
                   <br />
                   <div className="left-half">
-                    <div className="WeeklyGoals-container">
+                    {/* <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
-                    </div>
+                    </div> */}
                     <div className="timer-container">
 
                     </div>
                     <div className="table-container">
                       <TableForms />
-                    </div>
-                    <div className='buttons-container'>
-              
-
-                      <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
-                      <Categories className="Family-btn" color='yellow' content='Family' />
-                      <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
-                      <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
-                      <Categories className="Routine-btn" color='lightGray' content='Routine' />
-                      <Categories className="Friends-btn" color='pink' content='Friends' />
-                      <Categories className="Health-btn" color='gold' content='Health' />
-                      <Categories className="Hobby-btn" color='plum' content='Hobby' />
                     </div>
                    
                   </div>

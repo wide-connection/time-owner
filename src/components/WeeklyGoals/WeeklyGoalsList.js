@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import WeeklyGoalsForm from './WeeklyGoalsForm';
 import WeeklyGoals from './WeeklyGoals';
-import './WeeklyGoals.css';
+import './WeeklyGoals.scss';
 
 function WeeklyGoalsList() {
   const [goals, setGoals] = useState([]);
