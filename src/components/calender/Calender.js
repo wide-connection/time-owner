@@ -40,7 +40,9 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
- 
+    let prev = time;
+    let count = 0; 
+    console.log(prev); 
     for (let i = 0; i < eventContainer.length; i++) {
          
         let temp = eventContainer[i].target.style.backgroundColor;
@@ -81,8 +83,14 @@ export function changeTileColor(task, category) {
             // when the user clicks specific category, it will display some proper imojis     
             // the format of time hh:mm 
         }
-        time = (eventContainer.length * 10); 
+      
     }
+    if (count == 0) {
+        time = (eventContainer.length * 10);
+    } else {
+        time = (eventContainer.length * 10) - prev; 
+    }
+    count++; 
 } 
 
 const Calender = () => {
