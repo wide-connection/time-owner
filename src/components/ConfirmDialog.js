@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme =>({
         justifyContent:'center'
     },
     titleIcon: {
-        backgroundColor: theme.palette.secondary.light,
+        backgroundColor: '#ffe3e7',
         color: theme.palette.secondary.main,
         '&:hover' : {
             backgroundColor: theme.palette.secondary.light,
@@ -55,11 +55,12 @@ const classes = useStyles()
                 <Controls.Button
                 text="No"
                 color="default"
-                onClick={()=>setConfirmDialog({ ...confirmDialog, isOpen: false})}
+                onClick={()=> setConfirmDialog({...confirmDialog,isOpen: false})}
                 />
                 <Controls.Button
                 text="Yes"
-                color="secondary"/>
+                color="secondary"
+                onClick = {confirmDialog.onConfirm}/>
             </DialogActions>
         </Dialog>
     )

@@ -32,12 +32,12 @@ export function updateTask(data) {
 
 export function deleteTask(id) {
     let tasks = getAllTasks();
-    tasks = tasks.filter(x => x.id != id)
+    tasks = tasks.filter(x => x.id !== id)
     localStorage.setItem(KEYS.tasks, JSON.stringify(tasks)); 
 }
 
 export function generateTaskId() {
-    if (localStorage.getItem(KEYS.taskId) == null)
+    if (localStorage.getItem(KEYS.taskId) === null)
         localStorage.setItem(KEYS.taskId, '0')
 
     var id = parseInt(localStorage.getItem(KEYS.taskId))
@@ -47,7 +47,7 @@ export function generateTaskId() {
 }
 
 export function getAllTasks() {
-    if (localStorage.getItem(KEYS.tasks) == null)
+    if (localStorage.getItem(KEYS.tasks) === null)
         localStorage.setItem(KEYS.tasks, JSON.stringify([]));
 
     return JSON.parse(localStorage.getItem(KEYS.tasks));

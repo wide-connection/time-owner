@@ -17,14 +17,9 @@
 .Work-btn {
     float: left;
     position: relative;
-    width: 50px;
+    width: 80px;
+    margin-left: 60px;
 }
-
-.Work-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-  }
 
 .Family-btn button{
     padding: 8px 20px; 
@@ -45,14 +40,8 @@
 .Family-btn {
     float: left;
     position: relative;
-    width: 100px;
+    width: 90px;
 }
-
-.Family-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-  }
 
 .Education-btn button{
     padding: 8px 20px; 
@@ -73,14 +62,8 @@
 .Education-btn {
     float: left;
     position: relative;
-    width: 100px;
+    width: 80px;
 }
-
-.Education-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-  }
 
 .Entertainment-btn button{
     padding: 8px 20px; 
@@ -101,14 +84,8 @@
 .Entertainment-btn {
     float: left;
     position: relative;
-    width: 125px;
+    width: 150px;
 }
-
-.Entertainment-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
 
 .Routine-btn button{
     padding: 8px 20px; 
@@ -129,14 +106,8 @@
 .Routine-btn {
     float: left;
     position: relative;
-    width: 100px;
+    width: 80px;
 }
-
-.Routine-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-  }
 
 .Friends-btn button{
     padding: 8px 20px; 
@@ -160,11 +131,6 @@
     width: 80px;
 }
 
-.Friends-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-  }
 
 .Health-btn button{
     padding: 8px 20px; 
@@ -185,14 +151,10 @@
 .Health-btn {
     float: left;
     position: relative;
-    width: 100px;
+    width: 80px;
 }
 
-.Health-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 22px;
-  }
+
 
 .Hobby-btn button{
     padding: 8px 20px; 
@@ -213,17 +175,11 @@
 .Hobby-btn {
     float: left;
     position: relative;
-    width: 50px;
+    width: 80px;
 }
 
-.Hobby-btn span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
 
-
-.button:hover {
+.btn:hover {
     padding: 8px 20px;
     transition: all 0.3s ease-out;
     background: #fff;

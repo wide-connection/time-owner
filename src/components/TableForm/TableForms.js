@@ -11,7 +11,9 @@ import EditOutlinedIcon from '@material-ui/icons/EditOutlined'
 import CloseIcon from '@material-ui/icons/Close'
 import Notification from "../Notification"
 import ConfirmDialog from "../ConfirmDialog"
-
+import TimerIcon from '@material-ui/icons/Timer';
+import EventIcon from '@material-ui/icons/Event';
+import { changeTileColor, time} from '../../components/calender/Calender'
 const useStyles = makeStyles(theme =>({
     pageContent: {
         margin: theme.spacing(5),
@@ -28,7 +30,7 @@ const useStyles = makeStyles(theme =>({
 
 const headCells = [
     {id: 'task' , label:'Task Name'},
-    {id: 'time' , label:'Allocated Time'},
+    {id: 'time' , label:'Total Allocated Time'},
     {id: 'category' , label:'Category'},
     {id: 'complete', label:"Mark Complete"},
     {id: 'actions', label:'Actions', disableSorting: true}
@@ -42,7 +44,7 @@ export default function TableForms() {
     const [filterFn, setFilterFn] = useState({fn:items => {return items;}})
     const [openPopup, setOpenPopup] = useState(false); 
     const [notify, setNotify] = useState({isOpen: false, message:'', type:''})
-    const [confirmDialog, setconfirmDialog] = useState({isOpen:false, title:'', subTitle:''})
+    const [confirmDialog, setConfirmDialog] = useState({isOpen:false, title:'', subTitle:''})
 
     const {
         TblContainer,
@@ -64,36 +66,48 @@ export default function TableForms() {
     }
 
     const addOrEdit = (task, resetForm) => {
-        if (task.id === 0)
-            calendarTask.insertNewTask(task)
-        else 
+        if (task.id === 0) {              
+            calendarTask.insertNewTask(task)            
+        }
+        else {        
             calendarTask.updateTask(task)
-        resetForm()         
-        setRecordForEdit(null)
-        setOpenPopup(false)
-        setRecords(calendarTask.getAllTasks())
-        setNotify({
-            isOpen: true,
-            message: 'Submitted Successfully',
-            type: 'success'
-        })
+            resetForm()         
+            setRecordForEdit(null)
+            setOpenPopup(false)
+            setRecords(calendarTask.getAllTasks())
+            setNotify({
+                isOpen: true,
+                message: 'Submitted Successfully',
+                type: 'success'
+            })
+        }
     }
 
     const openInPopup = item => {
         setRecordForEdit(item)
         setOpenPopup(true)
     }
+    
+    const addToCalendar = item => {
+        changeTileColor(item.task, item.category); 
+        item.allocatedTime = `${time}m`;
+        calendarTask.updateTask(item);
+        setRecords(calendarTask.getAllTasks());
+
+    }
 
     const onDelete = id => {
-        if(window.confirm('Are you sure to delete this record?')) {
-            calendarTask.deleteTask(id); 
-            setRecords(calendarTask.getAllTasks())
-            setNotify({
-                isOpen: true,
-                message: 'Deleted Successfully',
-                type: 'error'
-            })
-        }
+        setConfirmDialog({
+            ...confirmDialog,
+            isOpen: false
+        })
+        calendarTask.deleteTask(id); 
+        setRecords(calendarTask.getAllTasks())
+        setNotify({
+            isOpen: true,
+            message: 'Deleted Successfully',
+            type: 'error'
+        })        
     }
 
     return (
@@ -123,30 +137,45 @@ export default function TableForms() {
                 <TableBody>
                     {
                         recordsAfterPagingAndSorting().map(item =>
-                            (<TableRow key={item.id}>
-                                <TableCell>{item.task}</TableCell>
-                                <TableCell>{item.length}</TableCell>
-                                <TableCell>{item.category}</TableCell>
-                                <TableCell>{item.markComplete}</TableCell>
-                                <TableCell>
-                                    <Controls.ActionButton
-                                    color="primary"
-                                    onClick = {()=> {openInPopup(item)}}>
-                                        <EditOutlinedIcon fontSize="small"/>
-                                    </Controls.ActionButton>                                
-                                    <Controls.ActionButton
-                                        color="secondary"
-                                        onClick={() => {
-                                            setconfirmDialog({
-                                                isOpen: true,
-                                                title:'Are you sure to delete this record?',
-                                                subTitle: "You can't undo this operation"
+                            (<TableRow key={item.id}>                                                         
+                                        <TableCell>{item.task}</TableCell>
+                                        <TableCell>{item.allocatedTime}</TableCell>
+                                        <TableCell>{item.category}</TableCell>
+                                        <TableCell>{item.markComplete}</TableCell>
+                                        <TableCell>                                    
+                                            <Controls.ActionButton
+                                            color="primary"
+                                            onClick = {()=> {openInPopup(item)}}>
+                                                <EditOutlinedIcon fontSize="small"/>
+                                            </Controls.ActionButton>                                
+                                            <Controls.ActionButton
+                                                color="secondary"
+                                                onClick={() => {
+                                                    setConfirmDialog({
+                                                        isOpen: true,
+                                                        title:'Are you sure to delete this record?',
+                                                        subTitle: "You can't undo this operation",
+                                                        onConfirm: () => {onDelete(item.id)}
 
-                                            })
-                                        }}>
-                                        <CloseIcon fontSize="small"/>
-                                    </Controls.ActionButton> 
-                                </TableCell>
+                                                    })
+                                                }}>
+                                                <CloseIcon fontSize="small"/>
+                                            </Controls.ActionButton> 
+                                            
+                                                    <br/> 
+                                                    
+                                                <Controls.ActionButton
+                                                color="tertiary"
+                                                onClick = {()=> {openInPopup(item)}}>
+                                                    <TimerIcon fontSize="small"/>                                    
+                                                </Controls.ActionButton>
+
+                                                <Controls.ActionButton
+                                                color="tertiary"
+                                                onClick = {()=> {addToCalendar(item)}}>
+                                                    <EventIcon fontSize="small"/>                                    
+                                                </Controls.ActionButton>
+                                        </TableCell>                  
                             </TableRow>))                            
                     }
                 </TableBody>
@@ -168,7 +197,7 @@ export default function TableForms() {
         />
         <ConfirmDialog
         confirmDialog={confirmDialog}
-        setconfirmDialog={setconfirmDialog}
+        setConfirmDialog={setConfirmDialog}
         />
        </>
         

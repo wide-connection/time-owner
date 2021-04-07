@@ -17,7 +17,7 @@ export function useForm(initialFValues, validateOnChange=false, validate) {
         validate({[name]: value})
     }
 
-    const resetForm =()=> {
+    const resetForm =()=> { 
         setValues(initialFValues);
         setErrors({});
     }
