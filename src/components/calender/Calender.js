@@ -104,12 +104,7 @@ const Calender = () => {
     return (
         <div>      
             <div className="timeContainer">
-                <TimePicker
-                value={twentyFourHourTime}
-                onChange={setTwentyFourHourTime}
-                format="24"
-                step={1800}
-                />
+           
            </div>
         <div className="calender">                     
             <div className="time-stamp">
