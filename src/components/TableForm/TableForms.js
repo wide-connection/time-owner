@@ -27,19 +27,19 @@ const useStyles = makeStyles(theme =>({
         
     },
     searchInput: {
-        width: '550px',
-        position: 'absolute',
+        width: '560px',
+        position: 'relative',
         color:'red',
         display: 'flex',
         
     },
     
     newButton : {
-        position: 'absoulte',
-        left: 550,
+        position: 'relative',
+        left: 1,
         display: 'flex',
         height: '55px',
-        width: '150px'
+        width: '169px'
     },
 }))
 
