@@ -17,6 +17,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "baseui": "^9.112.0",
     "bootstrap": "^4.6.0",
     "date-fns": "^2.19.0",
     "dateformat": "^4.5.1",
@@ -32,6 +33,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-spinners": "^0.10.6",
+    "styletron-engine-atomic": "^1.4.7",
+    "styletron-react": "^6.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {TimePicker} from 'baseui/timepicker';
+import {FormControl} from 'baseui/form-control';
 import './Calender.css';
 
 export const divArr=[];
@@ -15,8 +17,7 @@ export function handleClick(e) {
     } else {
         e.target.style.backgroundColor = 'white';
         e.target.innerHTML = "";
-        eventContainer.pop(e);
-        
+
     }             
 }
 
@@ -83,17 +84,34 @@ export function changeTileColor(task, category) {
         }      
     }
     let count = 0; 
+   
     for (let j = 0; j < eventContainer.length; j++) {
+
         if (eventContainer[j].target.innerHTML === task) {
             count++; 
         }
     }
+
+
     time = (count * 10);
 } 
 
 const Calender = () => {
+    const [twentyFourHourTime, setTwentyFourHourTime] = useState(
+        null,
+      );
+ 
     return (
-        <div className="calender">
+        <div>      
+            <div className="timeContainer">
+                <TimePicker
+                value={twentyFourHourTime}
+                onChange={setTwentyFourHourTime}
+                format="24"
+                step={1800}
+                />
+           </div>
+        <div className="calender">                     
             <div className="time-stamp">
                 <div className="time-zone">9:00</div>
                 <div className="time-zone">10:00</div>
@@ -220,8 +238,8 @@ const Calender = () => {
                   <div className="flex-row-item" onClick={handleClick}></div>
                   <div className="flex-row-item" onClick={handleClick}></div> 
               </div>
-              {/* <div className="square"></div>         */}
-                    
+              {/* <div className="square"></div>         */}                    
+        </div>
         </div>
     )
 }
