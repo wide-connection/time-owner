@@ -3,8 +3,8 @@ import './Calender.css';
 
 export const divArr=[];
 export const eventContainer=[]; 
-export let time = 0; 
-export const timeContainer = []; 
+export const timeContainer = [];
+export let time = 0;  
 
 export function handleClick(e) {
     let a = e.target.style.backgroundColor; 
@@ -16,9 +16,8 @@ export function handleClick(e) {
         e.target.style.backgroundColor = 'white';
         e.target.innerHTML = "";
         eventContainer.pop(e);
-    }     
-    
-    
+        
+    }             
 }
 
 export function handleCategoryHighlight(e) {
@@ -41,13 +40,12 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
-    let count = []; 
+
     for (let i = 0; i < eventContainer.length; i++) {         
         let temp = eventContainer[i].target.style.backgroundColor;
         if(category === "Work" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#00bfff';
             eventContainer[i].target.innerHTML = task;
-
         }
         else if (category === "Family" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#ffff00';
@@ -76,21 +74,24 @@ export function changeTileColor(task, category) {
         else if (category === "Hobby" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
             eventContainer[i].target.innerHTML = task;
+
             // css to assign middle 
             // mark complete user non-automatic change 
             // time sound 
             // when the user clicks specific category, it will display some proper imojis     
             // the format of time hh:mm 
-        }
-      
+        }      
     }
-    time = (eventContainer.length * 10);
-    
-
+    let count = 0; 
+    for (let j = 0; j < eventContainer.length; j++) {
+        if (eventContainer[j].target.innerHTML === task) {
+            count++; 
+        }
+    }
+    time = (count * 10);
 } 
 
 const Calender = () => {
-
     return (
         <div className="calender">
             <div className="time-stamp">
