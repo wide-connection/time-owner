@@ -3,7 +3,8 @@ import './Calender.css';
 
 export const divArr=[];
 export const eventContainer=[]; 
-export let time = []; 
+export let time = 0; 
+export const timeContainer = []; 
 
 export function handleClick(e) {
     let a = e.target.style.backgroundColor; 
@@ -22,7 +23,7 @@ export function handleClick(e) {
 
 export function handleCategoryHighlight(e) {
     let temp = e.target.style.backgroundColor; 
-    console.log(e.target.style.backgroundColor);
+ 
     for (let i = 0; i < eventContainer.length; i++) {
         if (temp === 'deepskyblue') {
             eventContainer[i].target.style.backgroundColor = '#00bfff';
@@ -40,15 +41,13 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
-    let prev = time;
-    let count = 0; 
-    console.log(prev); 
-    for (let i = 0; i < eventContainer.length; i++) {
-         
+    let count = []; 
+    for (let i = 0; i < eventContainer.length; i++) {         
         let temp = eventContainer[i].target.style.backgroundColor;
         if(category === "Work" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#00bfff';
             eventContainer[i].target.innerHTML = task;
+
         }
         else if (category === "Family" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#ffff00';
@@ -85,12 +84,9 @@ export function changeTileColor(task, category) {
         }
       
     }
-    if (count == 0) {
-        time = (eventContainer.length * 10);
-    } else {
-        time = (eventContainer.length * 10) - prev; 
-    }
-    count++; 
+    time = (eventContainer.length * 10);
+    
+
 } 
 
 const Calender = () => {
