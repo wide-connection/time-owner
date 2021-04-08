@@ -1,291 +1,1592 @@
+@media only screen and (max-width: 3840px){
+    html {
+        scroll-behavior: smooth;
+    }
+    .contentbox {
+        margin-top: 6vw;
+        position: relative;
+        top: 10%;
+        left: 50%;
+        align-items: center;
+        margin-bottom: 3%;
+        transform: translate(-50%, 10%);
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1);
+        display: flex;
+    }
+    h3.abouth3 { 
+        text-align: center;
+        margin-top: 50px;
+    }
 
-html {
-    scroll-behavior: smooth;
+    .aboutWideConnection {
+        padding-left: 6vw;
+    }
+
+
+    .wrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutTimeOwner {
+        padding-left: 6vw;
+        margin-bottom: 10%;
+    }
+    .aboutUseCase{
+        padding-left: 15vw;
+    }
+    .aboutClassDiagram{
+        padding-left: 15vw;
+    }
+    .aboutOurFuture {
+        padding-left: 5vw;
+    }
+    .aboutOurFuture div{
+        padding-left: 8vw;
+    }
+    .aboutConceptionModule{
+        padding-left: 20vw;
+    }
+
+    .about_topic {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 3vw;
+        vertical-align: baseline;
+    }
+    .about_content{
+        color: black; 
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1vw;
+        margin-top: 0px;
+    }
+
+    .wideconnectionLogo {
+        width: 40%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0;
+        max-width: 200%;
+    
+    }
+
+    .timeOwnerLogo {
+        width: 30%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0px;
+        max-width: 200%;
+    }
+
+    .useCaseDiagram {
+        width: 60vw;
+        text-align: center;
+    }
+
+    .functionalFlow{
+
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .ConceptFlow{
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+
+    .ProcessFlow{
+        width: 80%;
+        height: 30%;
+        display: block;
+        position: relative; 
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .Alice_WC{
+        height: 35vw;
+    }
+    .Alice_PF{
+        height: 35vw;
+    }
+
+    .Alice_SC{
+        height: 35vw;
+    }
+
+    .Alice_AT{
+        height: 35vw;
+    }
+
+    .Alice_GO{
+        height: 35vw;
+    }
+
+    .Alice_ST{
+        height: 35vw;
+    }
+    
+    .aboutRow1 {
+        min-height: 280px;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-gap: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+    .about1content{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 15%;
+    }
+    .about1content h4{
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 3vw;
+        color: black;
+    }
+    .about1content div{
+        padding-left: 10%;
+        color: black;
+    }
+    .about1content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: black;
+    font-size: 1vw;
+    width: 500px;
+    }
+    .about1content div a{
+        color: black;
+        font-size: 1vw;
+    }
+    .about1content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg1 img{
+        width: 30%;
+        height: 40%;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg1 .usecaseImg{
+        width: 15vw;
+        height: 15vw;
+        padding-left: 20%;
+    }
+
+    .abtimg1 .time{
+        width: 10vw;
+        height: 10vw;
+    }
+    .aboutRow2 {
+        min-height: 280px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 10px;
+        background-color: rgba(7, 110, 179, 0.836);
+        padding: 10px;
+    }
+    .about2content{
+        padding-right: 30%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .about2content h4{
+        padding-left: 40%;
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 3vw;
+        color: white;
+        text-align: left;
+    }
+    .about2content div{
+        padding-left: 50%;
+        color: white;
+    }
+    .about2content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: white;
+    font-size: 1vw;
+    width: 500px;
+    }
+    .about2content div a{
+        color: white;
+        font-size: 1vw;
+    }
+    .about2content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg2 img{
+        width: 15vw;
+        height: 15vw;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .to-top{
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-style: 1px solid rgba(0,0,0);
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s;
+    }
+
+    .to-top .scrollTop{
+        width: 60px;
+        height: 60px;
+    }
+
+    .classDiagram{
+        width: 60vw;
+        padding-bottom: 3vw;
+    }
 }
-.contentbox {
-    position: relative;
-    top: 10%;
-    left: 50%;
-    margin-bottom: 3%;
-    transform: translate(-50%, 10%);
-    box-sizing: border-box;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0,0,0, .5);
-    display: flex;
+
+@media only screen and (max-width: 1920px){
+    html {
+        scroll-behavior: smooth;
+    }
+    .contentbox {
+        margin-top: 6vw;
+        position: relative;
+        top: 10%;
+        left: 50%;
+        align-items: center;
+        margin-bottom: 3%;
+        transform: translate(-50%, 10%);
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1);
+        display: flex;
+    }
+    h3.abouth3 { 
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .aboutWideConnection {
+        padding-left: 6vw;
+    }
+
+
+    .wrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutTimeOwner {
+        padding-left: 6vw;
+        margin-bottom: 10%;
+    }
+    .aboutUseCase{
+        padding-left: 15vw;
+    }
+    .aboutClassDiagram{
+        padding-left: 15vw;
+    }
+    .aboutOurFuture {
+        padding-left: 5vw;
+    }
+    .aboutOurFuture div{
+        padding-left: 8vw;
+    }
+    .aboutConceptionModule{
+        padding-left: 20vw;
+    }
+
+    .about_topic {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 3vw;
+        vertical-align: baseline;
+    }
+    .about_content{
+        color: black; 
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1vw;
+        margin-top: 0px;
+    }
+
+    .wideconnectionLogo {
+        width: 40%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0;
+        max-width: 200%;
+    
+    }
+
+    .timeOwnerLogo {
+        width: 30%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0px;
+        max-width: 200%;
+    }
+
+    .useCaseDiagram {
+        width: 60vw;
+        text-align: center;
+    }
+
+    .functionalFlow{
+
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .ConceptFlow{
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+
+    .ProcessFlow{
+        width: 80%;
+        height: 30%;
+        display: block;
+        position: relative; 
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .Alice_WC{
+        height: 35vw;
+    }
+    .Alice_PF{
+        height: 35vw;
+    }
+
+    .Alice_SC{
+        height: 35vw;
+    }
+
+    .Alice_AT{
+        height: 35vw;
+    }
+
+    .Alice_GO{
+        height: 35vw;
+    }
+
+    .Alice_ST{
+        height: 35vw;
+    }
+    
+    .aboutRow1 {
+        min-height: 280px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+    .about1content{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 15%;
+    }
+    .about1content h4{
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4vw;
+        color: black;
+    }
+    .about1content div{
+        padding-left: 10%;
+        color: black;
+    }
+    .about1content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: black;
+    font-size: 1vw;
+    width: 500px;
+    }
+    .about1content div a{
+        color: black;
+        font-size: 1vw;
+    }
+    .about1content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg1 img{
+        width: 60%;
+        height: 70%;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg1 .usecaseImg{
+        width: 15vw;
+        height: 15vw;
+        padding-left: 20%;
+    }
+
+    .abtimg1 .time{
+        width: 20vw;
+        height: 20vw;
+    }
+    .aboutRow2 {
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 10px;
+        background-color: rgba(7, 110, 179, 0.836);
+        padding: 15px;
+    }
+    .about2content{
+        padding-right: 30%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .about2content h4{
+        padding-left: 40%;
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4vw;
+        color: white;
+        text-align: left;
+    }
+    .about2content div{
+        padding-left: 50%;
+        color: white;
+    }
+    .about2content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: white;
+    font-size: 1vw;
+    width: 500px;
+    }
+    .about2content div a{
+        color: white;
+        font-size: 1vw;
+    }
+    .about2content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg2 img{
+        width: 15vw;
+        height: 15vw;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .to-top{
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-style: 1px solid rgba(0,0,0);
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s;
+    }
+
+    .to-top .scrollTop{
+        width: 60px;
+        height: 60px;
+    }
+
+    .classDiagram{
+        width: 60vw;
+        padding-bottom: 3vw;
+    }
 }
 
 
-#aboutWideConnection {
-    padding-left: 10%;
-}
+@media only screen and (max-width: 1310px){
+    html {
+        scroll-behavior: smooth;
+    }
+    h3.abouth3 { 
+        text-align: center;
+        margin-top: 50px;
+    }
+    .contentbox {
+        margin-top: 6vw;
+        position: relative;
+        top: 10%;
+        left: 50%;
+        align-items: center;
+        margin-bottom: 3%;
+        transform: translate(-50%, 10%);
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1);
+        display: flex;
+    }
 
 
-.wrap {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    vertical-align: baseline;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
+    .aboutWideConnection {
+        padding-left: 6vw;
+    }
 
-#aboutTimeOwner {
-    padding-left: 10%;
-    margin-bottom: 10%;
 
-}
+    .wrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
 
-#aboutUseCase {
-    padding-left: 20%;
+    .aboutTimeOwner {
+        padding-left: 6vw;
+        margin-bottom: 10%;
+    }
+    .aboutUseCase{
+        padding-left: 5vw;
+    }
+    .aboutUseCase h1{
+        padding-left: 10vw;
 
-}
+    }
+    .aboutUseCase img{
+        width: 100%;
+    }
+    .aboutClassDiagram{
+        padding-left: 0vw;
+    }
+    .aboutClassDiagram img{
+        width: 100%;
+    }
+    .aboutClassDiagram h1{
+        padding-left: 10vw;
+    }
 
-#aboutClassDiagram{
-    padding-left: 20%;
+    .aboutConceptionModule{
+        padding-left: 0vw;
+    }
+    .aboutConceptionModule img{
+        width: 100%;
+    }
+    .aboutConceptionModule h1{
+        padding-left: 10vw;
+    }
 
-}
+    .aboutOurFuture {
+        padding-left: 5vw;
+    }
 
-#aboutOurFuture {
-    padding-left: 10%;
-}
-
-#aboutConceptionModule{
-    padding-left: 10%;
-    padding-bottom: 10%;
-}
-
-.about_topic {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 50px;
-    vertical-align: baseline;
-}
-.about_content{
-    color: black; 
-    display: inline-block;
-    padding-top: 10px;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 22px;
-    margin-top: 0px;
-}
-
-.wideconnectionLogo {
-    width: 40%;
-    height: 40%;
-    display: block;
-    position: relative; 
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    background: none;
-    border: "1px";
-    border-radius: 5%;
-    padding: 0;
-    max-width: 200%;
    
-}
 
-.timeOwnerLogo {
-    width: 30%;
-    height: 40%;
-    display: block;
-    position: relative; 
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    background: none;
-    border: "1px";
-    border-radius: 5%;
-    padding: 0px;
-    max-width: 200%;
-}
+    .about_topic {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 4vw;
+        vertical-align: baseline;
+    }
+    .about_content{
+        color: black; 
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1.5vw;
+        margin-top: 0px;
+    }
 
-.useCaseDiagram {
-    width: 100%;
-    height:80%;
-    display: block;
-    position: relative; 
-    margin: 0 auto;
-    margin-top: 20px;
-    background: none;
-    border: "1px";
-    border-radius: 5%;
-    padding: 0px;
-    max-width: 100%;
-}
+    .wideconnectionLogo {
+        width: 40%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0;
+        max-width: 200%;
+    
+    }
 
-.functionalFlow{
+    .timeOwnerLogo {
+        width: 30%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0px;
+        max-width: 200%;
+    }
 
-    width: 80%;
-    height: 30%;
-    display: block;
-    position: relative; 
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    background: none;
-    border: "1px";
-    border-radius: 5%;
-    padding: 10px;
-    max-width: 200%;
-}
+    .useCaseDiagram {
+        width: 40vw;
+        text-align: center;
+    }
 
-.ConceptFlow{
-    width: 100%;
-    height: 30%;
-    display: block;
-    position: relative; 
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background: none;
-    border: "1px";
-    border-radius: 5%;
-    padding: 10px;
-    max-width: 200%;
-}
+    .functionalFlow{
+
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .ConceptFlow{
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
 
 
-.ProcessFlow{
-    width: 80%;
-    height: 30%;
-    display: block;
-    position: relative; 
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    background: none;
-    border: "1px";
-    border-radius: 5%;
-    padding: 10px;
-    max-width: 200%;
-}
+    .ProcessFlow{
+        width: 80%;
+        height: 30%;
+        display: block;
+        position: relative; 
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
 
-.Alice_WC{
-   height: 47%;
-}
+    .Alice_WC{
+        height: 38vw;
+    }
+    .Alice_PF{
+        height: 38vw;
+    }
 
-.aboutRow1 {
-    min-height: 280px;
-    max-height: 320px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 10px;
-    background-color: white;
-    padding: 10px;
-}
-.about1content{
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 15%;
-}
-.about1content h4{
-    letter-spacing: -3px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 8vh;
+    .Alice_SC{
+        height: 38vw;
+    }
+
+    .Alice_AT{
+        height: 38vw;
+    }
+
+    .Alice_GO{
+        height: 38vw;
+    }
+
+    .Alice_ST{
+        height: 38vw;
+    }
+
+    .aboutRow1 {
+        min-height: 280px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+    .about1content{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 15%;
+    }
+    .about1content h4{
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 5vw;
+        color: black;
+    }
+    .about1content div{
+        padding-left: 10%;
+        color: black;
+    }
+    .about1content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
     color: black;
-}
-.about1content div{
-    padding-left: 10%;
-    color: black;
-}
-.about1content div p{
-  letter-spacing: -1px;
-  margin-right:auto;
-  text-align:left;
-  color: black;
-  font-size: 2vh;
-  width: 500px;
-}
-.about1content div a{
-    color: black;
-}
-.about1content div a:hover{
-    text-decoration: underline;
-}
-.abtimg1 img{
-    width: 60%;
-    height: 70%;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 10%;
-}
-.abtimg1 .usecaseImg{
-    width: 30%;
-    height: 80%;
-    padding-left: 20%;
-}
-.aboutRow2 {
-    min-height: 300px;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-gap: 10px;
-    background-color: rgba(7, 110, 179, 0.836);
-    padding: 15px;
-}
-.about2content{
-    padding-right: 30%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
-.about2content h4{
-    padding-left: 40%;
-    letter-spacing: -3px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 8vh;
+    font-size: 1.5vw;
+    width: 400px;
+    }
+    .about1content div a{
+        color: black;
+        font-size: 1.3vw;
+    }
+    .about1content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg1 img{
+        width: 30vw;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg1 .usecaseImg{
+        width: 20vw;
+        height: 20vw;
+        padding-left: 20%;
+    }
+
+    .abtimg1 .time{
+        width: 20vw;
+        height: 20vw;
+    }
+    .aboutRow2 {
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 10px;
+        background-color: rgba(7, 110, 179, 0.836);
+        padding: 15px;
+    }
+    .about2content{
+        padding-right: 30%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .about2content h4{
+        padding-left: 40%;
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 5vw;
+        color: white;
+        text-align: left;
+    }
+    .about2content div{
+        padding-left: 50%;
+        color: white;
+    }
+    .about2content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
     color: white;
-    text-align: left;
-}
-.about2content div{
-    padding-left: 50%;
-    color: white;
-}
-.about2content div p{
-  letter-spacing: -1px;
-  margin-right:auto;
-  text-align:left;
-  color: white;
-  font-size: 2vh;
-  width: 500px;
-}
-.about2content div a{
-    color: white;
-}
-.about2content div a:hover{
-    text-decoration: underline;
-}
-.abtimg2 img{
-    width: 60%;
-    height: 90%;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 10%;
-}
-.to-top{
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border-style: 1px solid rgba(0,0,0);
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s;
+    font-size: 1.5vw;
+    width: 400px;
+    }
+    .about2content div a{
+        color: white;
+        font-size: 1.3vw;
+    }
+    .about2content div a:hover{
+        text-decoration: underline;
+    }
+    div.abtimg2 img{
+        width: 80%;
+        height: 80%;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .to-top{
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-style: 1px solid rgba(0,0,0);
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s;
+    }
+
+    .to-top .scrollTop{
+        width: 60px;
+        height: 60px;
+    }
+
+    .classDiagram{
+        width: 45vw;
+        padding-bottom: 3vw;
+    }
 }
 
-.to-top .scrollTop{
-    width: 60px;
-    height: 60px;
+
+@media only screen and (max-width: 1000px){
+    html {
+        scroll-behavior: smooth;
+    }
+    .contentbox {
+        margin-top: 6vw;
+        position: relative;
+        top: 10%;
+        left: 50%;
+        align-items: center;
+        margin-bottom: 3%;
+        transform: translate(-50%, 10%);
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1);
+        display: flex;
+    }
+
+
+    .aboutWideConnection {
+        padding-left: 6vw;
+    }
+    h3.abouth3 { 
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .wrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutTimeOwner {
+        padding-left: 6vw;
+        margin-bottom: 10%;
+    }
+    .aboutUseCase{
+        padding-left: 0vw;
+    }
+    .aboutClassDiagram{
+        padding-left: 0vw;
+    }
+    .aboutOurFuture {
+        padding-left: 0vw;
+    }
+    .aboutOurFuture div{
+        padding-left: 8vw;
+    }
+    .aboutConceptionModule{
+        padding-left: 0vw;
+    }
+
+    .about_topic {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 4vw;
+        vertical-align: baseline;
+    }
+    .about_content{
+        color: black; 
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1.6vw;
+        margin-top: 0px;
+    }
+
+    .wideconnectionLogo {
+        width: 40%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0;
+        max-width: 200%;
+    
+    }
+
+    .timeOwnerLogo {
+        width: 30%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0px;
+        max-width: 200%;
+    }
+
+    .useCaseDiagram {
+        width: 60vw;
+        text-align: center;
+    }
+
+    .functionalFlow{
+
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .ConceptFlow{
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+
+    .ProcessFlow{
+        width: 80%;
+        height: 30%;
+        display: block;
+        position: relative; 
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .Alice_WC{
+        height: 35vw;
+    }
+    .Alice_PF{
+        height: 35vw;
+    }
+
+    .Alice_SC{
+        height: 35vw;
+    }
+
+    .Alice_AT{
+        height: 35vw;
+    }
+
+    .Alice_GO{
+        height: 35vw;
+    }
+
+    .Alice_ST{
+        height: 35vw;
+    }
+    
+    .aboutRow1 {
+        min-height: 150px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+    .about1content{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 15%;
+    }
+    .about1content h4{
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4.5vw;
+        color: black;
+    }
+    .about1content div{
+        padding-left: 10%;
+        color: black;
+    }
+    .about1content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: black;
+    font-size: 1.6vw;
+    width: 200px;
+    }
+    .about1content div a{
+        color: black;
+        font-size: 1.3vw;
+    }
+    .about1content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg1 img{
+        width: 25vw;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg1 .usecaseImg{
+        width: 20vw;
+        height: 20vw;
+        padding-left: 20%;
+    }
+
+    .abtimg1 .time{
+        width: 20vw;
+        height: 20vw;
+    }
+    .aboutRow2 {
+        min-height: 150px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 10px;
+        background-color: rgba(7, 110, 179, 0.836);
+        padding: 15px;
+    }
+    .about2content{
+        padding-right: 30%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .about2content h4{
+        padding-left: 40%;
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 4.5vw;
+        color: white;
+        text-align: left;
+    }
+    .about2content div{
+        padding-left: 50%;
+        color: white;
+    }
+    .about2content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: white;
+    font-size: 1.6vw;
+    width: 200px;
+    }
+    .about2content div a{
+        color: white;
+        font-size: 1.2vw;
+    }
+    .about2content div a:hover{
+        text-decoration: underline;
+    }
+    div.abtimg2 img{
+        width: 85%;
+        height: 75%;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg2 .classDimg{
+        width: 25vw;
+        height: 25vw;
+    }
+    .to-top{
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-style: 1px solid rgba(0,0,0);
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s;
+    }
+
+    .to-top .scrollTop{
+        width: 60px;
+        height: 60px;
+    }
+
+    .classDiagram{
+        width: 60vw;
+        padding-bottom: 3vw;
+    }
+}
+
+
+@media only screen and (max-width: 750px){
+    html {
+        scroll-behavior: smooth;
+    }
+    .contentbox {
+        margin-top: 6vw;
+        position: relative;
+        top: 10%;
+        left: 50%;
+        align-items: center;
+        margin-bottom: 3%;
+        transform: translate(-50%, 10%);
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1);
+        display: flex;
+    }
+
+
+    .aboutWideConnection {
+        padding-left: 6vw;
+    }
+
+
+    .wrap {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutTimeOwner {
+        padding-left: 6vw;
+        margin-bottom: 10%;
+    }
+    .aboutUseCase{
+        padding-left: 0vw;
+    }
+    .aboutClassDiagram{
+        padding-left: 0vw;
+    }
+    .aboutOurFuture {
+        padding-left: 0vw;
+    }
+    .aboutOurFuture div{
+        padding-left: 8vw;
+    }
+    .aboutConceptionModule{
+        padding-left: 0vw;
+    }
+
+    .about_topic {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 4vw;
+        vertical-align: baseline;
+    }
+
+    h3.abouth3 { 
+        font-size: 2vw;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .about_content{
+        color: black; 
+        display: inline-block;
+        padding-top: 10px;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1.6vw;
+        margin-top: 0px;
+    }
+
+    .wideconnectionLogo {
+        width: 40%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0;
+        max-width: 200%;
+    
+    }
+
+    .timeOwnerLogo {
+        width: 30%;
+        height: 40%;
+        display: block;
+        position: relative; 
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 0px;
+        max-width: 200%;
+    }
+
+    .useCaseDiagram {
+        width: 60vw;
+        text-align: center;
+    }
+
+    .functionalFlow{
+
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .ConceptFlow{
+        width: 30vw;
+        display: block;
+        position: relative; 
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+
+    .ProcessFlow{
+        width: 80%;
+        height: 30%;
+        display: block;
+        position: relative; 
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        border: "1px";
+        border-radius: 5%;
+        padding: 10px;
+        max-width: 200%;
+    }
+
+    .Alice_WC{
+        height: 35vw;
+    }
+    .Alice_PF{
+        height: 35vw;
+    }
+
+    .Alice_SC{
+        height: 35vw;
+    }
+
+    .Alice_AT{
+        height: 35vw;
+    }
+
+    .Alice_GO{
+        height: 35vw;
+    }
+
+    .Alice_ST{
+        height: 35vw;
+    }
+    
+    .aboutRow1 {
+        min-height: 120px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+    .about1content{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 15%;
+    }
+    .about1content h4{
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 3.5vw;
+        color: black;
+    }
+    .about1content div{
+        padding-left: 10%;
+        color: black;
+    }
+    .about1content div p{
+    letter-spacing: -1px;
+    margin-right:auto;
+    text-align:left;
+    color: black;
+    font-size: 1vw;
+    width: 200px;
+    }
+    .about1content div a{
+        color: black;
+        font-size: 0.5vw;
+    }
+    .about1content div a:hover{
+        text-decoration: underline;
+    }
+    .abtimg1 img{
+        width: 25vw;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg1 .usecaseImg{
+        width: 20vw;
+        height: 20vw;
+        padding-left: 20%;
+    }
+
+    .abtimg1 .time{
+        width: 20vw;
+        height: 20vw;
+    }
+    .aboutRow2 {
+        min-height: 120px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-gap: 10px;
+        background-color: rgba(7, 110, 179, 0.836);
+        padding: 15px;
+    }
+    .about2content{
+        padding-right: 30%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .about2content h4{
+        padding-left: 40%;
+        letter-spacing: -3px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 3.5vw;
+        color: white;
+        text-align: left;
+    }
+    .about2content div{
+        padding-left: 50%;
+        color: white;
+    }
+    .about2content div p{
+    letter-spacing: -0.5px;
+    margin-right:auto;
+    text-align:left;
+    color: white;
+    font-size: 1vw;
+    width: 200px;
+    }
+    .about2content div a{
+        color: white;
+        font-size: 0.5vw;
+    }
+    .about2content div a:hover{
+        text-decoration: underline;
+    }
+    div.abtimg2 img{
+        width: 85%;
+        height: 75%;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .abtimg2 .classDimg{
+        width: 25vw;
+        height: 25vw;
+    }
+    .to-top{
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-style: 1px solid rgba(0,0,0);
+        box-shadow: 0 5px 15px rgba(146, 117, 117, 0.1); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s;
+    }
+
+    .to-top .scrollTop{
+        width: 60px;
+        height: 60px;
+    }
+
+    .classDiagram{
+        width: 60vw;
+        padding-bottom: 3vw;
+    }
 }

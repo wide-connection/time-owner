@@ -31,22 +31,10 @@ const About = () => {
             </a>
 
             <div className="grid-container">
+                
+                    
                 <div className="aboutRow1">
                     <div className="about1content">
-                        
-                        <h4> Wide Connection </h4>
-                        <div>
-                            <p>The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.</p>
-                            <a href="#aboutWideConnection"> ▷ Click here to see more details</a>
-                        </div>        
-                    </div>
-                    <div className="abtimg1">
-                        <img src={wideconnectionLogo} alt="" /> 
-                    </div>
-                </div>
-                    
-                <div className="aboutRow2">
-                    <div className="about2content">
                         <h4> Time Owner </h4>
                         <div>
                             <p>Time Owner is time-management application, that would include daily to-do list, as well as calendar view.</p>
@@ -54,10 +42,25 @@ const About = () => {
                         </div>
                     </div>  
                     
-                    <div className="abtimg2">
-                        <img src={timeowner} alt="" /> 
+                    <div className="abtimg1">
+                        <img src={timeowner} className="time" alt="" /> 
                     </div>      
                 </div>
+
+                <div className="aboutRow2">
+                    <div className="about2content">
+                        
+                        <h4> Wide Connection </h4>
+                        <div>
+                            <p>The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.</p>
+                            <a href="#aboutWideConnection"> ▷ Click here to see more details</a>
+                        </div>        
+                    </div>
+                    <div className="abtimg2">
+                        <img src={wideconnectionLogo} alt="" /> 
+                    </div>
+                </div>
+
                 <div className="aboutRow1">
                     <div className="about1content">
                         
@@ -81,7 +84,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="abtimg2">
-                        <img src={classDiagram2} alt="" /> 
+                        <img src={classDiagram2} className="classDimg" /> 
                     </div>        
                 </div>
                 <div className="aboutRow1">
@@ -120,15 +123,15 @@ const About = () => {
 
                     <div class = "entry-content">
 
-                        <div class = "contentbox" id = "aboutWideConnection">
+                        <div class = "contentbox" >
                                
 
-                                <div>
+                                <div className= "aboutWideConnection">
 
                                     <h1 class ="about_topic">Wide Connection</h1>
                                      <img src={wideconnectionLogo} alt="" className="wideconnectionLogo"/>
 
-                                        <h3 style={{textAlign: 'center', marginTop: '50px'}}>"Time Owner will ease your daily life!"</h3>
+                                        <h3 className="abouth3">"Time Owner will ease your daily life!"</h3>
 
                                      <p class ="about_content">
                                         The Wide Connection is a small Start-Up group dreaming to make the most useful and practical application to brighten user’s daily life.<br /><br />
@@ -143,11 +146,8 @@ const About = () => {
                              
                         </div>
                         
-                        <div class = "contentbox" id = "aboutTimeOwner">
-                               
-
-                               
-                            <div>
+                        <div class = "contentbox">
+                            <div  class = "aboutTimeOwner">
 
                      
                                 <img src={timeowner} alt="" className="timeOwnerLogo"/> 
@@ -161,23 +161,14 @@ const About = () => {
                                     Desperate user might choose to commit to their goal financially and receive a fine if goal is not completed.<br /><br />
                                     Time Owner will allow user to choose maximum fine amount for not achieving goal commitment.
                                      </p>
-
-                  
                             </div>
-
-                            
-                                
-                               
-
                         </div>
+                        <br></br>
 
-                        <div class = "contentbox" id = "aboutUseCase">
-                               
-
-                               
-                               <div>
+                        <div class = "contentbox">
+                               <div className= "aboutUseCase">
    
-                               <h1 class ="about_topic">Usecase Diagram</h1>
+                                    <h1 class ="about_topic">Usecase Diagram</h1>
                                    <img src={useCaseDiagram} alt="" className="useCaseDiagram"/> 
 
                      
@@ -189,11 +180,9 @@ const About = () => {
    
                            </div>
 
-                           <div class = "contentbox" id = "aboutClassDiagram">
+                           <div class = "contentbox" >
                                
-
-                               
-                               <div>
+                               <div className= "aboutClassDiagram"> 
    
                                <h1 class ="about_topic">Class Diagram</h1>
                                    <img src={classDiagram} alt="" className="classDiagram"/> 
@@ -209,19 +198,12 @@ const About = () => {
    
                            </div>
 
-                           <div class = "contentbox" id = "aboutConceptionModule">
+                           <div class = "contentbox" >
                                
-                               
-                               
-
-                               
-                               <div>
+                               <div className = "aboutConceptionModule">
    
                                <h1 class ="about_topic">Concept and Key Flow</h1>
                                    <img src={functionalFlow} alt="" className="functionalFlow"/> 
-
-                                   <img src={ConceptFlow} alt="" className="ConceptFlow"/> 
-
                                    <img src={ProcessFlow} alt="" className="ProcessFlow"/> 
    
                                        
@@ -235,29 +217,27 @@ const About = () => {
    
                            </div>
 
-                           <div class = "contentbox" id = "aboutOurFuture">
+                           <div class = "contentbox" >
                                
                                
 
                                
-                               <div>
+                               <div className = "aboutOurFuture">
    
                                <h1 style={{paddingBottom: '50px'}}class ="about_topic">Our Future Plan</h1>
-                                   <img src={Alice_WC} alt="" className="Alice_WC"/> 
+                                    <div>
+                                        <img src={Alice_WC} alt="" className="Alice_WC"/> 
 
-                                   <img src={Alice_PF} alt="" className="Alice_PF"/> 
+                                        <img src={Alice_PF} alt="" className="Alice_PF"/> 
 
-                                   <img src={ Alice_SC} alt="" className=" Alice_SC"/> 
+                                        <img src={ Alice_SC} alt="" className=" Alice_SC"/> 
 
-                                   <img src={  Alice_AT} alt="" className="  Alice_AT"/> 
+                                        <img src={  Alice_AT} alt="" className="  Alice_AT"/> 
 
-                                   <img src={ Alice_GO} alt="" className="  Alice_GO"/> 
+                                        <img src={ Alice_GO} alt="" className="  Alice_GO"/> 
 
-                                   <img src={Alice_ST} alt="" className=" Alice_ST"/> 
-   
-                                       
-   
-                     
+                                        <img src={Alice_ST} alt="" className=" Alice_ST"/> 
+                                    </div>
                                </div>
 
                                </div>
