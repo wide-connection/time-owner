@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
         '& thead th': {
             fontWeight: '400',
             color: 'white', 
-            backgroundColor: ' #008CBA',
+            backgroundColor: '#375E97',
             height: '20px',
          
         },

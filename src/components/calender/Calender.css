@@ -1,6 +1,6 @@
 .calender {
     width: 560px;
-    height: 795px;
+    height: 1200px;
     overflow: scroll;
 }
 .horizontal_1 {
@@ -36,7 +36,7 @@
 }
 
 .vertical {
-    border-left: 2px dotted black; 
+    /* border-left: 2px dotted black;  */
     height: 780px;
     right: 39%;
     position: absolute;
@@ -59,3 +59,8 @@
     border: 1px solid black;
 }
 
+#non-flex-item {
+    border: none; 
+    
+
+}

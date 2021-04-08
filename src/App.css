@@ -12,8 +12,8 @@
 }
 
 .left-half .table-container {
-    float: left;
-    width: 100%;
+    margin-left: 10%; 
+    margin-top: 5%;
 }
 
 .right-half {

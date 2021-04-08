@@ -9,9 +9,11 @@ body {
 h1 {
     color: yellow;
 }
+
 p {
     color: black; 
 }
+
 footer {
     background: $base-color-blue;
     position: fixed;
@@ -20,8 +22,6 @@ footer {
     height: 60px;
     width: 100%;
 }
-
-
 
 .footer-container {
     max-width: 1300px; 
@@ -115,6 +115,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+
+.buttons-container {
+    margin-left: 400px;
 }
 
 @media screen and (max-width: 960px) 
