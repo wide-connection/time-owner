@@ -14,29 +14,20 @@ p {
 }
 footer {
     background: $base-color-blue;
-    flex-direction: column; 
-    align-items: flex-start;
-    padding: 35px 10px;  
-}
-//display please fix the content
-.logo {
-    width: 100px;
-    position: relative; 
-    left: -10px; 
-    background: none;
-    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
 }
 
-//display none please fix it
+
+
 .footer-container {
     max-width: 1300px; 
     margin: auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    display: none;
 }
 
 .fa-calendar-week {
@@ -47,6 +38,14 @@ footer {
     margin: 20px 0;
 }
 
+.git_icon {
+    list-style: none; 
+    color: var(--text-color); 
+    display: flex;
+    right: 50px;
+    font-size: 30px;
+    padding-left: 3cm;
+}
 .social-media a {
     color: black;
     margin-right: 25px; 

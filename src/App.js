@@ -10,7 +10,7 @@ import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
-
+import About from './components/About/About'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -28,56 +28,43 @@ function App() {
             <div>
               <Header />
               <Switch>
+              <Route path="/about" component={About}/>
                 <Route path="/">
                   <div className="right-half">       
                     <div className="calender-container">
                       <Calender />
                     </div>
-
-                      {/* <Timer/>
-                      <TimerProc /> */}
-
+                   {/* ON HOLD 
+                      <Timer/>
+                      <TimerProc /> 
+                         ON HOLD */}
                   </div>
 
                   <br />
                   <div className="left-half">
-                    <div className="WeeklyGoals-container">
+                    {/* <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
-                    </div>
+                    </div> */}
                     <div className="timer-container">
 
                     </div>
                     <div className="table-container">
                       <TableForms />
                     </div>
-                    <div className='buttons-container'>
-                    <div className='buttons-container'>
-                    </div>
-
-                      <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
-                      <Categories className="Family-btn" color='yellow' content='Family' />
-                      <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
-                      <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
-                      <Categories className="Routine-btn" color='lightGray' content='Routine' />
-                      <Categories className="Friends-btn" color='pink' content='Friends' />
-                      <Categories className="Health-btn" color='gold' content='Health' />
-                      <Categories className="Hobby-btn" color='plum' content='Hobby' />
-                    </div>
                    
                   </div>
                 </Route>
 
-                <Route path="login">
+                <Route path="/login">
 
                 </Route>
-                <Route path="about">
+                
+                      
+
+                <Route path="/contact">
 
                 </Route>
-
-                <Route path="contact">
-
-                </Route>
-              </Switch>
+                </Switch>
               <Footer />
             </div>
         }

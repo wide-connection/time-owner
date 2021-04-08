@@ -39,7 +39,9 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
-        console.log(task);
+    let prev = time;
+    let count = 0; 
+    console.log(prev); 
     for (let i = 0; i < eventContainer.length; i++) {
          
         let temp = eventContainer[i].target.style.backgroundColor;
@@ -60,9 +62,6 @@ export function changeTileColor(task, category) {
             eventContainer[i].target.innerHTML = task;
         }
         else if (category === "Routine" && temp === "rgb(205, 205, 205)") {
-            if (eventContainer[i].target.style.backgroundColor = 'white') {
-
-            }
             eventContainer[i].target.style.backgroundColor = '#d3d3d3';
             eventContainer[i].target.innerHTML = task;
         }
@@ -77,15 +76,20 @@ export function changeTileColor(task, category) {
         else if (category === "Hobby" && temp === "rgb(205, 205, 205)") {
             eventContainer[i].target.style.backgroundColor = '#dda0dd';
             eventContainer[i].target.innerHTML = task;
-            eventContainer[i].target = 'center';
             // css to assign middle 
             // mark complete user non-automatic change 
             // time sound 
             // when the user clicks specific category, it will display some proper imojis     
             // the format of time hh:mm 
         }
-        time = (eventContainer.length * 10); 
+      
     }
+    if (count == 0) {
+        time = (eventContainer.length * 10);
+    } else {
+        time = (eventContainer.length * 10) - prev; 
+    }
+    count++; 
 } 
 
 const Calender = () => {

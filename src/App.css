@@ -33,7 +33,7 @@
 .left-half .buttons-container {
     float: left;
     position: absolute;
-    bottom: 5px;
+    top: 950px;
     width: 50%;
     height: 60px;
     
@@ -45,6 +45,25 @@
 
 }
 
+@media screen and (max-width: 960px)
+{
+    .right-half{
+     
+    max-width: 600px;
+    margin: 1000px 0px;
+  
+    
+    }
+    .time-stamp{
+    /* need styling  */
+     
+    }
+}
+
+.App{
+    max-width:100%;
+;
+}
 
 
 
