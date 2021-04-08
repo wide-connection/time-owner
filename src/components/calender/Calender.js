@@ -85,7 +85,7 @@ export function changeTileColor(task, category) {
         }
       
     }
-    if (count == 0) {
+    if (count === 0) {
         time = (eventContainer.length * 10);
     } else {
         time = (eventContainer.length * 10) - prev; 

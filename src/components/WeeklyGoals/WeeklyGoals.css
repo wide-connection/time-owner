@@ -1,7 +1,7 @@
 .goal-app {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     width: 600px;
     left: 5px;
     min-height: 600px;
