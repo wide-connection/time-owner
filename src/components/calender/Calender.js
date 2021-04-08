@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import {TimePicker} from 'baseui/timepicker';
-import {FormControl} from 'baseui/form-control';
+import React from 'react';
+
 import './Calender.css';
 
 export const divArr=[];
@@ -96,11 +95,7 @@ export function changeTileColor(task, category) {
     time = (count * 10);
 } 
 
-const Calender = () => {
-    const [twentyFourHourTime, setTwentyFourHourTime] = useState(
-        null,
-      );
- 
+const Calender = () => { 
     return (
         <div>      
             <div className="timeContainer">
