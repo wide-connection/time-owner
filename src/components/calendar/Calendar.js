@@ -144,19 +144,30 @@ const Calendar = () => {
         },
     ];
 
+    let now = new Date();
+    let dname = now.getDay(),
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear();
+    
+    let today = document.querySelector("#today");
+    console.log(today);
+    today.innerText = `ssdass`;
+    
+
     const timeZoneButton = timeZone.map((time, index) => {        
 
        return  <div className="time-zone">{time.title}</div>
-        });
+     });
+  
+        
     return (
         <div>
             <div className="date-container">
                 <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
-                        <span id="year">2021-</span>
-                        <span id="month">04-</span>
-                        <span id="dayname">10</span>
+                        <span id="today" ></span>
                     <i class="fas fa-arrow-right"></i>
                     </div>
                 </div>
@@ -171,7 +182,9 @@ const Calendar = () => {
                 </div> 
             </div>
         </div>
-    )
+    ) 
+    
+    
 }
 
 export default Calendar;
