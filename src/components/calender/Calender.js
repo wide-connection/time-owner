@@ -84,7 +84,7 @@ export function changeTileColor(task, category) {
         }
       
     }
-    if (count == 0) {
+    if (count === 0) {
         time = (eventContainer.length * 10);
     } else {
         time = (eventContainer.length * 10) - prev; 
@@ -92,196 +92,236 @@ export function changeTileColor(task, category) {
     count++; 
 } 
 
+
+
+
+let now = new Date();
+let dname = now.getDay(),
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear();
+
+
+
+
 const Calender = () => {
+     
 
     return (
-        <div className="calender">     
-            <div className="time-stamp">
-                
-                <div className="time-zone">9:00</div>
-                <div className="time-zone">10:00</div>
-                <div className="time-zone">11:00</div>
-                <div className="time-zone">12:00</div>
-                <div className="time-zone">13:00</div>
-                <div className="time-zone">14:00</div>
-                <div className="time-zone">15:00</div>
-                <div className="time-zone">16:00</div>
-                <div className="time-zone">17:00</div>
-                <div className="time-zone">18:00</div>
-                <div className="time-zone">19:00</div>
-                <div className="time-zone">20:00</div>
-                <div className="time-zone">21:00</div>
-                <div className="time-zone">22:00</div>
-                <div className="time-zone">23:00</div>
+        <div>            
+            <div className="date-container">
+
+                <div className="datetime">
+                    <div className="date">
+                      <i class="fas fa-arrow-left"></i>
+                        <span id="year">2021-</span>
+                        <span id="month">04-</span>
+                        <span id="dayname">10</span>
+                      <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+   
             </div>
-            {/* <hr style={{position: 'absolute', top: '15.1%', right: '34.3%', border: '1px dotted black', width: '80px' }}/>
-            <hr style={{position: 'absolute', top: '106.5%', right: '34.3%', border: '1px dotted black', width: '80px' }}/> */}
-            <div className="vertical"></div>            
-              <div class="flex-row-container">                 
-                <div className="flex-row-item" id="non-flex-item"  onClick={handleClick}>9:00</div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>         
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div>
-                  <div className="flex-row-item" onClick={handleClick}></div> 
-              </div>
-              {/* <div className="square"></div>         */}
+            <div className="calender">     
+                <div className="time-stamp">
                     
+                    <div className="time-zone">9:00</div>
+                    <div className="time-zone">10:00</div>
+                    <div className="time-zone">11:00</div>
+                    <div className="time-zone">12:00</div>
+                    <div className="time-zone">13:00</div>
+                    <div className="time-zone">14:00</div>
+                    <div className="time-zone">15:00</div>
+                    <div className="time-zone">16:00</div>
+                    <div className="time-zone">17:00</div>
+                    <div className="time-zone">18:00</div>
+                    <div className="time-zone">19:00</div>
+                    <div className="time-zone">20:00</div>
+                    <div className="time-zone">21:00</div>
+                    <div className="time-zone">22:00</div>
+                    <div className="time-zone">23:00</div>
+                </div>
+                {/* <hr style={{position: 'absolute', top: '15.1%', right: '34.3%', border: '1px dotted black', width: '80px' }}/>
+                <hr style={{position: 'absolute', top: '106.5%', right: '34.3%', border: '1px dotted black', width: '80px' }}/> */}
+                <div className="vertical"></div>            
+                <div class="flex-row-container">                 
+                    {/* <div className="flex-row-item" id="non-flex-item"  onClick={handleClick}>9:00</div> */}
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                        
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>         
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div>
+                    <div className="flex-row-item" onClick={handleClick}></div> 
+                </div>                        
+            </div>
         </div>
     )
 }

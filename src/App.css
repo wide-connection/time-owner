@@ -24,8 +24,8 @@
 
 .calender-container {
     float: right;    
-    margin: 20px 30px;
-    border: 2px solid lightgray;
+    margin: 15px 30px;
+
 }
 
 
@@ -54,10 +54,10 @@
   
     
     }
-    .time-stamp{
-    /* need styling  */
+    /* .time-stamp{
+    need styling
      
-    }
+    } */
 }
 
 .App{

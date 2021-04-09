@@ -6,7 +6,6 @@ import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
 import TableForms from './components/TableForm/TableForms'
-import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
@@ -45,9 +44,7 @@ function App() {
                     {/* <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
                     </div> */}
-                    <div className="timer-container">
-
-                    </div>
+                    
                     <div className="table-container">
                       <TableForms />
                     </div>
