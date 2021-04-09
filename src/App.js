@@ -45,10 +45,16 @@ function App() {
 
                   <br />
                   <div className="left-half">
+<<<<<<< HEAD
                     {/* <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
                     </div> */}
                     
+=======
+                    <div className="timer-container">
+
+                    </div>
+>>>>>>> cdad487 (resoved the conflict)
                     <div className="table-container">
                       <TableForms />
                     </div>
