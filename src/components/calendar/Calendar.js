@@ -149,14 +149,27 @@ const Calendar = () => {
        return  <div className="time-zone">{time.title}</div>
         });
     return (
-        <div className="calendar">
-            <div className="time-stamp">
-            {timeZoneButton}
+        <div>
+            <div className="date-container">
+                <div className="datetime">
+                    <div className="date">
+                    <i class="fas fa-arrow-left"></i>
+                        <span id="year">2021-</span>
+                        <span id="month">04-</span>
+                        <span id="dayname">10</span>
+                    <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
-            <div className="vertical"></div>
-            <div class="flex-row-container">
-          {  [...Array(138)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
-            </div> 
+            <div className="calendar">
+                <div className="time-stamp">
+                {timeZoneButton}
+                </div>
+                <div className="vertical"></div>
+                <div class="flex-row-container">
+            {  [...Array(138)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
+                </div> 
+            </div>
         </div>
     )
 }
