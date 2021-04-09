@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
-import Calender from './components/calender/Calender'
+import Calendar from './components/calendar/Calendar'
 import TableForms from './components/TableForm/TableForms'
 import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
@@ -30,8 +30,8 @@ function App() {
               <Route path="/about" component={About}/>
                 <Route path="/">
                   <div className="right-half">       
-                    <div className="calender-container">
-                      <Calender />
+                    <div className="calendar-container">
+                      <Calendar />
                     </div>
                    {/* ON HOLD 
                       <Timer/>

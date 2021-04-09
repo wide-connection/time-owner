@@ -13,7 +13,7 @@ import Notification from "../Notification"
 import ConfirmDialog from "../ConfirmDialog"
 import TimerIcon from '@material-ui/icons/Timer';
 import EventIcon from '@material-ui/icons/Event';
-import { changeTileColor, time} from '../../components/calender/Calender'
+import { changeTileColor, time} from '../../components/calendar/Calendar'
 import { relativeTimeRounding } from 'moment'
 import { blue } from '@material-ui/core/colors';
 import './TableForm.scss';

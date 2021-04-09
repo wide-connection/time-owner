@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Categories.css';
-import { handleCategoryHighlight } from '../../components/calender/Calender'; 
+import { handleCategoryHighlight } from '../calendar/Calendar'; 
 
 export function handleCategoryClick(e) {
     handleCategoryHighlight(e); 
