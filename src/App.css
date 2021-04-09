@@ -2,15 +2,6 @@
     width: 50%;
 }
 
-.WeeklyGoals-container {
-    margin-left: 10%;
-    width: 80%;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    text-align: center;
-    justify-content: center;
-}
-
 .left-half .table-container {
     margin-left: 10%; 
     margin-top: 5%;
@@ -22,7 +13,7 @@
     height: 50%;
 }
 
-.calender-container {
+.calendar-container {
     float: right;    
     margin: 15px 30px;
 
