@@ -88,7 +88,7 @@ const About = () => {
                     </div>        
                 </div>
                 <div className="aboutRow1">
-                    <div className="about1content">
+                    <div className="about1content" > 
                         
                         <h4> Conception Module </h4>
                         <div>
@@ -123,10 +123,29 @@ const About = () => {
 
                     <div class = "entry-content">
 
+                        
+                        
+                        <div class = "contentbox">
+                            <div  class = "aboutTimeOwner" id="aboutTimeOwner">
+
+                     
+                                <img src={timeowner} alt="" className="timeOwnerLogo"/> 
+
+                                    <p class ="about_content">
+                                    Wide connection’s 'Time Owner' is time-management application, that would include daily to-do list, as well as calendar view.<br /><br />
+                                    Time Owner will allow user to plan their days, weeks, and month ahead, as well as track their current productivity.<br /><br />
+                                    Time Owner will encourage users to create life goals and help with scheduling them out.<br /><br />
+                                    Time Owner would present user a statistic with how productive they were, and how close they are to fulfilling their goals.<br /><br />
+                                    Time Owner is also designed for user to assign the goal and checklist to have a constant visual reminder and to increase chance to achieve their goal.<br /><br />
+                                    Desperate user might choose to commit to their goal financially and receive a fine if goal is not completed.<br /><br />
+                                    Time Owner will allow user to choose maximum fine amount for not achieving goal commitment.
+                                     </p>
+                            </div>
+                        </div>
                         <div class = "contentbox" >
                                
 
-                                <div className= "aboutWideConnection">
+                                <div className= "aboutWideConnection" id="aboutWideConnection">
 
                                     <h1 class ="about_topic">Wide Connection</h1>
                                      <img src={wideconnectionLogo} alt="" className="wideconnectionLogo"/>
@@ -145,28 +164,9 @@ const About = () => {
                                     
                              
                         </div>
-                        
-                        <div class = "contentbox">
-                            <div  class = "aboutTimeOwner">
-
-                     
-                                <img src={timeowner} alt="" className="timeOwnerLogo"/> 
-
-                                    <p class ="about_content">
-                                    Wide connection’s 'Time Owner' is time-management application, that would include daily to-do list, as well as calendar view.<br /><br />
-                                    Time Owner will allow user to plan their days, weeks, and month ahead, as well as track their current productivity.<br /><br />
-                                    Time Owner will encourage users to create life goals and help with scheduling them out.<br /><br />
-                                    Time Owner would present user a statistic with how productive they were, and how close they are to fulfilling their goals.<br /><br />
-                                    Time Owner is also designed for user to assign the goal and checklist to have a constant visual reminder and to increase chance to achieve their goal.<br /><br />
-                                    Desperate user might choose to commit to their goal financially and receive a fine if goal is not completed.<br /><br />
-                                    Time Owner will allow user to choose maximum fine amount for not achieving goal commitment.
-                                     </p>
-                            </div>
-                        </div>
-                        <br></br>
 
                         <div class = "contentbox">
-                               <div className= "aboutUseCase">
+                               <div className= "aboutUseCase" id="aboutUseCase">
    
                                     <h1 class ="about_topic">Usecase Diagram</h1>
                                    <img src={useCaseDiagram} alt="" className="useCaseDiagram"/> 
@@ -182,7 +182,7 @@ const About = () => {
 
                            <div class = "contentbox" >
                                
-                               <div className= "aboutClassDiagram"> 
+                               <div className= "aboutClassDiagram" id="aboutClassDiagram"> 
    
                                <h1 class ="about_topic">Class Diagram</h1>
                                    <img src={classDiagram} alt="" className="classDiagram"/> 
@@ -200,7 +200,7 @@ const About = () => {
 
                            <div class = "contentbox" >
                                
-                               <div className = "aboutConceptionModule">
+                               <div className = "aboutConceptionModule" id="aboutConceptionModule">
    
                                <h1 class ="about_topic">Concept and Key Flow</h1>
                                    <img src={functionalFlow} alt="" className="functionalFlow"/> 
@@ -222,7 +222,7 @@ const About = () => {
                                
 
                                
-                               <div className = "aboutOurFuture">
+                               <div className = "aboutOurFuture" id="aboutOurFuture">
    
                                <h1 style={{paddingBottom: '50px'}}class ="about_topic">Our Future Plan</h1>
                                     <div>
