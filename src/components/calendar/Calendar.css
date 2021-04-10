@@ -53,6 +53,7 @@
     transition: 0.3s;
     width: 300px;
     margin-left: 114px; 
+    display: none;
 }
 
 .datetime:hover {
