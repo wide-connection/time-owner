@@ -150,9 +150,9 @@ const Calendar = () => {
     dnum = now.getDate(),
     yr = now.getFullYear();
     
-    let today = document.querySelector("#today");
-    console.log(today);
-    today.innerText = `ssdass`;
+    // let today = document.getElementById("#today");
+    // console.log(today);
+    // today.innerText = `ssdass`;
     
 
     const timeZoneButton = timeZone.map((time, index) => {        
