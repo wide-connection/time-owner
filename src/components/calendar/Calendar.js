@@ -93,6 +93,7 @@ export function changeTileColor(task, category) {
 
 const Calendar = () => {
 
+
     const timeZone = [
         {
             title: '9:00'
@@ -107,52 +108,52 @@ const Calendar = () => {
             title: '12:00'
         },
         {
-            title: '9:00'
+            title: '13:00'
         },
         {
-            title: '10:00'
+            title: '14:00'
         },
         {
-            title: '11:00'
+            title: '15:00'
         },
         {
-            title: '12:00'
+            title: '16:00'
         },
         {
-            title: '9:00'
+            title: '17:00'
         },
         {
-            title: '10:00'
+            title: '18:00'
         },
         {
-            title: '11:00'
+            title: '19:00'
         },
         {
-            title: '12:00'
+            title: '20:00'
         },
         {
-            title: '9:00'
+            title: '21:00'
         },
         {
-            title: '10:00'
+            title: '22:00'
         },
         {
-            title: '11:00'
+            title: '23:00'
         },
         {
-            title: '12:00'
+            title: '24:00'
         },
     ];
 
-    let now = new Date();
-    let dname = now.getDay(),
-    mo = now.getMonth(),
-    dnum = now.getDate(),
-    yr = now.getFullYear();
+    // let now = new Date();
+    // let dname = now.getDay(),
+    // mo = now.getMonth(),
+    // dnum = now.getDate(),
+    // yr = now.getFullYear();
     
-    let today = document.querySelector("#today");
-    console.log(today);
-    today.innerText = `ssdass`;
+    // let today = document.querySelector("#today");
+    // console.log(today);
+    // today.innerText = `ssdass`;
     
 
     const timeZoneButton = timeZone.map((time, index) => {        
@@ -163,11 +164,13 @@ const Calendar = () => {
         
     return (
         <div>
+            <input type="time"/>
+            <input type="submit" className="time-selector" value="select time"/>
             <div className="date-container">
                 <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
-                        <span id="today" ></span>
+                        <span id="today" >2021-04-10</span>                       
                     <i class="fas fa-arrow-right"></i>
                     </div>
                 </div>
