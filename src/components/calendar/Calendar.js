@@ -151,7 +151,7 @@ const Calendar = () => {
     // dnum = now.getDate(),
     // yr = now.getFullYear();
     
-    // let today = document.querySelector("#today");
+    // let today = document.getElementById("#today");
     // console.log(today);
     // today.innerText = `ssdass`;
     
