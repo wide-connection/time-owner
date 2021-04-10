@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme =>({
         left: 1,
         display: 'flex',
         height: '55px',
-        width: '169px'
+        width: '100px'
     },
 }))
 

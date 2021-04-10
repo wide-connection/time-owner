@@ -151,7 +151,11 @@ const Calendar = () => {
     // dnum = now.getDate(),
     // yr = now.getFullYear();
     
+<<<<<<< HEAD
     // let today = document.querySelector("#today");
+=======
+    // let today = document.getElementById("#today");
+>>>>>>> 515ea7427cb3e6fedd3baa850457e35b22a3a0e3
     // console.log(today);
     // today.innerText = `ssdass`;
     
