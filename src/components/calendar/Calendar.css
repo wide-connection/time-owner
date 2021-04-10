@@ -101,6 +101,9 @@
 }
 
 i:hover {
-    color: blue;
-    
+    color: blue;   
+}
+
+.time-selector {
+    margin-left: 2px; 
 }
