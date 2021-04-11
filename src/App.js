@@ -6,7 +6,6 @@ import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
 import Calender from './components/calender/Calender'
 import TableForms from './components/TableForm/TableForms'
-import WeeklyGoalsList from './components/WeeklyGoals/WeeklyGoalsList';
 import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
@@ -37,33 +36,21 @@ function App() {
                       <Calender />
                     </div>
 
+                   {/* ON HOLD 
                       <Timer/>
-                      <TimerProc />
+                      <TimerProc /> 
+                         ON HOLD */}
 
                   </div>
 
                   <br />
                   <div className="left-half">
-                    <div className="WeeklyGoals-container">
+                    {/* <div className="WeeklyGoals-container">
                       <WeeklyGoalsList />
-                    </div>
-                    <div className="timer-container">
-
-                    </div>
+                    </div> */}
+                    
                     <div className="table-container">
                       <TableForms />
-                    </div>
-                    <div className='buttons-container'>
-              
-
-                      <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
-                      <Categories className="Family-btn" color='yellow' content='Family' />
-                      <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
-                      <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
-                      <Categories className="Routine-btn" color='lightGray' content='Routine' />
-                      <Categories className="Friends-btn" color='pink' content='Friends' />
-                      <Categories className="Health-btn" color='gold' content='Health' />
-                      <Categories className="Hobby-btn" color='plum' content='Hobby' />
                     </div>
                    
                   </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './WeeklyGoals.css';
+import './WeeklyGoals.scss';
 
 function WeeklyGoalsForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
