@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Statistics.css';
 import { Bar, Pie, defaults } from 'react-chartjs-2'
+import { Redirect } from 'react-router';
 
 
 defaults.global.legend.labels.boxWidth = 100;
@@ -17,7 +18,7 @@ const Statistics = () => {
                         <div class = "pieCharts">
 
                             <div class = "dailyPie">
-                                            <h1>Daily Statistics</h1>
+                                            <h1 style={{color: "black"}}>Daily Statistics</h1>
                                         <Pie
                                             data = {{
                                             labels: ['Sleep', 'Work', 'Hobby'],
@@ -54,7 +55,7 @@ const Statistics = () => {
                              </div>
 
                                     <div class = "dailyPie">
-                                    <h1>Weekly Statistics</h1>
+                                    <h1 style={{color: "black"}}>Weekly Statistics</h1>
                                     <Pie
                                     data = {{
                                         labels: ['Sleep', 'Work', 'Hobby'],
@@ -92,7 +93,7 @@ const Statistics = () => {
                         
                         <div class = "barCharts">
                                 <div class = "dailyPie">
-                                                    <h1>Daily Statistics</h1>
+                                                    <h1 style={{color: "black"}}>Daily Statistics</h1>
                                                 <Bar
                                                     data = {{
                                                     labels: ['Sleep', 'Work', 'Hobby'],
@@ -149,7 +150,7 @@ const Statistics = () => {
                                     </div>
 
                                             <div class = "dailyPie">
-                                            <h1>Weekly Statistics</h1>
+                                            <h1 style={{color: "black"}}>Weekly Statistics</h1>
                                             <Bar
                                             data = {{
                                                 labels: ['Sleep', 'Work', 'Hobby'],
