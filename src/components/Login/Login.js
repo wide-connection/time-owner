@@ -25,10 +25,11 @@ class Login extends Component {
         <Container>
           <Row>
             <Col lg={6} md={6} sm={12} className="p-5 m-auto">
-              <div className="LoginBox p-5">
+              <div className="LoginBox p-5 position-absolute">
                 <img className="LoginImg" src={LoginImg} alt="" />
 
                 <Form className="mt-3">
+                  <br />
                   <Form.Group>
                     <Form.Control type="email" placeholder="Enter email" />
                   </Form.Group>
@@ -38,12 +39,28 @@ class Login extends Component {
                       type="password"
                       placeholder="Enter Password"
                     />
+                    <small
+                      id="passwordHelpInline"
+                      class="text-muted"
+                      style={{ marginLeft: '30px' }}
+                    >
+                      Must be 8-20 characters long.
+                    </small>
                   </Form.Group>
+                  <br />
 
-                  <a className="ml-3" href="#">
-                    Forgot Password
-                  </a>
-
+                  <div>
+                    <p className="forgot-password text-right">
+                      <a href="#">Forgot ID?</a> /{' '}
+                      <a href="#">Forgot Password?</a>
+                    </p>
+                  </div>
+                  <div class="visible">
+                    <span>
+                      No account? <a href="#"> Sign up </a>
+                    </span>
+                  </div>
+                  <br />
                   <Button className="btn-block" variant="success" type="submit">
                     Submit
                   </Button>
