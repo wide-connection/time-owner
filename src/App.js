@@ -10,6 +10,7 @@ import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
 import About from './components/About/About'
+import Statistics from './components/Statistics/Statistics'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -28,15 +29,18 @@ function App() {
               <Header />
               <Switch>
               <Route path="/about" component={About}/>
+              <Route path="/statistics" component={Statistics}/>
                 <Route path="/">
                   <div className="right-half">       
                     <div className="calender-container">
                       <Calender />
                     </div>
+
                    {/* ON HOLD 
                       <Timer/>
                       <TimerProc /> 
                          ON HOLD */}
+
                   </div>
 
                   <br />

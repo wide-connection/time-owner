@@ -1,0 +1,15 @@
+.dailyPie{
+    width: 700px;
+    height: 500px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pieCharts{
+    text-align:center;
+}
+
+.barCharts{
+    margin-top: 10%;
+    text-align:center;
+}

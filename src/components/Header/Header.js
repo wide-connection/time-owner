@@ -14,7 +14,11 @@ class Header extends Component {
               <ul className="navbar_menu">
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About Us</a></li>
-                  <li><a href="/contact">Contact</a></li>                    
+
+                  <li><a href="/contact">Contact</a></li>   
+                  <li><a href="/statistics">Statistics</a></li>                   
+                  <li><a href="/login" className="login_btn">Login</a></li>
+
               </ul>
 
               <div className="logout">  
