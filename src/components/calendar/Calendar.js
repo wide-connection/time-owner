@@ -51,6 +51,7 @@ export function changeTileColor(task, category) {
         if(temp === colorBlox){
             switch(category){
                 case "Work":
+                    
                     eventContainer[i].target.style.backgroundColor = '#00bfff';
                     eventContainer[i].target.innerHTML = task;   
                 break;
@@ -145,19 +146,15 @@ const Calendar = () => {
         },
     ];
 
-    // let now = new Date();
-    // let dname = now.getDay(),
-    // mo = now.getMonth(),
-    // dnum = now.getDate(),
-    // yr = now.getFullYear();
+    let now = new Date();
+    let dname = now.getDay(),
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear();
     
-<<<<<<< HEAD
-    // let today = document.querySelector("#today");
-=======
-    // let today = document.getElementById("#today");
->>>>>>> 515ea7427cb3e6fedd3baa850457e35b22a3a0e3
-    // console.log(today);
-    // today.innerText = `ssdass`;
+    let today = document.querySelector("#today");
+    console.log(today);
+
     
 
     const timeZoneButton = timeZone.map((time, index) => {        
@@ -168,10 +165,12 @@ const Calendar = () => {
         
     return (
         <div>
+
             <input type="time"/>
             <input type="submit" className="time-selector" value="select time"/>
+        
             <div className="date-container">
-                <div className="datetime">
+                 <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
                         <span id="today" >2021-04-10</span>                       
