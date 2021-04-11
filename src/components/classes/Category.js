@@ -1,9 +1,17 @@
+//import React from 'react';
 class Category {
-    constructor(category, preferredTimeblock){
-        this.category=category;
+    constructor(name, color, preferredTimeblock){
+        this.name=name;
+        this.color=color;
         this.preferredTimeblock=preferredTimeblock;
+        
+
     }
     getName(){return this.cName};
     getCategory(){return this.category};
         
 }
+
+// Category UserCategories = new Array()
+
+// export default Categories;
