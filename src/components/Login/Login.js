@@ -19,13 +19,11 @@ class Login extends Component {
   render() {
     return (
       <Fragment>
-        <h2 className="PageTitle" style={{ 'margin-left': '840px' }}>
-          Log In
-        </h2>
+        <h2 className="PageTitle">Log In</h2>
         <Container>
           <Row>
-            <Col lg={6} md={6} sm={12} className="p-5 m-auto">
-              <div className="LoginBox p-5 position-absolute">
+            <Col lg={5} md={6} sm={12} className="p-5 m-auto">
+              <div className="LoginBox p-5 ">
                 <img className="LoginImg" src={LoginImg} alt="" />
 
                 <Form className="mt-3">
@@ -50,12 +48,12 @@ class Login extends Component {
                   <br />
 
                   <div>
-                    <p className="forgot-password text-right">
-                      <a href="#">Forgot ID?</a> /{' '}
+                    <p className="forgot-password text-center">
+                      <a href="#">Forgot ID?</a> /{'   '}
                       <a href="#">Forgot Password?</a>
                     </p>
                   </div>
-                  <div class="visible">
+                  <div className="noaccount" style={{ marginLeft: '47px' }}>
                     <span>
                       No account? <a href="#"> Sign up </a>
                     </span>
