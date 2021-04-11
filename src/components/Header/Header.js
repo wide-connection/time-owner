@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Header.css'
+import './Header.scss'
 import logo from '../Footer/Images/Logo_transparent.png';
 
 class Header extends Component {  
@@ -9,23 +9,23 @@ class Header extends Component {
           <div className="App">
             <nav className="navbar">
               <div className="navbar_logo">
-               <a href="/"><img src={logo} alt="logo" width="200px" /></a>           
+               <a href="/"><img src={logo} alt="logo" width="100px"  /></a>           
               </div>
-
               <ul className="navbar_menu">
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About Us</a></li>
+
                   <li><a href="/contact">Contact</a></li>   
                   <li><a href="/statistics">Statistics</a></li>                   
                   <li><a href="/login" className="login_btn">Login</a></li>
+
               </ul>
 
-              <div className="navbar_icons">                
-                  <li><a href="https://github.com/wide-connection/time-owner"><i class="fab fa-github"></i></a></li>
+              <div className="logout">  
+                  <li><a href="https://github.com/wide-connection/time-owner"><i className="fab fa-github git-icon"></i></a></li>
+              <li><a href="/login" className="login_btn">Logout</a></li>              
               </div>
-        
-            </nav>
-         
+            </nav> 
           </div>
  
         );
