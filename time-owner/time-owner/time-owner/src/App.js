@@ -11,6 +11,9 @@ import Categories from './components/Categories/Categories';
 import Timer from './components/Timer/Timer'
 import TimerProc from './components/Timer/TimerProc'
 import About from './components/About/About'
+import addTask from './components/addTask'
+import taskList from './components/taskList'
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -29,6 +32,8 @@ function App() {
               <Header />
               <Switch>
               <Route path="/about" component={About}/>
+              <Route path="/addTask" component={addTask}/>
+              <Route path="/taskList" component={taskList}/>
                 <Route path="/">
                   <div className="right-half">       
                     <div className="calender-container">
