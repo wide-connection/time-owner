@@ -51,6 +51,7 @@ export function changeTileColor(task, category) {
         if(temp === colorBlox){
             switch(category){
                 case "Work":
+                    
                     eventContainer[i].target.style.backgroundColor = '#00bfff';
                     eventContainer[i].target.innerHTML = task;   
                 break;
@@ -145,11 +146,11 @@ const Calendar = () => {
         },
     ];
 
-    // let now = new Date();
-    // let dname = now.getDay(),
-    // mo = now.getMonth(),
-    // dnum = now.getDate(),
-    // yr = now.getFullYear();
+    let now = new Date();
+    let dname = now.getDay(),
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear();
     
     // let today = document.getElementById("#today");
     // console.log(today);
@@ -164,10 +165,12 @@ const Calendar = () => {
         
     return (
         <div>
+
             <input type="time"/>
             <input type="submit" className="time-selector" value="select time"/>
+        
             <div className="date-container">
-                <div className="datetime">
+                 <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
                         <span id="today" >2021-04-10</span>                       
