@@ -26,11 +26,15 @@ const handleClick=(e)=> {
 
 export function handleCategoryHighlight(e) {
     let temp = e.target.style.backgroundColor;
+    console.log(e.target.style.backgroundColor);
     for (let i = 0; i < eventContainer.length; i++) {
         switch(temp){
             case 'deepskyblue':
             eventContainer[i].target.style.backgroundColor = '#00bfff';
             break;
+            case 'yellow':
+            eventContainer[i].target.style.backgroundColor = '#ffff00';
+            break
             case 'pink':
             eventContainer[i].target.style.backgroundColor = '#ffc0cb';
             break;
@@ -39,6 +43,15 @@ export function handleCategoryHighlight(e) {
             break;
             case  'lightcoral':
             eventContainer[i].target.style.backgroundColor = '#f08080'; 
+            break;
+            case 'lightgray':
+            eventContainer[i].target.style.backgroundColor = '#d3d3d3';
+            break;
+            case 'gold':
+            eventContainer[i].target.style.backgroundColor = '#ffd700';
+            break;
+            case 'plum':
+            eventContainer[i].target.style.backgroundColor = '#dda0dd';                
             break;
         default:
             console.log('There was a error with background color');
@@ -194,8 +207,7 @@ const Calendar = () => {
     const cleanTable=(e)=> {
         let flag = window.confirm("Are you sure you wish to delete this item?");
         if (flag) {
-            for (let i = 0; i < eventContainer.length; i++) {
-        
+            for (let i = 0; i < eventContainer.length; i++) {        
                 eventContainer[i].target.style.backgroundColor = 'white'; // clean all calendar 
                 eventContainer[i].target.innerHTML = "";
             }
