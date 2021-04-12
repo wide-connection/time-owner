@@ -65,10 +65,6 @@
     margin: 2.5px 2.5px 2.5px 2.5px;
 }
 
-#non-flex-item {
-    border: none; 
-}
-
 
 /* Below code is for showing current date */
 .datetime { 
@@ -159,8 +155,8 @@ i:hover {
 
 .custom-modal-style {
     position: absolute;
-    left: 40%;
-    top: 10%;
+    left: 45%;
+    top: 30%;
     text-align: center;
     width: 400px;
     height: 300px;

@@ -104,9 +104,7 @@ export function changeTileColor(task, category) {
     time = (count * 10);
 }
 
-export function cleanTable() {
-    
-}
+
 const Calendar = () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -163,6 +161,7 @@ const Calendar = () => {
         {
             title: `${timeString == null ? `${default_time_number + 15}:00` : `${converted_time_number + 15 > 24 ? '' : converted_time_number + 15 + ':00'}`}`
         },
+
     ];
 
     let result = 24 - parseInt(timeZone[0].title); 
@@ -186,13 +185,22 @@ const Calendar = () => {
             optionsContainer.classList.remove("active");
             timeString = o.querySelector("label").innerHTML; 
            })
-        });
-        
+        });        
     }
-    const submitTime=(e)=> {
-        
- 
+
+    const submitTime=(e)=> {        
         setModalIsOpen(false);
+    }
+    const cleanTable=(e)=> {
+        let flag = window.confirm("Are you sure you wish to delete this item?");
+        if (flag) {
+            for (let i = 0; i < eventContainer.length; i++) {
+        
+                eventContainer[i].target.style.backgroundColor = 'white'; // clean all calendar 
+                eventContainer[i].target.innerHTML = "";
+            }
+            setModalIsOpen(false);
+        } 
     }
 
     const timeZoneButton = timeZone.map((time, index) => {        
@@ -307,7 +315,7 @@ const Calendar = () => {
                                     Select new time
                             </div>                           
                         </div>
-                        <div className="reset-calendar">
+                        <div className="reset-calendar" onClick={cleanTable}>
                             Reset calendar
                         </div>
                     </div>
