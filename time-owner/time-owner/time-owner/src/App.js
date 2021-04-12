@@ -13,6 +13,7 @@ import TimerProc from './components/Timer/TimerProc'
 import About from './components/About/About'
 import addTask from './components/addTask'
 import taskList from './components/taskList'
+import register from './components/register'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,12 +35,13 @@ function App() {
               <Route path="/about" component={About}/>
               <Route path="/addTask" component={addTask}/>
               <Route path="/taskList" component={taskList}/>
+              <Route path="/register" component={register}/>
                 <Route path="/">
                   <div className="right-half">       
                     <div className="calender-container">
                       <Calender />
                     </div>
-
+                         
                       {/* <Timer/>
                       <TimerProc /> */}
 
