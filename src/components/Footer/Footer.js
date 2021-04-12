@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Footer.css'
-import logo from '../Footer/Images/Logo_transparent.png';
+import './Footer.scss'
+import Categories from '../Categories/Categories';
 
 class Footer extends Component {
     render() {
@@ -11,22 +11,18 @@ class Footer extends Component {
             </div>
 
             <footer>
-                <div className="footer-container">
+                <div>
                     <div className="left-col">
-                    <img src={logo} alt="logo" className="logo"/>                    
-                        <div className="social-media">                           
-                            <a href="https://github.com/wide-connection/time-owner"><i class="fab fa-github"></i></a>
-                        </div>
-                        <p className="rights-text">&copy; 2021 Created by Team Wide Connection All rights reserved.</p>
-                    </div>
-                    <div className="right-col">
-                        <h1>Our updates</h1>
-                        <div className="border"></div>
-                        <p>Enter your Email to get our updates</p>
-                        <form action="" class="updates-form">
-                            <input type="email" name="" class="txtb" placeholder="Enter you email"/>
-                            <input type="submit" class="btn" value="Submit" name=""/>
-                        </form>
+                    <div className='buttons-container'>
+                      <Categories className="Work-btn" color='deepSkyBlue' content='Work' />
+                      <Categories className="Family-btn" color='yellow' content='Family' />
+                      <Categories className="Education-btn" color='mediumSpringGreen' content='Education' />
+                      <Categories className="Entertainment-btn" color='lightCoral' content='Entertainment' />
+                      <Categories className="Routine-btn" color='lightGray' content='Routine' />
+                      <Categories className="Friends-btn" color='pink' content='Friends' />
+                      <Categories className="Health-btn" color='gold' content='Health' />
+                      <Categories className="Hobby-btn" color='plum' content='Hobby' />
+                    </div>                 
                     </div>
                 </div>
             </footer>

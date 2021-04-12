@@ -1,0 +1,110 @@
+.calendar {
+    width: 560px;
+    height: 1200px;
+}
+
+.time-stamp {
+    width: 80px; 
+    right: 34.3%;
+    height: 780px;
+    position: absolute; 
+}
+
+.time-zone:nth-child(1) {
+    position: relative;
+    margin-top: 15px; 
+}
+
+.time-zone {
+    position: relative; 
+    margin-top: 33px;  
+    margin-left: 20px;
+}
+
+.flex-row-container {
+    /* background: #aaa; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-container > .flex-row-item {
+    flex: 1 1 15%; /*grow | shrink | basis */
+    height: 50px;
+}
+
+.flex-row-item {
+    border: 1.5px solid black;
+}
+
+#non-flex-item {
+    border: none; 
+}
+
+
+/* Below code is for showing current date */
+.datetime {
+ 
+    font-family: "Segoe UI", sans-serif;    
+    padding: 15px 10px; 
+    margin-bottom: 10px;
+    border: 1px solid orange;
+    border-radius: 2em;
+    transition: 0.3s;
+    width: 300px;
+    margin-left: 114px; 
+    display: none;
+}
+
+.datetime:hover {
+    background: orange
+}
+
+.date {
+    font-size: 20px; 
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px; 
+}
+
+.time {
+    font-size: 60px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.time span:not(:last-child) {
+    position: relative; 
+    margin: 0 6px;
+    font-weight: 600; 
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time span:last-child{
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px; 
+    border-radius: 3px; 
+}
+
+.fa-arrow-left {
+    padding-right: 12px; 
+}
+
+.fa-arrow-right {
+    padding-left: 12px;
+}
+
+i:hover {
+    color: blue;   
+}
+
+.time-selector {
+    margin-left: 2px; 
+}
