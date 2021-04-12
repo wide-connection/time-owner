@@ -11,6 +11,8 @@ import Timer from './components/Timer/Timer';
 import TimerProc from './components/Timer/TimerProc';
 import About from './components/About/About';
 import Statistics from './components/Statistics/Statistics';
+import Login from './components/Login/Login';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -29,6 +31,8 @@ function App() {
             <Switch>
               <Route path="/about" component={About} />
               <Route path="/statistics" component={Statistics} />
+              <Route path="/login" component={Login} />
+
               <Route path="/">
                 <div className="right-half">
                   <div className="calendar-container">
