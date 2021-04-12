@@ -113,7 +113,7 @@ const Calendar = () => {
 
     const timeZone = [
         {
-            title: '9:00'
+            title: `9:00`
         },
         {
             title: '10:00'
@@ -330,7 +330,7 @@ const Calendar = () => {
                 </div>
                 <div className="vertical"></div>
                 <div class="flex-row-container">
-            {  [...Array(138)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
+            {  [...Array(96)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
                 </div> 
             </div>
             
