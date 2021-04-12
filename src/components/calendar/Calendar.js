@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './Calendar.css';
 import Modal from 'react-modal'
-import { SelectAllRounded } from '@material-ui/icons';
-
 
 const eventContainer = [];
 export let time = [];
 export let timeString; 
+let numOfTile = 1; 
+
 const handleClick=(e)=> {
     let a = e.target.style.backgroundColor;
    
@@ -110,57 +110,63 @@ export function cleanTable() {
 const Calendar = () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
+    let default_time_number = 9; 
+    let converted_time_number = parseInt(timeString);
+   
 
     const timeZone = [
         {
-            title: `9:00`
+            title: `${timeString == null ? `${default_time_number}:00` : `${converted_time_number}:00`}`,            
+        }, 
+        {
+            title: `${timeString == null ? `${default_time_number + 1}:00` : `${converted_time_number + 1}:00`}`
         },
         {
-            title: '10:00'
+            title: `${timeString == null ? `${default_time_number + 2}:00` : `${converted_time_number + 2}:00`}`
         },
         {
-            title: '11:00'
+            title: `${timeString == null ? `${default_time_number + 3}:00` : `${converted_time_number + 3}:00`}`
         },
         {
-            title: '12:00'
+            title: `${timeString == null ? `${default_time_number + 4}:00` : `${converted_time_number + 4}:00`}`
         },
         {
-            title: '13:00'
+            title: `${timeString == null ? `${default_time_number + 5}:00` : `${converted_time_number + 5 > 24 ? '' : converted_time_number + 5 + ':00'}`}`
         },
         {
-            title: '14:00'
+            title: `${timeString == null ? `${default_time_number + 6}:00` : `${converted_time_number + 6 > 24 ? '' : converted_time_number + 6 + ':00'}`}`
         },
         {
-            title: '15:00'
+            title: `${timeString == null ? `${default_time_number + 7}:00` : `${converted_time_number + 7 > 24 ? '' : converted_time_number + 7 + ':00'}`}`
         },
         {
-            title: '16:00'
+            title: `${timeString == null ? `${default_time_number + 8}:00` : `${converted_time_number + 8 > 24 ? '' : converted_time_number + 8 + ':00'}`}`
         },
         {
-            title: '17:00'
+            title: `${timeString == null ? `${default_time_number + 9}:00` : `${converted_time_number + 9 > 24 ? '' : converted_time_number + 9 + ':00'}`}`
         },
         {
-            title: '18:00'
+            title: `${timeString == null ? `${default_time_number + 10}:00` : `${converted_time_number + 10 > 24 ? '' : converted_time_number + 10 + ':00'}`}`
         },
         {
-            title: '19:00'
+            title: `${timeString == null ? `${default_time_number + 11}:00` : `${converted_time_number + 11 > 24 ? '' : converted_time_number + 11 + ':00'}`}`
         },
         {
-            title: '20:00'
+            title: `${timeString == null ? `${default_time_number + 12}:00` : `${converted_time_number + 12 > 24 ? '' : converted_time_number + 12 + ':00'}`}`
         },
         {
-            title: '21:00'
+            title: `${timeString == null ? `${default_time_number + 13}:00` : `${converted_time_number + 13 > 24 ? '' : converted_time_number + 13 + ':00'}`}`
         },
         {
-            title: '22:00'
+            title: `${timeString == null ? `${default_time_number + 14}:00` : `${converted_time_number + 14 > 24 ? '' : converted_time_number + 14 + ':00'}`}`
         },
         {
-            title: '23:00'
-        },
-        {
-            title: '24:00'
+            title: `${timeString == null ? `${default_time_number + 15}:00` : `${converted_time_number + 15 > 24 ? '' : converted_time_number + 15 + ':00'}`}`
         },
     ];
+
+    let result = 24 - parseInt(timeZone[0].title); 
+    parseInt(timeZone[0].title) === 9 ? numOfTile = 96 : numOfTile = (result * 6) + 6;
 
 
     // below code is for calendar setting (modal popup)
@@ -185,7 +191,7 @@ const Calendar = () => {
     }
     const submitTime=(e)=> {
         
-        console.log(timeString);
+ 
         setModalIsOpen(false);
     }
 
@@ -214,87 +220,87 @@ const Calendar = () => {
                             <div className="options-container">
                                 <div className="option" >                                                     
                                     <input type="radio" className="radio" id="twelve-am" name="time-category"/>
-                                    <label for="times">12:00 AM</label>
+                                    <label for="times">00:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="one-am" name="time-category"/>
-                                    <label for="times">1:00 AM</label>
+                                    <label for="times">1:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="two-am" name="time-category"/>
-                                    <label for="times">2:00 AM</label>
+                                    <label for="times">2:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="three-am" name="time-category"/>
-                                    <label for="times">3:00 AM</label>
+                                    <label for="times">3:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="four-am" name="time-category"/>
-                                    <label for="times">4:00 AM</label>
+                                    <label for="times">4:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="five-am" name="time-category"/>
-                                    <label for="times">5:00 AM</label>
+                                    <label for="times">5:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="six-am" name="time-category"/>
-                                    <label for="times">6:00 AM</label>
+                                    <label for="times">6:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="seven-am" name="time-category"/>
-                                    <label for="times">7:00 AM</label>
+                                    <label for="times">7:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="eight-am" name="time-category"/>
-                                    <label for="times">8:00 AM</label>
+                                    <label for="times">8:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="nine-am" name="time-category"/>
-                                    <label for="times">9:00 AM</label>
+                                    <label for="times">9:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="ten-am" name="time-category"/>
-                                    <label for="times">10:00 AM</label>
+                                    <label for="times">10:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="eleven-am" name="time-category"/>
-                                    <label for="times">11:00 AM</label>
+                                    <label for="times">11:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="twelve-pm" name="time-category"/>
-                                    <label for="times">12:00 PM</label>
+                                    <label for="times">12:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="one-pm" name="time-category"/>
-                                    <label for="times">1:00 PM</label>
+                                    <label for="times">13:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="two-pm" name="time-category"/>
-                                    <label for="times">2:00 PM</label>
+                                    <label for="times">14:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="three-pm" name="time-category"/>
-                                    <label for="times">3:00 PM</label>
+                                    <label for="times">15:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="four-pm" name="time-category"/>
-                                    <label for="times">4:00 PM</label>
+                                    <label for="times">16:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="five-pm" name="time-category"/>
-                                    <label for="times">5:00 PM</label>
+                                    <label for="times">17:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="six-pm" name="time-category"/>
-                                    <label for="times">6:00 PM</label>
+                                    <label for="times">18:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="seven-pm" name="time-category"/>
-                                    <label for="times">7:00 PM</label>
+                                    <label for="times">19:00</label>
                                 </div>
                                 <div className="option" >
                                     <input type="radio" className="radio" id="eight-pm" name="time-category"/>
-                                    <label for="times">8:00 PM</label>
+                                    <label for="times">20:00</label>
                                 </div>                               
                             </div>
                             <div className="selected" onClick={clickTime}>
@@ -330,7 +336,7 @@ const Calendar = () => {
                 </div>
                 <div className="vertical"></div>
                 <div class="flex-row-container">
-            {  [...Array(96)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
+            {  [...Array(numOfTile)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
                 </div> 
             </div>
             

@@ -11,8 +11,9 @@
     right: 33.8%;
     height: 1240px;
     position: absolute; 
-    border: 3px dashed grey;
+    /* border: 3px dashed grey;
     border-right: none;
+    border-bottom: none; */
 }
 
 .time-zone:nth-child(1) {
