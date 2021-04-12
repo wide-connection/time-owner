@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Calendar.css';
 import Modal from 'react-modal'
+import { SelectAllRounded } from '@material-ui/icons';
 
 
 const eventContainer = [];
 export let time = [];
-
+export let timeString; 
 const handleClick=(e)=> {
     let a = e.target.style.backgroundColor;
    
@@ -161,30 +162,32 @@ const Calendar = () => {
         },
     ];
 
-    // let now = new Date();
-    // let dname = now.getDay(),
-    // mo = now.getMonth(),
-    // dnum = now.getDate(),
-    // yr = now.getFullYear();
-    
-    // let today = document.querySelector("#today");
-    // console.log(today);
 
     // below code is for calendar setting (modal popup)
-    function onLoad() {
+    // This currently has an error (I should click twice to change value)
+    const clickTime=(e)=> {
         const selected = document.querySelector(".selected");
         const optionsContainer = document.querySelector(".options-container");
-    
+
         const optionsList = document.querySelectorAll(".option");
-    
         selected.addEventListener("click", () => {
             optionsContainer.classList.toggle("active"); 
         })
-    
-     
+
+        optionsList.forEach(o => {
+           o.addEventListener("click", ()=> {            
+            selected.innerHTML = o.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+            timeString = o.querySelector("label").innerHTML; 
+           })
+        });
         
     }
-    window.onload=onLoad();
+    const submitTime=(e)=> {
+        
+        console.log(timeString);
+        setModalIsOpen(false);
+    }
 
     const timeZoneButton = timeZone.map((time, index) => {        
        return  <div className="time-zone">{time.title}</div>
@@ -197,8 +200,7 @@ const Calendar = () => {
              className="custom-modal-style"
              isOpen={modalIsOpen} 
              shouldCloseOnOverlayClick={false} 
-             onRequestClose={() => setModalIsOpen(false)}
-     
+             onRequestClose={() => setModalIsOpen(false)}     
              >
                 <h2 className="modal-header">
                 Calendar setting
@@ -210,98 +212,103 @@ const Calendar = () => {
 
                         <div className="select-box">
                             <div className="options-container">
-                                <div className="option">                                                     
+                                <div className="option" >                                                     
                                     <input type="radio" className="radio" id="twelve-am" name="time-category"/>
                                     <label for="times">12:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="one-am" name="time-category"/>
                                     <label for="times">1:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="two-am" name="time-category"/>
                                     <label for="times">2:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="three-am" name="time-category"/>
                                     <label for="times">3:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="four-am" name="time-category"/>
                                     <label for="times">4:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="five-am" name="time-category"/>
                                     <label for="times">5:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="six-am" name="time-category"/>
                                     <label for="times">6:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="seven-am" name="time-category"/>
                                     <label for="times">7:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="eight-am" name="time-category"/>
                                     <label for="times">8:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="nine-am" name="time-category"/>
                                     <label for="times">9:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="ten-am" name="time-category"/>
                                     <label for="times">10:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="eleven-am" name="time-category"/>
                                     <label for="times">11:00 AM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="twelve-pm" name="time-category"/>
                                     <label for="times">12:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="one-pm" name="time-category"/>
                                     <label for="times">1:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="two-pm" name="time-category"/>
                                     <label for="times">2:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="three-pm" name="time-category"/>
                                     <label for="times">3:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="four-pm" name="time-category"/>
                                     <label for="times">4:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="five-pm" name="time-category"/>
                                     <label for="times">5:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="six-pm" name="time-category"/>
                                     <label for="times">6:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="seven-pm" name="time-category"/>
                                     <label for="times">7:00 PM</label>
                                 </div>
-                                <div className="option">
+                                <div className="option" >
                                     <input type="radio" className="radio" id="eight-pm" name="time-category"/>
                                     <label for="times">8:00 PM</label>
                                 </div>                               
                             </div>
-                            <div className="selected">
+                            <div className="selected" onClick={clickTime}>
                                     Select new time
-                            </div>   
+                            </div>                           
+                        </div>
+                        <div className="reset-calendar">
+                            Reset calendar
                         </div>
                     </div>
-                    {/* <input type="submit" value="Apply change"/> 
-                    <button onClick={() => setModalIsOpen(false)}>Close</button> */}
+                    <div className="btn-submit-handler">
+                        <input type="submit" value="Apply change" onClick={submitTime}/> 
+                        <button id="btn-close-modal"onClick={() => setModalIsOpen(false)} >Close</button>
+                    </div>
                 </div>
             </Modal>            
             <div className="date-container">
@@ -311,7 +318,7 @@ const Calendar = () => {
                  <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
-                        <span id="today" >2021-04-12</span>                       
+                        <span id="today">2021-04-12</span>                       
                     <i class="fas fa-arrow-right"></i>
                     </div>                
                 </div>           
@@ -326,7 +333,7 @@ const Calendar = () => {
             {  [...Array(138)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
                 </div> 
             </div>
-            <script src="./subCalendar.js"></script>
+            
         </div>
        
     ) 

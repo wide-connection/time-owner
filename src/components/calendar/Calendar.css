@@ -130,10 +130,10 @@ i:hover {
 .time-container {
     color: black;
 }
+
 #modal-setting-icon {
     padding: 0 0 0 10px;
     pointer-events: none;
-    
 }
 
 .custom-modal-style {
@@ -142,7 +142,7 @@ i:hover {
     top: 10%;
     text-align: center;
     width: 400px;
-    height: 400px;
+    height: 300px;
 }
 
 .select-box {
@@ -169,7 +169,6 @@ i:hover {
     margin-bottom: 8px; 
     color: #f5f6fa; 
     position: relative; 
-
     order: 0;
 }   
 
@@ -179,7 +178,6 @@ i:hover {
     background-size: contain;
     background-repeat: no-repeat;
  
-
     position: absolute; 
     height: 100%;
     width: 32px; 
@@ -198,7 +196,7 @@ i:hover {
 .select-box .options-container.active + .selected::after {
     transform: rotateX(180deg); 
     top: -6px; 
-    
+
 }
 
 .select-box .options-container::-webkit-scrollbar {
@@ -229,3 +227,20 @@ i:hover {
     display: none; 
 }
 
+.reset-calendar {
+    background: red;
+    border-radius: 8px; 
+    margin-top: 20px;
+    padding: 12px 24px; 
+    order: 0;
+    color: white; 
+    cursor: pointer
+}
+
+.btn-submit-handler {
+    margin-top: 35px;
+}
+
+#btn-close-modal {
+    margin-left: 10px;
+}
