@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Calendar.css';
-
+import Modal from 'react-modal'
 const eventContainer = [];
 export let time = [];
 
 const handleClick=(e)=> {
     let a = e.target.style.backgroundColor;
-
-    if (a === "" || a === "white") {
-        e.target.style.backgroundColor = '#CDCDCD';
+   
+    if (a === "" || a === "white") {        
+        e.target.style.transition = '0.8s'
+        e.target.style.backgroundColor = '#CDCDCD';    
+   
         eventContainer.push(e);
     } else {
+        e.target.style.transition = '0.8s'
         e.target.style.backgroundColor = 'white';
         e.target.innerHTML = "";
         eventContainer.pop(e);
@@ -41,18 +44,15 @@ export function handleCategoryHighlight(e) {
 }
 
 export function changeTileColor(task, category) {
-    let prev = time;
-    let count = 0;
-    console.log(prev);
+  
     const colorBlox = "rgb(205, 205, 205)";
     for (let i = 0; i < eventContainer.length; i++) {
-
+   
         let temp = eventContainer[i].target.style.backgroundColor;
         if(temp === colorBlox){
             switch(category){
                 case "Work":
-                    
-                    eventContainer[i].target.style.backgroundColor = '#00bfff';
+                    eventContainer[i].target.style.backgroundColor = '#00bfff';                   
                     eventContainer[i].target.innerHTML = task;   
                 break;
                 case "Family":
@@ -63,7 +63,7 @@ export function changeTileColor(task, category) {
                     eventContainer[i].target.style.backgroundColor = '#00fa9a';
                     eventContainer[i].target.innerHTML = task;
                 break;
-                case "Entertainment":
+                case "Entertainment":    
                     eventContainer[i].target.style.backgroundColor = '#f08080';
                     eventContainer[i].target.innerHTML = task;
                 break;
@@ -88,12 +88,25 @@ export function changeTileColor(task, category) {
             }
         }         
     }
-     (count === 0) ? time = (eventContainer.length * 10): time = (eventContainer.length * 10) - prev;
-     count++;
+    let count = 0; 
+   
+    for (let j = 0; j < eventContainer.length; j++) {
+
+        if (eventContainer[j].target.innerHTML === task) {
+            count++; 
+        }
+    }
+
+
+    time = (count * 10);
 }
 
+export function cleanTable() {
+    
+}
 const Calendar = () => {
 
+    const [modalIsOpen, setModalIsOpen] = useState(false)
 
     const timeZone = [
         {
@@ -146,14 +159,14 @@ const Calendar = () => {
         },
     ];
 
-    let now = new Date();
-    let dname = now.getDay(),
-    mo = now.getMonth(),
-    dnum = now.getDate(),
-    yr = now.getFullYear();
+    // let now = new Date();
+    // let dname = now.getDay(),
+    // mo = now.getMonth(),
+    // dnum = now.getDate(),
+    // yr = now.getFullYear();
     
-    let today = document.querySelector("#today");
-    console.log(today);
+    // let today = document.querySelector("#today");
+    // console.log(today);
 
     
 
@@ -165,18 +178,39 @@ const Calendar = () => {
         
     return (
         <div>
-
-            <input type="time"/>
-            <input type="submit" className="time-selector" value="select time"/>
-        
+            <Modal
+             className="custom-modal-style"
+             isOpen={modalIsOpen} 
+             shouldCloseOnOverlayClick={false} 
+             onRequestClose={() => setModalIsOpen(false)}
+             style={
+                 {            
+                   overlay: {
+                       color: 'white'
+                   },
+                   content: {
+                  
+                   }
+                 }
+             }
+             >
+                <h2 className="modal-header">Calendar setting<i class="fas fa-user-cog"></i></h2>
+                <div>
+                    <button onClick={() => setModalIsOpen(false)}>Close</button>
+                </div>
+            </Modal>            
             <div className="date-container">
+                <div className="reset-btn-container">                   
+                    <i class="fas fa-user-cog" onClick={() => setModalIsOpen(true)}></i>
+                </div>   
                  <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
                         <span id="today" >2021-04-10</span>                       
                     <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
+                    </div>                
+                </div>           
+               
             </div>
             <div className="calendar">
                 <div className="time-stamp">

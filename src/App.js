@@ -6,10 +6,9 @@ import Footer from './components/Footer/Footer'
 import Loading from './components/Loading/Loading'
 import Calendar from './components/calendar/Calendar'
 import TableForms from './components/TableForm/TableForms'
-import Categories from './components/Categories/Categories';
-import Timer from './components/Timer/Timer'
-import TimerProc from './components/Timer/TimerProc'
 import About from './components/About/About'
+import Modal from 'react-modal'
+Modal.setAppElement('#root')
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -40,11 +39,7 @@ function App() {
                   </div>
 
                   <br />
-                  <div className="left-half">
-                    {/* <div className="WeeklyGoals-container">
-                      <WeeklyGoalsList />
-                    </div> */}
-                    
+                  <div className="left-half">                                   
                     <div className="table-container">
                       <TableForms />
                     </div>

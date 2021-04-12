@@ -1,6 +1,7 @@
 .calendar {
     width: 560px;
     height: 1200px;
+    margin-right: 50px;
 }
 
 .time-stamp {
@@ -34,7 +35,12 @@
 }
 
 .flex-row-item {
+    user-select : text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1.5px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
 }
 
 #non-flex-item {
@@ -43,21 +49,20 @@
 
 
 /* Below code is for showing current date */
-.datetime {
- 
+.datetime { 
     font-family: "Segoe UI", sans-serif;    
     padding: 15px 10px; 
     margin-bottom: 10px;
-    border: 1px solid orange;
+    border: 1px solid black;
     border-radius: 2em;
     transition: 0.3s;
     width: 300px;
     margin-left: 114px; 
-    display: none;
+    
 }
 
 .datetime:hover {
-    background: orange
+    background: orange;
 }
 
 .date {
@@ -107,4 +112,24 @@ i:hover {
 
 .time-selector {
     margin-left: 2px; 
+}
+
+/* below code is for reset calendar button*/
+.reset-btn-container {   
+    position: relative;
+    float: right; 
+    padding-top: 20px;
+    padding-right: 80px;
+}
+
+.modal-header {
+    color: black; 
+}
+.custom-modal-style {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    text-align: center;
+    width: 400px;
+    height: 400px;
 }
