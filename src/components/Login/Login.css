@@ -24,3 +24,10 @@ body {
 #passwordHelpInline {
   margin-left: 10px;
 }
+
+a {
+  backface-visibility: visible;
+  color: rgb(206, 95, 95);
+  font-weight: 600;
+  font-size: small;
+}
