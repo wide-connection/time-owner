@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Calendar.css';
 import Modal from 'react-modal'
+
+
 const eventContainer = [];
 export let time = [];
 
@@ -168,10 +170,23 @@ const Calendar = () => {
     // let today = document.querySelector("#today");
     // console.log(today);
 
+    // below code is for calendar setting (modal popup)
+    function onLoad() {
+        const selected = document.querySelector(".selected");
+        const optionsContainer = document.querySelector(".options-container");
     
+        const optionsList = document.querySelectorAll(".option");
+    
+        selected.addEventListener("click", () => {
+            optionsContainer.classList.toggle("active"); 
+        })
+    
+     
+        
+    }
+    window.onload=onLoad();
 
     const timeZoneButton = timeZone.map((time, index) => {        
-
        return  <div className="time-zone">{time.title}</div>
      });
   
@@ -183,30 +198,120 @@ const Calendar = () => {
              isOpen={modalIsOpen} 
              shouldCloseOnOverlayClick={false} 
              onRequestClose={() => setModalIsOpen(false)}
-             style={
-                 {            
-                   overlay: {
-                       color: 'white'
-                   },
-                   content: {
-                  
-                   }
-                 }
-             }
+     
              >
-                <h2 className="modal-header">Calendar setting<i class="fas fa-user-cog"></i></h2>
+                <h2 className="modal-header">
+                Calendar setting
+                <i class="fas fa-user-cog" id="modal-setting-icon"></i>
+                </h2>
                 <div>
-                    <button onClick={() => setModalIsOpen(false)}>Close</button>
+                    <div className="time-container">
+                        <h3>Change starting time</h3>
+
+                        <div className="select-box">
+                            <div className="options-container">
+                                <div className="option">                                                     
+                                    <input type="radio" className="radio" id="twelve-am" name="time-category"/>
+                                    <label for="times">12:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="one-am" name="time-category"/>
+                                    <label for="times">1:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="two-am" name="time-category"/>
+                                    <label for="times">2:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="three-am" name="time-category"/>
+                                    <label for="times">3:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="four-am" name="time-category"/>
+                                    <label for="times">4:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="five-am" name="time-category"/>
+                                    <label for="times">5:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="six-am" name="time-category"/>
+                                    <label for="times">6:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="seven-am" name="time-category"/>
+                                    <label for="times">7:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="eight-am" name="time-category"/>
+                                    <label for="times">8:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="nine-am" name="time-category"/>
+                                    <label for="times">9:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="ten-am" name="time-category"/>
+                                    <label for="times">10:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="eleven-am" name="time-category"/>
+                                    <label for="times">11:00 AM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="twelve-pm" name="time-category"/>
+                                    <label for="times">12:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="one-pm" name="time-category"/>
+                                    <label for="times">1:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="two-pm" name="time-category"/>
+                                    <label for="times">2:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="three-pm" name="time-category"/>
+                                    <label for="times">3:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="four-pm" name="time-category"/>
+                                    <label for="times">4:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="five-pm" name="time-category"/>
+                                    <label for="times">5:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="six-pm" name="time-category"/>
+                                    <label for="times">6:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="seven-pm" name="time-category"/>
+                                    <label for="times">7:00 PM</label>
+                                </div>
+                                <div className="option">
+                                    <input type="radio" className="radio" id="eight-pm" name="time-category"/>
+                                    <label for="times">8:00 PM</label>
+                                </div>                               
+                            </div>
+                            <div className="selected">
+                                    Select new time
+                            </div>   
+                        </div>
+                    </div>
+                    {/* <input type="submit" value="Apply change"/> 
+                    <button onClick={() => setModalIsOpen(false)}>Close</button> */}
                 </div>
             </Modal>            
             <div className="date-container">
                 <div className="reset-btn-container">                   
-                    <i class="fas fa-user-cog" onClick={() => setModalIsOpen(true)}></i>
+                    <i class="fas fa-user-cog fa-lg" onClick={() => setModalIsOpen(true)}></i>
                 </div>   
                  <div className="datetime">
                     <div className="date">
                     <i class="fas fa-arrow-left"></i>
-                        <span id="today" >2021-04-10</span>                       
+                        <span id="today" >2021-04-12</span>                       
                     <i class="fas fa-arrow-right"></i>
                     </div>                
                 </div>           
@@ -221,7 +326,9 @@ const Calendar = () => {
             {  [...Array(138)].map((x, i) =>   <div className="flex-row-item" onClick={handleClick}></div>)}
                 </div> 
             </div>
+            <script src="./subCalendar.js"></script>
         </div>
+       
     ) 
     
     
